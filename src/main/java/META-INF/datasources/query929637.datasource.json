@@ -1,0 +1,118 @@
+{
+  "customId": "query929637",
+  "queryName": "Itens de um Pedido",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "PedidoItem",
+  "entityFullName": "app.entity.PedidoItem",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "PedidoItem",
+        "namespace": "app.entity.PedidoItem",
+        "alias": "p"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "p",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "p.itemCardapio.foto",
+        "type": "string"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "p.pedido.id",
+          "field": "p.pedido.id",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "value": ":pedidoId",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "pedidoId",
+      "fieldValue": ""
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "quantidade": null,
+    "valorUnitario": null,
+    "pedido": null,
+    "itemCardapio": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "quantidade": null,
+    "valorUnitario": null,
+    "pedido": null,
+    "itemCardapio": null
+  },
+  "security": {
+    "id": null,
+    "quantidade": null,
+    "valorUnitario": null,
+    "pedido": null,
+    "itemCardapio": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query929637/",
+  "audit": false
+}

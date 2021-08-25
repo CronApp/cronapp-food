@@ -1,0 +1,16 @@
+window.fixedTimeZone = true;
+window.timeZone = 'UTC';
+window.timeZoneOffset = 0;
+window.blockly = window.blockly || {};
+window.blockly.js = window.blockly.js || {};
+window.blockly.js.blockly = window.blockly.js.blockly || {};
+window.translations = window.translations || {};
+window.translations.localesKeys = ['en_us','pt_br'];
+window.translations.localesRef =  {"en*":"en_us","*":"pt_br","pt*":"pt_br"};
+document.write("<script src='js/blockly/Carrinho.blockly.js?f2565312d3bc4e1084d0fba27f2e557b'></script>");
+document.write("<script src='js/blockly/FinalizaPedido.blockly.js?a72f42f91b73f189520995ba8f456b90'></script>");
+document.write("<script src='js/blockly/Restaurante.blockly.js?6529fbaa1d49f614ad63e203c6de1909'></script>");
+document.write("<script src='js/blockly/auth/ChangePassword.blockly.js?e3858ce02693c16ac9ca8388ff344acc'></script>");
+document.write("<script src='js/blockly/auth/FuncoesUsuario.blockly.js?56e5c8ed2faf5b5f2b955fce195c3fb1'></script>");
+document.write("<script src='js/blockly/auth/Home.blockly.js?9f788680dcdc696f94cebf4348f51b3e'></script>");
+document.write("<script src='js/blockly/auth/Login.blockly.js?cc551bda44726a6090736c4b9f7a9ee1'></script>");
