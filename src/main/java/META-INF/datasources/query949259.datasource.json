@@ -1,0 +1,91 @@
+{
+  "customId": "queryLojas",
+  "queryName": "Busca Lojas",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Restaurante",
+  "entityFullName": "app.entity.Restaurante",
+  "query": {
+    "isEmpty": true,
+    "isRawSql": true,
+    "sqlContent": "select distinct r from Restaurante r where r.descricao LIKE (CONCAT(\u0027%\u0027, :descricao, \u0027%\u0027)) OR r.nome LIKE (CONCAT(\u0027%\u0027, :nome, \u0027%\u0027))",
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "descricao",
+      "fieldValue": ""
+    },
+    {
+      "fieldName": "nome",
+      "fieldValue": ""
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "nome": null,
+    "descricao": null,
+    "permiteRetirada": null,
+    "realizaEntrega": null,
+    "tempoEntrega": null,
+    "taxaEntrega": null,
+    "logotipo": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "nome": null,
+    "descricao": null,
+    "permiteRetirada": null,
+    "realizaEntrega": null,
+    "tempoEntrega": null,
+    "taxaEntrega": null,
+    "logotipo": null
+  },
+  "security": {
+    "id": null,
+    "nome": null,
+    "descricao": null,
+    "permiteRetirada": null,
+    "realizaEntrega": null,
+    "tempoEntrega": null,
+    "taxaEntrega": null,
+    "logotipo": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query949259/",
+  "audit": false
+}

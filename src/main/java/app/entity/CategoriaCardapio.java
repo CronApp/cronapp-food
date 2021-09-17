@@ -41,6 +41,13 @@ public class CategoriaCardapio implements Serializable {
         private java.lang.String descricao;
 
     /**
+    * @generated
+    */
+    @Column(name = "imagem", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private byte[] imagem;
+
+    /**
     * Construtor
     * @generated
     */
@@ -83,6 +90,25 @@ public class CategoriaCardapio implements Serializable {
     */
     public CategoriaCardapio setDescricao(java.lang.String descricao){
         this.descricao = descricao;
+        return this;
+    }
+    /**
+    * Obtém imagem
+    * return imagem
+    * @generated
+    */
+    
+    public byte[] getImagem(){
+        return this.imagem;
+    }
+
+    /**
+    * Define imagem
+    * @param imagem imagem
+    * @generated
+    */
+    public CategoriaCardapio setImagem(byte[] imagem){
+        this.imagem = imagem;
         return this;
     }
 

@@ -7,7 +7,8 @@ window.blockly.js.blockly.auth.Home = window.blockly.js.blockly.auth.Home || {};
 /**
  * Home
  */
-window.blockly.js.blockly.auth.Home.change = function() {
+window.blockly.js.blockly.auth.Home.changeArgs = [];
+window.blockly.js.blockly.auth.Home.change = async function() {
 
   this.cronapi.screen.changeView("#/app/login",[  ]);
 }

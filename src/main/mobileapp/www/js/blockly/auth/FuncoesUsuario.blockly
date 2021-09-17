@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="" resourceType="JS" ruleDescription="FuncoesUsuario" ruleName="FuncoesUsuario" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
-  <metadata scale="1" scrollx="140.90000000000077" scrolly="-9.200000000000045" target=".BiG2HBJ:*@@@~acKyNv"/>
-  <block asynccall="false" colour="#fca03b" id=".BiG2HBJ:*@@@~acKyNv" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="8" y="83">
+  <metadata scale="1" scrollx="168.29999999999995" scrolly="-7.5" target=".BiG2HBJ:*@@@~acKyNv"/>
+  <block asynccall="false" colour="#fca03b" id=".BiG2HBJ:*@@@~acKyNv" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="23" y="83">
     <field customattributes="" name="NAME">getLoginUsuarioLogado</field>
     <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
     <value name="RETURN">

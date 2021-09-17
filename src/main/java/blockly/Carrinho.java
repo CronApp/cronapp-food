@@ -14,40 +14,6 @@ public class Carrinho {
 public static final int TIMEOUT = 300;
 
 /**
- *
- * @return Var
- */
-// FuncoesUsuario
-public static Var LoginDoUsuario() throws Exception {
- return new Callable<Var>() {
-
-   private Var retorno = Var.VAR_NULL;
-   private Var restaurantes = Var.VAR_NULL;
-   private Var restaurante = Var.VAR_NULL;
-   private Var pedidoRestaurante = Var.VAR_NULL;
-   private Var formaPagamento = Var.VAR_NULL;
-   private Var cep = Var.VAR_NULL;
-   private Var logradouro = Var.VAR_NULL;
-   private Var numero = Var.VAR_NULL;
-   private Var bairro = Var.VAR_NULL;
-   private Var cidade = Var.VAR_NULL;
-   private Var uf = Var.VAR_NULL;
-   private Var itensRestaurante = Var.VAR_NULL;
-   private Var itemCardapio = Var.VAR_NULL;
-   private Var itemCarrinho = Var.VAR_NULL;
-   private Var itemPedido = Var.VAR_NULL;
-   private Var exception = Var.VAR_NULL;
-   private Var lista = Var.VAR_NULL;
-   private Var i = Var.VAR_NULL;
-
-   public Var call() throws Exception {
-    return
-cronapi.util.Operations.getCurrentUserName();
-   }
- }.call();
-}
-
-/**
  */
 // Descreva esta função...
 public static void esvaziarCarrinho() throws Exception {
@@ -86,8 +52,8 @@ public static Var fecharPedido(@ParamMetaData(description = "formaPagamento") Va
    private Var restaurante = Var.VAR_NULL;
    private Var pedidoRestaurante = Var.VAR_NULL;
    private Var itensRestaurante = Var.VAR_NULL;
-   private Var itemCardapio = Var.VAR_NULL;
    private Var itemCarrinho = Var.VAR_NULL;
+   private Var itemCardapio = Var.VAR_NULL;
    private Var itemPedido = Var.VAR_NULL;
    private Var exception = Var.VAR_NULL;
 
@@ -99,7 +65,7 @@ public static Var fecharPedido(@ParamMetaData(description = "formaPagamento") Va
     try {
 
         restaurantes =
-        cronapi.database.Operations.query(Var.valueOf("app.entity.Carrinho"),Var.valueOf("select distinct c.itemCardapio.restaurante from Carrinho c"));
+        cronapi.database.Operations.query(Var.valueOf("app.entity.Carrinho"),Var.valueOf("select c.itemCardapio.restaurante from Carrinho c"));
 
         for (Iterator it_restaurante = restaurantes.iterator(); it_restaurante.hasNext();) {
             restaurante = Var.valueOf(it_restaurante.next());
@@ -217,9 +183,42 @@ public static Var obterUsuarioLogado() throws Exception {
     lista =
     cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select u from User u where u.normalizedUserName = :normalizedUserName"),Var.valueOf("normalizedUserName",
     cronapi.text.Operations.normalize(
-    Var.valueOf(LoginDoUsuario()))));
+    cronapi.util.Operations.getCurrentUserName())));
     return
 cronapi.list.Operations.getFirst(lista);
+   }
+ }.call();
+}
+
+/**
+ *
+ * @return Var
+ */
+// Descreva esta função...
+public static Var possuiItens() throws Exception {
+ return new Callable<Var>() {
+
+   private Var lista = Var.VAR_NULL;
+   private Var contemProdutos = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+
+    contemProdutos =
+    Var.VAR_FALSE;
+
+    lista =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.Carrinho"),Var.valueOf("select c from Carrinho c where c.user.normalizedUserName = :userNormalizedUserName"),Var.valueOf("userNormalizedUserName",
+    cronapi.util.Operations.getCurrentUserName()));
+
+    if (
+    Var.valueOf(
+    cronapi.list.Operations.size(lista).compareTo(
+    Var.valueOf(0)) > 0).getObjectAsBoolean()) {
+
+        contemProdutos =
+        Var.VAR_TRUE;
+    }
+    return contemProdutos;
    }
  }.call();
 }
@@ -234,8 +233,8 @@ public static Var totalCarrinho() throws Exception {
 
    private Var itemCardapio = Var.VAR_NULL;
    private Var lista = Var.VAR_NULL;
-   private Var total = Var.VAR_NULL;
    private Var i = Var.VAR_NULL;
+   private Var total = Var.VAR_NULL;
 
    public Var call() throws Exception {
 

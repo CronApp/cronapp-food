@@ -162,6 +162,13 @@ public class User implements Serializable {
         private Restaurante restaurante;
 
     /**
+    * @generated
+    */
+    @Column(name = "avaliacao_app", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Integer avaliacaoApp;
+
+    /**
     * Construtor
     * @generated
     */
@@ -509,6 +516,25 @@ public class User implements Serializable {
     */
     public User setRestaurante(Restaurante restaurante){
         this.restaurante = restaurante;
+        return this;
+    }
+    /**
+    * Obtém avaliacaoApp
+    * return avaliacaoApp
+    * @generated
+    */
+    
+    public java.lang.Integer getAvaliacaoApp(){
+        return this.avaliacaoApp;
+    }
+
+    /**
+    * Define avaliacaoApp
+    * @param avaliacaoApp avaliacaoApp
+    * @generated
+    */
+    public User setAvaliacaoApp(java.lang.Integer avaliacaoApp){
+        this.avaliacaoApp = avaliacaoApp;
         return this;
     }
 

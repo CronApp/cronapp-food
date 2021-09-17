@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="" resourceType="JAVA" ruleDescription="Carrinho" ruleName="Carrinho" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
-  <metadata scale="1" scrollx="740.052005438477" scrolly="186.9999999999999" target="53`*Bd!4ij-*5HAY~X5x"/>
-  <block asynccall="false" colour="#fca03b" id="53`*Bd!4ij-*5HAY~X5x" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-484" y="-326">
+  <metadata scale="1" scrollx="629.3000000000002" scrolly="-270.4999999999998" target="_^O:s`G:[!vT@XQP`(j^"/>
+  <block asynccall="false" colour="#fca03b" id="53`*Bd!4ij-*5HAY~X5x" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-454" y="-306">
     <mutation>
       <arg name="formaPagamento"/>
       <arg name="cep"/>
@@ -64,7 +64,7 @@
                               </block>
                             </value>
                             <value name="ARG2">
-                              <block asynccall="false" colour="#5ba593" dependencyby="53`*Bd!4ij-*5HAY~X5x" id="ah!7A[t%JZrBr)MMc/WB" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                              <block asynccall="false" colour="#5ba593" dependencyby="53`*Bd!4ij-*5HAY~X5x" id="ah!7A[t%JZrBr)MMc/WB" origintype="text" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="text">
                                 <field customattributes="" name="TEXT">Novo</field>
                               </block>
                             </value>
@@ -183,7 +183,7 @@
                                                   <arg name="itemCardapio"/>
                                                 </mutation>
                                                 <value name="ARG1">
-                                                  <block asynccall="false" colour="#5b67a5" dependencyby="53`*Bd!4ij-*5HAY~X5x" id="g(S_+Qar{8tbdX0Ddp*;" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                                  <block asynccall="false" colour="#5b67a5" dependencyby="53`*Bd!4ij-*5HAY~X5x" id="g(S_+Qar{8tbdX0Ddp*;" origintype="math_number" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="math_number">
                                                     <field customattributes="" name="NUM">1</field>
                                                   </block>
                                                 </value>
@@ -319,15 +319,6 @@
       </block>
     </statement>
   </block>
-  <block asynccall="false" colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
-    <field customattributes="" name="NAME">LoginDoUsuario</field>
-    <comment h="80" pinned="false" w="160">FuncoesUsuario</comment>
-    <value name="RETURN">
-      <block asynccall="false" colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%`@+dj.7EX*Y5yCF$Vcd" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20login%20do%20usu%C3%A1rio%20logado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20o%20login%20do%20usu%C3%A1rio%20logado.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.getCurrentUserName%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
-        <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
-      </block>
-    </value>
-  </block>
   <block asynccall="false" colour="#fca03b" id="W:Y*_BF`Muj3/CYv|?Yo" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-397" y="229">
     <mutation>
       <arg name="idItem"/>
@@ -364,111 +355,6 @@
       </block>
     </value>
   </block>
-  <block asynccall="false" colour="#fca03b" id="[dz/upDUJY-m!3}GIn)R" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-473" y="306">
-    <field customattributes="" name="NAME">totalCarrinho</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
-    <statement name="STACK">
-      <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="G]/p-)8p=ZZ+Xqx$h*Ps" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
-        <field customattributes="" name="VAR">total</field>
-        <value name="VALUE">
-          <block asynccall="false" colour="#5b67a5" dependencyby="[dz/upDUJY-m!3}GIn)R" id="wXg_/b+(ey,M(dusz*:/" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
-            <field customattributes="" name="NUM">0</field>
-          </block>
-        </value>
-        <next>
-          <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="AW:w1vRJbP;9R+HHNRm1" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
-            <field customattributes="" name="VAR">lista</field>
-            <value name="VALUE">
-              <block asynccall="false" colour="#aa2f00" dependencyby="[dz/upDUJY-m!3}GIn)R" id="sRRu~_tatq/;BAP7yJ_|" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.query%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
-                <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Carrinho%22,%22namespace%22:%22app.entity.Carrinho%22,%22alias%22:%22c%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22c%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22c.user%22,%22field%22:%22c.user%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:user%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22Carrinho%22,%22entityFullName%22:%22app.entity.Carrinho%22,%22filter%22:%22select%20c%20from%20Carrinho%20c%20where%20c.user%20=%20:user%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22user%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
-                  <arg name="user"/>
-                </mutation>
-                <value name="ARG0">
-                  <block asynccall="false" colour="#fca03b" dependencyby="[dz/upDUJY-m!3}GIn)R" id="l@98FPLI+_SHswEWaLJ?" origintype="procedures_callreturn" output="true" tooltip="Executa a função definida pelo usuário &quot;obterUsuarioLogado&quot; e usa seu retorno." type="procedures_callreturn">
-                    <mutation name="obterUsuarioLogado" return-raw-type="undefined"/>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <next>
-              <block asynccall="false" colour="#5ba55b" dependencyby="[dz/upDUJY-m!3}GIn)R" id="|4{/00L^8,t(1rICf/os" origintype="controls_forEach" output="false" tooltip="Faça algumas instruções várias vezes." type="controls_forEach">
-                <field customattributes="" name="VAR">i&lt;app.entity.Carrinho&gt;</field>
-                <value name="LIST">
-                  <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id=";OrARe9_4niY|G[Kq(R," origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                    <field customattributes="" name="VAR">lista</field>
-                  </block>
-                </value>
-                <statement name="DO">
-                  <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="Pw8vz=(7mvIU:2Txx~P)" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
-                    <field customattributes="" name="VAR">itemCardapio&lt;app.entity.ItemCardapio&gt;</field>
-                    <value name="VALUE">
-                      <block asynccall="false" colour="#c88330" dependencyby="[dz/upDUJY-m!3}GIn)R" id="D;4m1k+!iqMTix_eq55t" multilayer="false" namespace="cronapi.object.Operations.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%20do%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20Objeto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20a%20percorrer%20:%20Texto%3C/span%3E%3Cdiv%3E%20Exemplo:%20estado%5B3%5D.uf%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.object.Operations.getObjectField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
-                        <mutation name="{{cronapi.object.Operations.getObjectField}}">
-                          <arg name="Objeto"/>
-                          <arg name="Caminho a percorrer"/>
-                        </mutation>
-                        <value name="PARAM0">
-                          <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="Xx?/dM:J2AapGy/RM_8_" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                            <field customattributes="" name="VAR">i&lt;app.entity.Carrinho&gt;</field>
-                          </block>
-                        </value>
-                        <value name="PARAM1">
-                          <block asynccall="false" colour="#c88330" dependencyby="[dz/upDUJY-m!3}GIn)R" id="9^cQt?j)6Uk!u*Si%;=#" origintype="procedures_get_field_object" output="true" type="procedures_get_field_object">
-                            <mutation name="" return-raw-type="undefined"/>
-                            <field customattributes="" name="SELECT">itemCardapio</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <next>
-                      <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id=";DT;hC1xOf|2S()ZGLbl" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
-                        <field customattributes="" name="VAR">total</field>
-                        <value name="VALUE">
-                          <block asynccall="false" colour="#5b6da5" dependencyby="[dz/upDUJY-m!3}GIn)R" id="L9*[9@Z@yvLW)#ZwFta:" origintype="math_arithmetic" output="true" tooltip="function () { [native code] }" type="math_arithmetic">
-                            <mutation items="2"/>
-                            <field customattributes="" name="OP1">ADD</field>
-                            <value name="ARG0">
-                              <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="@GwKkCw%X8)1fYn~_fm$" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                                <field customattributes="" name="VAR">total</field>
-                              </block>
-                            </value>
-                            <value name="ARG1">
-                              <block asynccall="false" colour="#c88330" dependencyby="[dz/upDUJY-m!3}GIn)R" id="JBQsIqpVO;:DFV}~s`E{" multilayer="false" namespace="cronapi.object.Operations.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%20do%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20Objeto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20a%20percorrer%20:%20Texto%3C/span%3E%3Cdiv%3E%20Exemplo:%20estado%5B3%5D.uf%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.object.Operations.getObjectField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
-                                <mutation name="{{cronapi.object.Operations.getObjectField}}">
-                                  <arg name="Objeto"/>
-                                  <arg name="Caminho a percorrer"/>
-                                </mutation>
-                                <value name="PARAM0">
-                                  <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="JVI!W;YiS3T^]`=,.g(A" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                                    <field customattributes="" name="VAR">itemCardapio&lt;app.entity.ItemCardapio&gt;</field>
-                                  </block>
-                                </value>
-                                <value name="PARAM1">
-                                  <block asynccall="false" colour="#c88330" dependencyby="[dz/upDUJY-m!3}GIn)R" id="I{UXRE9KC]Jd,`+J2UC0" origintype="procedures_get_field_object" output="true" type="procedures_get_field_object">
-                                    <mutation name="" return-raw-type="undefined"/>
-                                    <field customattributes="" name="SELECT">preco</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </statement>
-    <value name="RETURN">
-      <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="STj=*ORh$=7|0@Idi!oI" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-        <field customattributes="" name="VAR">total</field>
-      </block>
-    </value>
-  </block>
   <block asynccall="false" colour="#fca03b" id="gBUA{m46#}Fsd^C~wy5b" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-289" y="305">
     <field customattributes="" name="NAME">obterUsuarioLogado</field>
     <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
@@ -486,11 +372,11 @@
                   <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Texto não normalizado"/>
                 </mutation>
                 <value name="ARG0">
-                  <shadow asynccall="false" colour="#5ba593" dependencyby="gBUA{m46#}Fsd^C~wy5b" id="|Q%7n-{(pp~NJpwK9U7r" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                  <shadow asynccall="false" colour="#5ba593" dependencyby="gBUA{m46#}Fsd^C~wy5b" id="|Q%7n-{(pp~NJpwK9U7r" origintype="text" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="text">
                     <field customattributes="" name="TEXT"/>
                   </shadow>
-                  <block asynccall="false" colour="#fca03b" dependencyby="gBUA{m46#}Fsd^C~wy5b" id="#ub,^#]XI0#DE^i7z[=c" origintype="procedures_callreturn" output="true" tooltip="Executa a função definida pelo usuário &quot;LoginDoUsuario&quot; e usa seu retorno." type="procedures_callreturn">
-                    <mutation name="LoginDoUsuario" return-raw-type="undefined"/>
+                  <block asynccall="false" colour="#487f7f" dependencyby="gBUA{m46#}Fsd^C~wy5b" id="UqTX_![=`:wsj$80LWsV" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20login%20do%20usu%C3%A1rio%20logado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20o%20login%20do%20usu%C3%A1rio%20logado.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.getCurrentUserName%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
                   </block>
                 </value>
               </block>
@@ -578,7 +464,7 @@
                   <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Detalhe de log"/>
                 </mutation>
                 <value name="ARG0">
-                  <shadow asynccall="false" colour="#5ba593" dependencyby="l|H[RMMc{wRr9,Y)=C-=" id=",lrN~9o*(dECVK+VS:nj" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                  <shadow asynccall="false" colour="#5ba593" dependencyby="l|H[RMMc{wRr9,Y)=C-=" id=",lrN~9o*(dECVK+VS:nj" origintype="text" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="text">
                     <field customattributes="" name="TEXT">General</field>
                   </shadow>
                 </value>
@@ -597,7 +483,7 @@
                   </block>
                 </value>
                 <value name="ARG2">
-                  <shadow asynccall="false" colour="#5ba593" dependencyby="l|H[RMMc{wRr9,Y)=C-=" id="g`#ZQKt[uzx+)%:F^U`W" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                  <shadow asynccall="false" colour="#5ba593" dependencyby="l|H[RMMc{wRr9,Y)=C-=" id="g`#ZQKt[uzx+)%:F^U`W" origintype="text" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="text">
                     <field customattributes="" name="TEXT">Erro ao adicionar item no carrinho</field>
                   </shadow>
                 </value>
@@ -612,5 +498,182 @@
         <field customattributes="" name="VAR">resposta</field>
       </block>
     </value>
+  </block>
+  <block asynccall="false" colour="#fca03b" id="[dz/upDUJY-m!3}GIn)R" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-433" y="326">
+    <field customattributes="" name="NAME">totalCarrinho</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="G]/p-)8p=ZZ+Xqx$h*Ps" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field customattributes="" name="VAR">total</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#5b67a5" dependencyby="[dz/upDUJY-m!3}GIn)R" id="wXg_/b+(ey,M(dusz*:/" origintype="math_number" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="math_number">
+            <field customattributes="" name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="AW:w1vRJbP;9R+HHNRm1" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field customattributes="" name="VAR">lista</field>
+            <value name="VALUE">
+              <block asynccall="false" colour="#aa2f00" dependencyby="[dz/upDUJY-m!3}GIn)R" id="sRRu~_tatq/;BAP7yJ_|" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.query%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Carrinho%22,%22namespace%22:%22app.entity.Carrinho%22,%22alias%22:%22c%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22c%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22c.user%22,%22field%22:%22c.user%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:user%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22Carrinho%22,%22entityFullName%22:%22app.entity.Carrinho%22,%22filter%22:%22select%20c%20from%20Carrinho%20c%20where%20c.user%20=%20:user%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22user%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+                  <arg name="user"/>
+                </mutation>
+                <value name="ARG0">
+                  <block asynccall="false" colour="#fca03b" dependencyby="[dz/upDUJY-m!3}GIn)R" id="l@98FPLI+_SHswEWaLJ?" origintype="procedures_callreturn" output="true" tooltip="Executa a função definida pelo usuário &quot;obterUsuarioLogado&quot; e usa seu retorno." type="procedures_callreturn">
+                    <mutation name="obterUsuarioLogado" return-raw-type="undefined"/>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block asynccall="false" colour="#5ba55b" dependencyby="[dz/upDUJY-m!3}GIn)R" id="|4{/00L^8,t(1rICf/os" origintype="controls_forEach" output="false" tooltip="Faça algumas instruções várias vezes." type="controls_forEach">
+                <field customattributes="" name="VAR">i&lt;app.entity.Carrinho&gt;</field>
+                <value name="LIST">
+                  <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id=";OrARe9_4niY|G[Kq(R," origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field customattributes="" name="VAR">lista</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="Pw8vz=(7mvIU:2Txx~P)" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                    <field customattributes="" name="VAR">itemCardapio&lt;app.entity.ItemCardapio&gt;</field>
+                    <value name="VALUE">
+                      <block asynccall="false" colour="#c88330" dependencyby="[dz/upDUJY-m!3}GIn)R" id="D;4m1k+!iqMTix_eq55t" multilayer="false" namespace="cronapi.object.Operations.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%20do%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20Objeto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20a%20percorrer%20:%20Texto%3C/span%3E%3Cdiv%3E%20Exemplo:%20estado%5B3%5D.uf%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.object.Operations.getObjectField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                        <mutation name="{{cronapi.object.Operations.getObjectField}}">
+                          <arg name="Objeto"/>
+                          <arg name="Caminho a percorrer"/>
+                        </mutation>
+                        <value name="PARAM0">
+                          <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="Xx?/dM:J2AapGy/RM_8_" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field customattributes="" name="VAR">i&lt;app.entity.Carrinho&gt;</field>
+                          </block>
+                        </value>
+                        <value name="PARAM1">
+                          <block asynccall="false" colour="#c88330" dependencyby="[dz/upDUJY-m!3}GIn)R" id="9^cQt?j)6Uk!u*Si%;=#" origintype="procedures_get_field_object" output="true" type="procedures_get_field_object">
+                            <mutation name="" return-raw-type="undefined"/>
+                            <field customattributes="" name="SELECT">itemCardapio</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id=";DT;hC1xOf|2S()ZGLbl" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                        <field customattributes="" name="VAR">total</field>
+                        <value name="VALUE">
+                          <block asynccall="false" colour="#5b6da5" dependencyby="[dz/upDUJY-m!3}GIn)R" id="L9*[9@Z@yvLW)#ZwFta:" origintype="math_arithmetic" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="math_arithmetic">
+                            <mutation items="2"/>
+                            <field customattributes="" name="OP1">ADD</field>
+                            <value name="ARG0">
+                              <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="@GwKkCw%X8)1fYn~_fm$" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field customattributes="" name="VAR">total</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block asynccall="false" colour="#c88330" dependencyby="[dz/upDUJY-m!3}GIn)R" id="JBQsIqpVO;:DFV}~s`E{" multilayer="false" namespace="cronapi.object.Operations.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%20do%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20Objeto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20a%20percorrer%20:%20Texto%3C/span%3E%3Cdiv%3E%20Exemplo:%20estado%5B3%5D.uf%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.object.Operations.getObjectField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                                <mutation name="{{cronapi.object.Operations.getObjectField}}">
+                                  <arg name="Objeto"/>
+                                  <arg name="Caminho a percorrer"/>
+                                </mutation>
+                                <value name="PARAM0">
+                                  <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="JVI!W;YiS3T^]`=,.g(A" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field customattributes="" name="VAR">itemCardapio&lt;app.entity.ItemCardapio&gt;</field>
+                                  </block>
+                                </value>
+                                <value name="PARAM1">
+                                  <block asynccall="false" colour="#c88330" dependencyby="[dz/upDUJY-m!3}GIn)R" id="I{UXRE9KC]Jd,`+J2UC0" origintype="procedures_get_field_object" output="true" type="procedures_get_field_object">
+                                    <mutation name="" return-raw-type="undefined"/>
+                                    <field customattributes="" name="SELECT">preco</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="STj=*ORh$=7|0@Idi!oI" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+        <field customattributes="" name="VAR">total</field>
+      </block>
+    </value>
+  </block>
+  <block asynccall="false" colour="#fca03b" id="_^O:s`G:[!vT@XQP`(j^" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-453" y="346">
+    <field customattributes="" name="NAME">possuiItens</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="8hVSmd:XBHM`B4To,y#2" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field customattributes="" name="VAR">contemProdutos</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#5b80a5" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="Eck=Ml@euPbObJ3[xOi(" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+            <field customattributes="" name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block asynccall="false" colour="#0088ee" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="Gq):j:x?ER|tJGbdQ*?N" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field customattributes="" name="VAR">lista</field>
+            <value name="VALUE">
+              <block asynccall="false" colour="#aa2f00" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="h7livh3;eh_[uEG.iHF=" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.query%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Carrinho%22,%22namespace%22:%22app.entity.Carrinho%22,%22alias%22:%22c%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22c%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22c.user.normalizedUserName%22,%22field%22:%22c.user.normalizedUserName%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:userNormalizedUserName%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22Carrinho%22,%22entityFullName%22:%22app.entity.Carrinho%22,%22filter%22:%22select%20c%20from%20Carrinho%20c%20where%20c.user.normalizedUserName%20=%20:userNormalizedUserName%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22userNormalizedUserName%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+                  <arg name="userNormalizedUserName"/>
+                </mutation>
+                <value name="ARG0">
+                  <block asynccall="false" colour="#487f7f" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="]sJ.?s@@a`WMGv)5px7b" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20login%20do%20usu%C3%A1rio%20logado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20o%20login%20do%20usu%C3%A1rio%20logado.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.getCurrentUserName%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block asynccall="false" colour="#5b80a5" dependencyby="_^O:s`G:[!vT@XQP`(j^" id=",R`%Prll-gV02#l-:{KV" origintype="controls_if" output="false" tooltip="function() {&#10;    [native code]&#10;}" type="controls_if">
+                <value name="IF0">
+                  <block asynccall="false" colour="#5b80a5" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="WP1`I`FH@`!dt62icj!J" origintype="logic_compare" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="logic_compare">
+                    <field customattributes="" name="OP">GT</field>
+                    <value name="A">
+                      <block asynccall="false" colour="#745ba5" dependencyby="_^O:s`G:[!vT@XQP`(j^" id=";B71?NZ]x{n^3h]noU;(" origintype="lists_length" output="true" tooltip="Retorna o tamanho de uma lista." type="lists_length">
+                        <value name="VALUE">
+                          <block asynccall="false" colour="#0088ee" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="hHwknyB)w?w/B@O%HszI" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field customattributes="" name="VAR">lista</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block asynccall="false" colour="#5b67a5" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="Ep3=?r/OvJK+V@MHaR$6" origintype="math_number" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="math_number">
+                        <field customattributes="" name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block asynccall="false" colour="#0088ee" dependencyby="_^O:s`G:[!vT@XQP`(j^" id=".G=Q]Bv@x:)GSMgY/:M_" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                    <field customattributes="" name="VAR">contemProdutos</field>
+                    <value name="VALUE">
+                      <block asynccall="false" colour="#5b80a5" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="i-*tyBwR9(FP_bVTtd7K" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+                        <field customattributes="" name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block asynccall="false" colour="#0088ee" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="*[T0H9;hE5=G)|`d-#DU" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+        <field customattributes="" name="VAR">contemProdutos</field>
+      </block>
+    </value>
+  </block>
+  <block asynccall="false" colour="#5b80a5" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="RkZ5#GsvIc3B[f~C6:3p" origintype="logic_compare" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="logic_compare" x="-832" y="368">
+    <field customattributes="" name="OP">EQ</field>
   </block>
 </blockly>

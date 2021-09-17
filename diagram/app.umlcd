@@ -7,6 +7,7 @@
       "chkApi": false,
       "dataSource": "jdbc/main",
       "disableCache": true,
+      "generationType": "drop-and-create-tables",
       "id": "paperCell",
       "namespace": "app",
       "position": {
@@ -906,25 +907,26 @@
       "angle": 0,
       "attributes": [
         "id:java.lang.String",
-        "descricao:java.lang.String"
+        "descricao:java.lang.String",
+        "imagem:Image Upload (to Database)"
       ],
       "attrs": {
         ".uml-class-attrs-rect": {
-          "height": 70,
+          "height": 90,
           "transform": "translate(0,50)"
         },
         ".uml-class-attrs-text": {
           "font-size": 11,
-          "text": "id\ndescricao\n"
+          "text": "id\ndescricao\nimagem\n"
         },
         ".uml-class-attrs-value": {
           "font-size": 11,
-          "ref-x": 114.75,
-          "text": "Texto\nTexto\n"
+          "ref-x": 81.08333206176758,
+          "text": "Texto\nTexto\nImagem no Banco\n"
         },
         ".uml-class-methods-rect": {
           "height": 30,
-          "transform": "translate(0,120)"
+          "transform": "translate(0,140)"
         },
         ".uml-class-methods-text": {
           "fill": "#0066FF",
@@ -1009,6 +1011,37 @@
           "storageType": "",
           "storageSecret": "",
           "foreignKeyName": ""
+        },
+        {
+          "name": "imagem",
+          "type": "Image Upload (to Database)",
+          "dbName": "imagem",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Imagem",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": ""
         }
       ],
       "generateView": "Auto",
@@ -1027,8 +1060,8 @@
       "role": "Auto",
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
-        "height": 107.89323043823242,
-        "width": 159.046875
+        "height": 119.67058563232422,
+        "width": 187.33333206176758
       },
       "tableName": "categoria_cardapio",
       "tableScheme": null,
@@ -3830,25 +3863,26 @@
         "userName:java.lang.String",
         "theme:java.lang.String",
         "picture:java.lang.String",
-        "restaurante:Restaurante"
+        "restaurante:Restaurante",
+        "avaliacaoApp:java.lang.Integer"
       ],
       "attrs": {
         ".uml-class-attrs-rect": {
-          "height": 390,
+          "height": 410,
           "transform": "translate(0,50)"
         },
         ".uml-class-attrs-text": {
           "font-size": 11,
-          "text": "id\naccessFailedCount\nemail\nemailConfirmed\nlockoutEnabled\nlockoutEnd\nname\nnormalizedEmail\nnormalizedUserName\npassword\nphoneNumber\nphoneNumberConfirmed\nsecurityStamp\ntwoFactorEnabled\nuserName\ntheme\npicture\nrestaurante\n"
+          "text": "id\naccessFailedCount\nemail\nemailConfirmed\nlockoutEnabled\nlockoutEnd\nname\nnormalizedEmail\nnormalizedUserName\npassword\nphoneNumber\nphoneNumberConfirmed\nsecurityStamp\ntwoFactorEnabled\nuserName\ntheme\npicture\nrestaurante\navaliacaoApp\n"
         },
         ".uml-class-attrs-value": {
           "font-size": 11,
-          "ref-x": 155.453125,
-          "text": "Texto\nInteiro\nTexto\nLógico\nLógico\nData e Hora\nTexto\nTexto\nTexto\nTexto\nTexto\nLógico\nTexto\nLógico\nTexto\nTexto\nTexto\nRestaurante\n"
+          "ref-x": 154.46666717529297,
+          "text": "Texto\nInteiro\nTexto\nLógico\nLógico\nData e Hora\nTexto\nTexto\nTexto\nTexto\nTexto\nLógico\nTexto\nLógico\nTexto\nTexto\nTexto\nRestaurante\nInteiro\n"
         },
         ".uml-class-methods-rect": {
           "height": 30,
-          "transform": "translate(0,440)"
+          "transform": "translate(0,460)"
         },
         ".uml-class-methods-text": {
           "fill": "#0066FF",
@@ -4497,6 +4531,37 @@
           "storageType": "",
           "storageSecret": "",
           "foreignKeyName": ""
+        },
+        {
+          "name": "avaliacaoApp",
+          "type": "java.lang.Integer",
+          "dbName": "avaliacao_app",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Avaliacao App",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": ""
         }
       ],
       "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
@@ -4589,8 +4654,8 @@
         ""
       ],
       "size": {
-        "height": 282.7584686279297,
-        "width": 233.390625
+        "height": 294.71018981933594,
+        "width": 231.3833351135254
       },
       "tableName": "USER",
       "type": "uml.Class",
