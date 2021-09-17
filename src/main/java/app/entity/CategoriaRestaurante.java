@@ -10,15 +10,15 @@ import cronapi.rest.security.CronappSecurity;
 
 
 /**
-* Classe que representa a tabela forma_pagamento
+* Classe que representa a tabela categoria_restaurante
 * @generated
 */
 @Entity
-@Table(name = "\"forma_pagamento\"")
+@Table(name = "\"categoria_restaurante\"")
 @XmlRootElement
 @CronappSecurity
-@JsonFilter("app.entity.FormaPagamento")
-public class FormaPagamento implements Serializable {
+@JsonFilter("app.entity.CategoriaRestaurante")
+public class CategoriaRestaurante implements Serializable {
 
     /**
     * UID da classe, necessário na serialização
@@ -41,17 +41,10 @@ public class FormaPagamento implements Serializable {
         private java.lang.String descricao;
 
     /**
-    * @generated
-    */
-    @Column(name = "icone", nullable = false, unique = false, insertable=true, updatable=true)
-        
-        private byte[] icone;
-
-    /**
     * Construtor
     * @generated
     */
-    public FormaPagamento(){
+    public CategoriaRestaurante(){
     }
 
     /**
@@ -69,7 +62,7 @@ public class FormaPagamento implements Serializable {
     * @param id id
     * @generated
     */
-    public FormaPagamento setId(java.lang.String id){
+    public CategoriaRestaurante setId(java.lang.String id){
         this.id = id;
         return this;
     }
@@ -88,27 +81,8 @@ public class FormaPagamento implements Serializable {
     * @param descricao descricao
     * @generated
     */
-    public FormaPagamento setDescricao(java.lang.String descricao){
+    public CategoriaRestaurante setDescricao(java.lang.String descricao){
         this.descricao = descricao;
-        return this;
-    }
-    /**
-    * Obtém icone
-    * return icone
-    * @generated
-    */
-    
-    public byte[] getIcone(){
-        return this.icone;
-    }
-
-    /**
-    * Define icone
-    * @param icone icone
-    * @generated
-    */
-    public FormaPagamento setIcone(byte[] icone){
-        this.icone = icone;
         return this;
     }
 
@@ -119,7 +93,7 @@ public class FormaPagamento implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-FormaPagamento object = (FormaPagamento)obj;
+CategoriaRestaurante object = (CategoriaRestaurante)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }

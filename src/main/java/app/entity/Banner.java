@@ -10,15 +10,15 @@ import cronapi.rest.security.CronappSecurity;
 
 
 /**
-* Classe que representa a tabela forma_pagamento
+* Classe que representa a tabela banner
 * @generated
 */
 @Entity
-@Table(name = "\"forma_pagamento\"")
+@Table(name = "\"banner\"")
 @XmlRootElement
 @CronappSecurity
-@JsonFilter("app.entity.FormaPagamento")
-public class FormaPagamento implements Serializable {
+@JsonFilter("app.entity.Banner")
+public class Banner implements Serializable {
 
     /**
     * UID da classe, necessário na serialização
@@ -36,22 +36,29 @@ public class FormaPagamento implements Serializable {
     /**
     * @generated
     */
-    @Column(name = "descricao", nullable = false, unique = false, insertable=true, updatable=true)
+    @Column(name = "imagem", nullable = false, unique = false, insertable=true, updatable=true)
         
-        private java.lang.String descricao;
+        private byte[] imagem;
 
     /**
     * @generated
     */
-    @Column(name = "icone", nullable = false, unique = false, insertable=true, updatable=true)
+    @Column(name = "titulo", nullable = false, unique = false, insertable=true, updatable=true)
         
-        private byte[] icone;
+        private java.lang.String titulo;
+
+    /**
+    * @generated
+    */
+    @Column(name = "conteudo", nullable = false, unique = false, insertable=true, updatable=true, columnDefinition = "TEXT")
+        
+        private java.lang.String conteudo;
 
     /**
     * Construtor
     * @generated
     */
-    public FormaPagamento(){
+    public Banner(){
     }
 
     /**
@@ -69,46 +76,65 @@ public class FormaPagamento implements Serializable {
     * @param id id
     * @generated
     */
-    public FormaPagamento setId(java.lang.String id){
+    public Banner setId(java.lang.String id){
         this.id = id;
         return this;
     }
     /**
-    * Obtém descricao
-    * return descricao
+    * Obtém imagem
+    * return imagem
     * @generated
     */
     
-    public java.lang.String getDescricao(){
-        return this.descricao;
+    public byte[] getImagem(){
+        return this.imagem;
     }
 
     /**
-    * Define descricao
-    * @param descricao descricao
+    * Define imagem
+    * @param imagem imagem
     * @generated
     */
-    public FormaPagamento setDescricao(java.lang.String descricao){
-        this.descricao = descricao;
+    public Banner setImagem(byte[] imagem){
+        this.imagem = imagem;
         return this;
     }
     /**
-    * Obtém icone
-    * return icone
+    * Obtém titulo
+    * return titulo
     * @generated
     */
     
-    public byte[] getIcone(){
-        return this.icone;
+    public java.lang.String getTitulo(){
+        return this.titulo;
     }
 
     /**
-    * Define icone
-    * @param icone icone
+    * Define titulo
+    * @param titulo titulo
     * @generated
     */
-    public FormaPagamento setIcone(byte[] icone){
-        this.icone = icone;
+    public Banner setTitulo(java.lang.String titulo){
+        this.titulo = titulo;
+        return this;
+    }
+    /**
+    * Obtém conteudo
+    * return conteudo
+    * @generated
+    */
+    
+    public java.lang.String getConteudo(){
+        return this.conteudo;
+    }
+
+    /**
+    * Define conteudo
+    * @param conteudo conteudo
+    * @generated
+    */
+    public Banner setConteudo(java.lang.String conteudo){
+        this.conteudo = conteudo;
         return this;
     }
 
@@ -119,7 +145,7 @@ public class FormaPagamento implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-FormaPagamento object = (FormaPagamento)obj;
+Banner object = (Banner)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }
