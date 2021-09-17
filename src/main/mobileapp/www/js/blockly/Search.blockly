@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="src/main/mobileapp/www/views/logged/home-busca.view.html" resourceType="JS" ruleDescription="Search" ruleName="Search" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
+  <metadata scale="1" scrollx="883.9999999999973" scrolly="8.00000000000017" target="8#v1+|tK_xt:ep[W{/P["/>
+  <block asynccall="false" colour="#fca03b" id="8#v1+|tK_xt:ep[W{/P[" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-547" y="128">
+    <field customattributes="" name="NAME">buscar</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#934848" dependencyby="8#v1+|tK_xt:ep[W{/P[" id="b?vZE9m/2:eHugLy;6I;" multilayer="true" namespace="cronapi.screen.changeValueOfField" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAlterar%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20alterar%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Campo%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Valor%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.changeValueOfField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.screen.changeValueOfField}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Campo"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Valor"/>
+        </mutation>
+        <value name="ARG0">
+          <block asynccall="false" colour="#934848" dependencyby="8#v1+|tK_xt:ep[W{/P[" id="tlzyNGV)1irBR8$KT{{h" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+            <field customattributes="" name="SELECT">params.filtrado</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <shadow asynccall="false" colour="#5ba593" dependencyby="8#v1+|tK_xt:ep[W{/P[" id="7,=CvgSL76,n#$S+Ludx" origintype="text" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="text">
+            <field customattributes="" name="TEXT">true</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block asynccall="false" colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
+    <field customattributes="" name="NAME">Executar</field>
+    <comment h="80" pinned="false" w="160">Search</comment>
+  </block>
+</blockly>
