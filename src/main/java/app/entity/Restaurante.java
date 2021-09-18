@@ -84,6 +84,14 @@ public class Restaurante implements Serializable {
         private byte[] logotipo;
 
     /**
+    * @generated
+    */
+    @ManyToOne
+    @JoinColumn(name="fk_categoriaRestaurante", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+        
+        private CategoriaRestaurante categoriaRestaurante;
+
+    /**
     * Construtor
     * @generated
     */
@@ -240,6 +248,25 @@ public class Restaurante implements Serializable {
     */
     public Restaurante setLogotipo(byte[] logotipo){
         this.logotipo = logotipo;
+        return this;
+    }
+    /**
+    * Obtém categoriaRestaurante
+    * return categoriaRestaurante
+    * @generated
+    */
+    
+    public CategoriaRestaurante getCategoriaRestaurante(){
+        return this.categoriaRestaurante;
+    }
+
+    /**
+    * Define categoriaRestaurante
+    * @param categoriaRestaurante categoriaRestaurante
+    * @generated
+    */
+    public Restaurante setCategoriaRestaurante(CategoriaRestaurante categoriaRestaurante){
+        this.categoriaRestaurante = categoriaRestaurante;
         return this;
     }
 

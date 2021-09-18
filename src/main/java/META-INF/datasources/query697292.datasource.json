@@ -9,7 +9,7 @@
   "query": {
     "isEmpty": true,
     "isRawSql": true,
-    "sqlContent": "select i, i.restaurante.tempoEntrega, i.restaurante.taxaEntrega from ItemCardapio i where i.descricao LIKE (CONCAT(\u0027%\u0027, :descricao, \u0027%\u0027)) OR i.titulo LIKE (CONCAT(\u0027%\u0027, :titulo, \u0027%\u0027)) OR i.restaurante.nome LIKE (CONCAT(\u0027%\u0027, :restauranteNome, \u0027%\u0027)) OR i.restaurante.descricao LIKE (CONCAT(\u0027%\u0027, :restauranteDescricao, \u0027%\u0027))",
+    "sqlContent": "select i, i.restaurante.tempoEntrega, i.restaurante.taxaEntrega from ItemCardapio i where i.descricao LIKE (CONCAT(\u0027%\u0027, :descricao, \u0027%\u0027)) OR i.titulo LIKE (CONCAT(\u0027%\u0027, :titulo, \u0027%\u0027)) ",
     "multiTenant": false,
     "paginatorAutomatic": false,
     "pagination": false
@@ -21,14 +21,6 @@
     },
     {
       "fieldName": "titulo",
-      "fieldValue": ""
-    },
-    {
-      "fieldName": "restauranteNome",
-      "fieldValue": ""
-    },
-    {
-      "fieldName": "restauranteDescricao",
       "fieldValue": ""
     }
   ],
