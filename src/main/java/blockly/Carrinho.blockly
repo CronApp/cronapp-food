@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="" resourceType="JAVA" ruleDescription="Carrinho" ruleName="Carrinho" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
-  <metadata scale="1" scrollx="728.7" scrolly="-352.5" target="9|DN)t{_T4Y,s9%w(;v="/>
+  <metadata scale="1" scrollx="614.7" scrolly="-272.29999999999995" target="[dz/upDUJY-m!3}GIn)R"/>
   <block asynccall="false" colour="#fca03b" id="53`*Bd!4ij-*5HAY~X5x" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-432" y="-303">
     <mutation>
       <arg name="formaPagamento"/>
@@ -635,28 +635,6 @@
                     </next>
                   </block>
                 </statement>
-                <next>
-                  <block asynccall="false" colour="#5ba58c" dependencyby="[dz/upDUJY-m!3}GIn)R" id="zQ[9)ABC^WDmqq16UDsh" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-                    <value name="TEXT">
-                      <shadow asynccall="false" colour="#5ba593" dependencyby="[dz/upDUJY-m!3}GIn)R" id="|g]XIcJH8y/|=Ywyt.{:" origintype="text" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="text">
-                        <field customattributes="" name="TEXT">abc</field>
-                      </shadow>
-                      <block asynccall="false" colour="#5ba58c" dependencyby="[dz/upDUJY-m!3}GIn)R" id="Q=BOvHQtGE*fj*Lz4ArX" origintype="text_join" output="true" tooltip="Criar um pedaço de texto juntando qualquer número de itens." type="text_join">
-                        <mutation items="2"/>
-                        <value name="ADD0">
-                          <block asynccall="false" colour="#5ba593" dependencyby="[dz/upDUJY-m!3}GIn)R" id="Da)OWy)Y=P~0})Ut-#p7" origintype="text" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="text">
-                            <field customattributes="" name="TEXT">TOTAL</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block asynccall="false" colour="#0088ee" dependencyby="[dz/upDUJY-m!3}GIn)R" id="oK(MCA.IG$8xQ.9@`lDl" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                            <field customattributes="" name="VAR">total</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </next>
               </block>
             </next>
           </block>

@@ -288,11 +288,6 @@ public static Var totalCarrinho() throws Exception {
         total =
         cronapi.math.Operations.sum(total,subtotal);
     } // end for
-
-    System.out.println(
-    Var.valueOf(
-    Var.valueOf("TOTAL").toString() +
-    total.toString()).getObjectAsString());
     return total;
    }
  }.call();
