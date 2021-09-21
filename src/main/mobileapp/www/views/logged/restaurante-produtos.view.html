@@ -1,7 +1,7 @@
 <div id="starter" ng-init="" ng-destroy="" data-component="crn-start" screen-params="[{'key':'idRestaurante','value':''}]"><ion-view class="pane">
-  <ion-header-bar align-title="center" class="bar bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar">
+  <ion-header-bar align-title="center" class="bar bar-light" xattr-theme="bar-light" data-component="crn-ion-header-bar">
     <div class="buttons buttons-left header-item">
-      <button class="button button-clear" data-component="crn-button" xattr-type="button-clear" ng-click="cronapi.client('js.blockly.Restaurante.voltar').names().run()"> <i class="icon ion ion-ios-arrow-back"></i> </button>
+      <button class="button button-clear" data-component="crn-button" xattr-type="button-clear" ng-click="cronapi.screen.changeView('#/app/logged/home', [])" onclick=""> <i class="icon ion ion-ios-arrow-back assertive" xattr-icon-theme="assertive"></i> </button>
     </div>
     <h1 class="title"></h1>
     <div class="buttons buttons-right header-item">
@@ -9,5 +9,17 @@
     </div>
   </ion-header-bar>
   <ion-content data-component="crn-ion-content" class="scroll-content has-header">
-  </ion-content>
+  <div data-component="crn-container" data-replace="false" class="component-holder col-xs-6" id="crn-container-20771" crn-repeat="BuscaItens">
+          <a class="item text-left  component-holder col-xs-12" href="" data-component="crn-list-item-thumbnail" id="crn-list-item-thumbnail-61051" crn-repeat="" ng-click="cronapi.screen.changeView('#/app/logged/produto-detalhe', [{'idProduto': BuscaItens.active.id}, {'descricaoProduto': BuscaItens.active.descricao}, {'idRestaurante': BuscaItens.active.restaurante_id}, {'imagemProduto': BuscaItens.active.foto}, {'logoRestaurante': BuscaItens.active.restaurante_logotipo}, {'nomeRestaurante': BuscaItens.active.restaurante_nome}, {'taxaEntregaRestaurante': BuscaItens.active.restaurante_taxaEntrega}, {'tempoEntregaRestaurante': BuscaItens.active.restaurante_tempoEntrega}, {'tituloProduto': BuscaItens.active.titulo}, {'valorProduto': BuscaItens.active.preco}])">
+
+              <img alt="Thumbnail" ng-src="{{'data:image/jpg;base64,'}}{{rowData.foto}}" style="width: 100%;">
+		
+              <h4 class="dark" xattr-theme="dark">{{rowData.titulo}}</h4>
+              
+               <h4 class="dark" xattr-theme="dark">R$ {{rowData.preco|mask:"#.##0,00;0"}}</h4>
+
+              <h5 class="dark" xattr-theme="dark">{{rowData.restaurante_tempoEntrega|mask:"mm"}} min - R$ {{rowData.restaurante_taxaEntrega|mask:"#.##0,00;0"}}</h5>
+             
+          </a>
+      </div></ion-content>
 </ion-view></div>
