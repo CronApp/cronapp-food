@@ -93,6 +93,31 @@ public static Var avaliarApp(@ParamMetaData(description = "nota") Var nota) thro
  * @return Var
  */
 // Descreva esta função...
+public static Var obterLoginUsuario() throws Exception {
+ return new Callable<Var>() {
+
+   private Var retorno = Var.VAR_NULL;
+   private Var usuarioAtual = Var.VAR_NULL;
+   private Var nota = Var.VAR_NULL;
+   private Var erro = Var.VAR_NULL;
+   private Var lista = Var.VAR_NULL;
+   private Var resultado = Var.VAR_NULL;
+   private Var name = Var.VAR_NULL;
+   private Var email = Var.VAR_NULL;
+   private Var phoneNumber = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    return
+cronapi.util.Operations.getCurrentUserName();
+   }
+ }.call();
+}
+
+/**
+ *
+ * @return Var
+ */
+// Descreva esta função...
 public static Var obterUsuarioLogado() throws Exception {
  return new Callable<Var>() {
 

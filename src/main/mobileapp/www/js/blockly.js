@@ -7,6 +7,7 @@ window.blockly.js.blockly = window.blockly.js.blockly || {};
 window.translations = window.translations || {};
 window.translations.localesKeys = ['pt_br','en_us'];
 window.translations.localesRef =  {"pt*":"pt_br","*":"pt_br","en*":"en_us"};
+document.write("<script src='js/blockly/Carrinho.blockly.js?f7ab8037122a941d137333bcb0e16c50'></script>");
 document.write("<script src='js/blockly/FinalizaPedido.blockly.js?a72f42f91b73f189520995ba8f456b90'></script>");
 document.write("<script src='js/blockly/ItemCardapio.blockly.js?733e1ffa52c64e6d34f166da5a4dd524'></script>");
 document.write("<script src='js/blockly/PerfilCliente.blockly.js?4cd353676186531b9c352e562ceab23d'></script>");
