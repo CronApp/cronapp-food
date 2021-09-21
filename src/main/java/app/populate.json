@@ -1790,8 +1790,8 @@
     "restaurante": {
         "id": "969DGD6W-56SZ-256Z-A562-4924595A2135"
       },
-    "promocao": true,
-    "precoPromocional": 31.0,
+    "promocao": false,
+    "precoPromocional": 0.0,
     "_class": "app.entity.ItemCardapio"
   },
   {

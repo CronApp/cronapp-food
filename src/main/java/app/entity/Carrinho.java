@@ -50,6 +50,20 @@ public class Carrinho implements Serializable {
         private User user;
 
     /**
+    * @generated
+    */
+    @Column(name = "quantidade", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Integer quantidade;
+
+    /**
+    * @generated
+    */
+    @Column(name = "valorUnitario", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Double valorUnitario;
+
+    /**
     * Construtor
     * @generated
     */
@@ -111,6 +125,44 @@ public class Carrinho implements Serializable {
     */
     public Carrinho setUser(User user){
         this.user = user;
+        return this;
+    }
+    /**
+    * Obtém quantidade
+    * return quantidade
+    * @generated
+    */
+    
+    public java.lang.Integer getQuantidade(){
+        return this.quantidade;
+    }
+
+    /**
+    * Define quantidade
+    * @param quantidade quantidade
+    * @generated
+    */
+    public Carrinho setQuantidade(java.lang.Integer quantidade){
+        this.quantidade = quantidade;
+        return this;
+    }
+    /**
+    * Obtém valorUnitario
+    * return valorUnitario
+    * @generated
+    */
+    
+    public java.lang.Double getValorUnitario(){
+        return this.valorUnitario;
+    }
+
+    /**
+    * Define valorUnitario
+    * @param valorUnitario valorUnitario
+    * @generated
+    */
+    public Carrinho setValorUnitario(java.lang.Double valorUnitario){
+        this.valorUnitario = valorUnitario;
         return this;
     }
 

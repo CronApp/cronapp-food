@@ -136,9 +136,10 @@ cronapi.list.Operations.getFirst(listaItens);
  * @return Var
  */
 // Descreva esta função...
-public static Var inserirItem(@ParamMetaData(description = "idItem") Var idItem) throws Exception {
+public static Var inserirItem(@ParamMetaData(description = "idItem") Var idItem, @ParamMetaData(description = "qtde") Var qtde) throws Exception {
  return new Callable<Var>() {
 
+   private Var itemCardapio = Var.VAR_NULL;
    private Var exception = Var.VAR_NULL;
    private Var resposta = Var.VAR_NULL;
 
@@ -149,9 +150,12 @@ public static Var inserirItem(@ParamMetaData(description = "idItem") Var idItem)
 
     try {
 
-        cronapi.database.Operations.insert(Var.valueOf("app.entity.Carrinho"),Var.valueOf("itemCardapio",
-        Var.valueOf(getItemCarrinhoPorId(idItem))),Var.valueOf("user",
-        Var.valueOf(obterUsuarioLogado())));
+        itemCardapio =
+        Var.valueOf(getItemCarrinhoPorId(idItem));
+
+        cronapi.database.Operations.insert(Var.valueOf("app.entity.Carrinho"),Var.valueOf("itemCardapio",itemCardapio),Var.valueOf("user",
+        Var.valueOf(obterUsuarioLogado())),Var.valueOf("quantidade",qtde),Var.valueOf("valorUnitario",
+        cronapi.object.Operations.getObjectField(itemCardapio, Var.valueOf("preco"))));
 
         resposta =
         Var.VAR_TRUE;
@@ -161,7 +165,9 @@ public static Var inserirItem(@ParamMetaData(description = "idItem") Var idItem)
         cronapi.util.Operations.log(
         Var.valueOf("General"),
         Var.valueOf("SEVERE"),
-        Var.valueOf("Erro ao adicionar item no carrinho"), Var.VAR_NULL);
+        Var.valueOf(
+        Var.valueOf("Erro ao adicionar na sacola\n").toString() +
+        exception.toString()), Var.VAR_NULL);
      }
     return resposta;
    }
@@ -208,7 +214,8 @@ public static Var possuiItens() throws Exception {
 
     lista =
     cronapi.database.Operations.query(Var.valueOf("app.entity.Carrinho"),Var.valueOf("select c from Carrinho c where c.user.normalizedUserName = :userNormalizedUserName"),Var.valueOf("userNormalizedUserName",
-    cronapi.util.Operations.getCurrentUserName()));
+    cronapi.text.Operations.normalize(
+    cronapi.util.Operations.getCurrentUserName())));
 
     if (
     Var.valueOf(
@@ -235,6 +242,7 @@ public static Var totalCarrinho() throws Exception {
    private Var lista = Var.VAR_NULL;
    private Var i = Var.VAR_NULL;
    private Var total = Var.VAR_NULL;
+   private Var subtotal = Var.VAR_NULL;
 
    public Var call() throws Exception {
 
@@ -251,10 +259,19 @@ public static Var totalCarrinho() throws Exception {
         itemCardapio =
         cronapi.object.Operations.getObjectField(i, Var.valueOf("itemCardapio"));
 
+        subtotal =
+        cronapi.math.Operations.multiply(
+        cronapi.object.Operations.getObjectField(i, Var.valueOf("quantidade")),
+        cronapi.object.Operations.getObjectField(i, Var.valueOf("valorUnitario")));
+
         total =
-        cronapi.math.Operations.sum(total,
-        cronapi.object.Operations.getObjectField(itemCardapio, Var.valueOf("preco")));
+        cronapi.math.Operations.sum(total,subtotal);
     } // end for
+
+    System.out.println(
+    Var.valueOf(
+    Var.valueOf("TOTAL").toString() +
+    total.toString()).getObjectAsString());
     return total;
    }
  }.call();
