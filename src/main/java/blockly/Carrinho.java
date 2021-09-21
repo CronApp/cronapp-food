@@ -179,6 +179,27 @@ public static Var inserirItem(@ParamMetaData(description = "idItem") Var idItem,
  * @return Var
  */
 // Descreva esta função...
+public static Var listaItensCarrinho() throws Exception {
+ return new Callable<Var>() {
+
+   private Var listaItens = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+
+    listaItens =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.Carrinho"),Var.valueOf("select c from Carrinho c where c.user.normalizedUserName = :userNormalizedUserName"),Var.valueOf("userNormalizedUserName",
+    cronapi.text.Operations.normalize(
+    Var.valueOf(obterUsuarioLogado()))));
+    return listaItens;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @return Var
+ */
+// Descreva esta função...
 public static Var obterUsuarioLogado() throws Exception {
  return new Callable<Var>() {
 

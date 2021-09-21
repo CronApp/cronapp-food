@@ -1,0 +1,158 @@
+{
+  "customId": "query715469",
+  "queryName": "Itens do Carrinho do Cliente Logado",
+  "sourceType": "blockly",
+  "baseEntity": "app.entity.Carrinho",
+  "blockly": {
+    "type": "server",
+    "blocklyMethod": "listaItensCarrinho",
+    "blocklyClass": "blockly.Carrinho",
+    "blocklyLanguage": "java",
+    "blocklyParams": [],
+    "blocklyJson": {
+      "namespace": "blockly.Carrinho",
+      "sourcePath": "src/main/java/blockly/Carrinho.blockly",
+      "language": "java",
+      "methods": [
+        {
+          "name": "fecharPedido",
+          "hasReturn": "true",
+          "params": [
+            "formaPagamento",
+            "cep",
+            "logradouro",
+            "numero",
+            "bairro",
+            "cidade",
+            "uf"
+          ]
+        },
+        {
+          "name": "esvaziarCarrinho",
+          "hasReturn": "false",
+          "params": []
+        },
+        {
+          "name": "getItemCarrinhoPorId",
+          "hasReturn": "true",
+          "params": [
+            "idItem"
+          ]
+        },
+        {
+          "name": "inserirItem",
+          "hasReturn": "true",
+          "params": [
+            "idItem",
+            "qtde"
+          ]
+        },
+        {
+          "name": "totalCarrinho",
+          "hasReturn": "true",
+          "params": []
+        },
+        {
+          "name": "obterUsuarioLogado",
+          "hasReturn": "true",
+          "params": []
+        },
+        {
+          "name": "possuiItens",
+          "hasReturn": "true",
+          "params": []
+        },
+        {
+          "name": "listaItensCarrinho",
+          "hasReturn": "true",
+          "params": []
+        }
+      ]
+    },
+    "blocklyGETMethod": "listaItensCarrinho",
+    "blocklyPOSTMethod": "default",
+    "blocklyPUTMethod": "default",
+    "blocklyDELETEMethod": "default",
+    "blocklyFILTERMethod": "listaItensCarrinho",
+    "blocklyCOUNTMethod": "listaItensCarrinho"
+  },
+  "entitySimpleName": null,
+  "entityFullName": null,
+  "query": "",
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "itemCardapio": null,
+    "quantidade": null,
+    "user": null,
+    "valorUnitario": null
+  },
+  "defaultValuesProperties": {
+    "id": {
+      "key": true,
+      "nullable": false,
+      "type": "String"
+    },
+    "itemCardapio": {
+      "key": false,
+      "nullable": false,
+      "type": "ItemCardapio"
+    },
+    "quantidade": {
+      "key": false,
+      "nullable": false,
+      "type": "Integer"
+    },
+    "user": {
+      "key": false,
+      "nullable": false,
+      "type": "User"
+    },
+    "valorUnitario": {
+      "key": false,
+      "nullable": false,
+      "type": "Double"
+    }
+  },
+  "security": {
+    "id": null,
+    "itemCardapio": null,
+    "quantidade": null,
+    "user": null,
+    "valorUnitario": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query715469/",
+  "audit": false
+}
