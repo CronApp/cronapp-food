@@ -47,7 +47,7 @@ div#crn-ion-segment-146435 ul li.active, div#crn-ion-segment-146435 ul li.active
     <div role="tabpanel" class="tab-pane" id="tab2">
       <div data-container="true" data-replace="false">
       <div data-component="crn-container" data-replace="false" class="component-holder col-xs-6 " id="crn-container-765344" crn-repeat="BuscaItens">
-          <a class="item text-left  component-holder col-xs-12" href="" data-component="crn-list-item-thumbnail" id="crn-list-item-thumbnail-503978" crn-repeat="" ng-click="cronapi.screen.changeView('#/app/logged/produto-detalhe', [{'idProduto': BuscaItens.active.id}])">
+          <a class="item text-left  component-holder col-xs-12" href="" data-component="crn-list-item-thumbnail" id="crn-list-item-thumbnail-503978" crn-repeat="" ng-click="cronapi.screen.changeView('#/app/logged/produto-detalhe', [{'idProduto': BuscaItens.active.id}, {'descricaoProduto': BuscaItens.active.descricao}, {'idRestaurante': BuscaItens.active.restaurante_id}, {'imagemProduto': BuscaItens.active.foto}, {'logoRestaurante': BuscaItens.active.restaurante_logotipo}, {'nomeRestaurante': BuscaItens.active.restaurante_nome}, {'taxaEntregaRestaurante': BuscaItens.active.restaurante_taxaEntrega}, {'tempoEntregaRestaurante': BuscaItens.active.restaurante_tempoEntrega}, {'tituloProduto': BuscaItens.active.titulo}, {'valorProduto': BuscaItens.active.preco}])">
 
               <img alt="Thumbnail" ng-src="{{'data:image/jpg;base64,'}}{{rowData.foto}}" style="width: 100%;">
 		
