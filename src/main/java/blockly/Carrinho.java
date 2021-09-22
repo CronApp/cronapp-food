@@ -65,7 +65,8 @@ public static Var fecharPedido(@ParamMetaData(description = "formaPagamento") Va
     try {
 
         restaurantes =
-        cronapi.database.Operations.query(Var.valueOf("app.entity.Carrinho"),Var.valueOf("select c.itemCardapio.restaurante from Carrinho c"));
+        cronapi.database.Operations.query(Var.valueOf("app.entity.Carrinho"),Var.valueOf("select distinct c.itemCardapio.restaurante from Carrinho c where c.user = :user"),Var.valueOf("user",
+        Var.valueOf(obterUsuarioLogado())));
 
         for (Iterator it_restaurante = restaurantes.iterator(); it_restaurante.hasNext();) {
             restaurante = Var.valueOf(it_restaurante.next());
@@ -291,6 +292,39 @@ public static Var totalCarrinho() throws Exception {
 
         total =
         cronapi.math.Operations.sum(total,subtotal);
+    } // end for
+    return total;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @return Var
+ */
+// Descreva esta função...
+public static Var totalFreteCarrinho() throws Exception {
+ return new Callable<Var>() {
+
+   private Var lista = Var.VAR_NULL;
+   private Var i = Var.VAR_NULL;
+   private Var total = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+
+    total =
+    Var.valueOf(0);
+
+    lista =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.Carrinho"),Var.valueOf("select distinct c.itemCardapio.restaurante from Carrinho c where c.user = :user"),Var.valueOf("user",
+    Var.valueOf(obterUsuarioLogado())));
+
+    for (Iterator it_i = lista.iterator(); it_i.hasNext();) {
+        i = Var.valueOf(it_i.next());
+
+        total =
+        cronapi.math.Operations.sum(total,
+        cronapi.object.Operations.getObjectField(i, Var.valueOf("taxaEntrega")));
     } // end for
     return total;
    }

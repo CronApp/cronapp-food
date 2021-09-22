@@ -1,11 +1,11 @@
-<div ng-init="" ng-destroy="" data-component="crn-start" screen-params="[{'key':'totalPedido','value':''}]"><ion-view class="pane"  id="pg-checkout">
-  <ion-header-bar align-title="center" class="bar bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar">
+<div ng-init="" ng-destroy="" data-component="crn-start" screen-params="[{'key':'totalPedido','value':''}]"><ion-view class="pane" id="pg-checkout">
+  <ion-header-bar align-title="center" class="bar bar-light" xattr-theme="bar-light" data-component="crn-ion-header-bar">
     <div class="buttons buttons-left header-item">
-      <button class="button button-clear" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button>
+      <button class="button button-clear" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion ion-ios-arrow-back"></i> </button>
     </div>
-    <h1 class="title">{{'FinalizarPedido' | translate}}</h1>
+    <h1 class="title">FINALIZAR PEDIDO</h1>
     <div class="buttons buttons-right header-item">
-      <button class="button button-clear" menu-toggle="right" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button>
+      
     </div>
   </ion-header-bar>
   <ion-content data-component="crn-ion-content" class="scroll-content has-header">
@@ -14,7 +14,7 @@
         <input type="text" placeholder="Informe seu CEP" aria-label="Aria Label Text" ng-model="vars.cep" mask="" keyboard="">
     </div>
     <button class="button component-holder button-small button-outline button-balanced" type="submit" ng-click="cronapi.client('js.blockly.FinalizaPedido.buscaCep').names().run()" data-component="crn-button" id="crn-button3220" xattr-type="button-outline" xattr-size="button-small" xattr-theme="button-balanced">
-        <i class="ion ion-ios-search"></i><span>Consulta CEP</span>
+        <i class="ion ion-ios-search"></i><span></span>
     </button>
 </div><label class="item item-input item-floating-label component-holder" data-component="crn-input-floating" id="crn-input-floating-350620" cronapp-security=""><span class="input-label">Rua:</span> <input type="text" aria-label="Aria Label Text" placeholder="Rua de Entrega" ng-model="vars.rua" mask="" keyboard=""></label><label class="item item-input item-floating-label component-holder" data-component="crn-input-floating" id="crn-input-floating-250087"><span class="input-label">Número:</span> <input type="text" aria-label="Aria Label Text" placeholder="Número Predial" ng-model="vars.numero" mask="" keyboard=""></label><label class="item item-input item-floating-label component-holder" data-component="crn-input-floating" id="crn-input-floating-258954"><span class="input-label">Bairro:</span> <input type="text" aria-label="Aria Label Text" placeholder="Informe o Bairro" ng-model="vars.bairro" mask="" keyboard=""></label><label class="item item-input item-floating-label component-holder" data-component="crn-input-floating" id="crn-input-floating-84387"><span class="input-label">Cidade:</span> <input type="text" aria-label="Aria Label Text" placeholder="Informe a Cidade" ng-model="vars.cidade" mask="" keyboard=""></label><label class="item item-input item-floating-label component-holder" data-component="crn-input-floating" id="crn-input-floating-212949"><span class="input-label">UF:</span> <input type="text" aria-label="Aria Label Text" placeholder="Informe o seu estado" ng-model="vars.uf" mask="" keyboard=""></label><button class="button button-block component-holder button-balanced" type="submit" xattr-fullsize="button-block" xattr-theme="button-balanced" ng-click="cronapi.client('js.blockly.FinalizaPedido.finalizarPedido').names().run()" data-component="crn-button" id="crn-button-410495"><i class="fa fa-check-square-o"></i> <span>{{'Confirmar' | translate}}</span></button></ion-content>
 </ion-view></div>
