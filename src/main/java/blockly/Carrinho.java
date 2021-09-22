@@ -183,6 +183,7 @@ public static Var listaItensCarrinho() throws Exception {
  return new Callable<Var>() {
 
    private Var listaItens = Var.VAR_NULL;
+   private Var listaRetorno = Var.VAR_NULL;
 
    public Var call() throws Exception {
 
@@ -190,7 +191,10 @@ public static Var listaItensCarrinho() throws Exception {
     cronapi.database.Operations.query(Var.valueOf("app.entity.Carrinho"),Var.valueOf("select c from Carrinho c where c.user.normalizedUserName = :userNormalizedUserName"),Var.valueOf("userNormalizedUserName",
     cronapi.text.Operations.normalize(
     Var.valueOf(obterUsuarioLogado()))));
-    return listaItens;
+
+    listaRetorno =
+    cronapi.json.Operations.toJson(listaItens);
+    return listaRetorno;
    }
  }.call();
 }

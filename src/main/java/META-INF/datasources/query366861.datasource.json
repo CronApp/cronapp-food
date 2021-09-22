@@ -21,7 +21,22 @@
     "rulesSelect": [
       {
         "func": "get",
-        "field": "c.itemCardapio",
+        "field": "c",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "c.itemCardapio.foto",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "c.itemCardapio.preco",
+        "type": "double"
+      },
+      {
+        "func": "get",
+        "field": "c.itemCardapio.restaurante.nome",
         "type": "string"
       }
     ],
@@ -82,17 +97,23 @@
   "defaultValues": {
     "id": null,
     "itemCardapio": null,
-    "user": null
+    "user": null,
+    "quantidade": null,
+    "valorUnitario": null
   },
   "defaultValuesProperties": {
     "id": null,
     "itemCardapio": null,
-    "user": null
+    "user": null,
+    "quantidade": null,
+    "valorUnitario": null
   },
   "security": {
     "id": null,
     "itemCardapio": null,
-    "user": null
+    "user": null,
+    "quantidade": null,
+    "valorUnitario": null
   },
   "calcFields": {},
   "calcFieldsSecurity": {},
