@@ -37,5 +37,35 @@ public static Var getRestaurantePorUsuario() throws Exception {
  }.call();
 }
 
+/**
+ *
+ * @param @ParamMetaData
+ * @return Var
+ */
+// Descreva esta função...
+public static Var getLogoRestaurante(@ParamMetaData(description = "idProduto") Var idProduto) throws Exception {
+ return new Callable<Var>() {
+
+   private Var lista = Var.VAR_NULL;
+   private Var item = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+
+    System.out.println(
+    Var.valueOf(
+    Var.valueOf("ID RECEBIDO").toString() +
+    idProduto.toString()).getObjectAsString());
+
+    lista =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.ItemCardapio"),Var.valueOf("select i.restaurante from ItemCardapio i where i.id = :id"),Var.valueOf("id",idProduto));
+
+    item =
+    cronapi.list.Operations.getFirst(lista);
+    return
+cronapi.object.Operations.getObjectField(item, Var.valueOf("logotipo"));
+   }
+ }.call();
+}
+
 }
 
