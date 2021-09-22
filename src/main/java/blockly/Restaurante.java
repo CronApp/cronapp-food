@@ -67,5 +67,27 @@ cronapi.object.Operations.getObjectField(item, Var.valueOf("logotipo"));
  }.call();
 }
 
+/**
+ *
+ * @param @ParamMetaData
+ * @return Var
+ */
+// Descreva esta função...
+public static Var getRestaurentePorId(@ParamMetaData(description = "id2") Var id2) throws Exception {
+ return new Callable<Var>() {
+
+   private Var idProduto = Var.VAR_NULL;
+   private Var lista = Var.VAR_NULL;
+   private Var item = Var.VAR_NULL;
+   private Var listRestaurantes = Var.VAR_NULL;
+   private Var restauranteLogado = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    return
+cronapi.database.Operations.query(Var.valueOf("app.entity.Restaurante"),Var.valueOf("select r from Restaurante r where r.id = :id"),Var.valueOf("id",id2));
+   }
+ }.call();
+}
+
 }
 
