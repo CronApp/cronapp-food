@@ -8,7 +8,7 @@ window.blockly.js.blockly.Restaurante = window.blockly.js.blockly.Restaurante ||
  */
 window.blockly.js.blockly.Restaurante.voltarArgs = [];
 window.blockly.js.blockly.Restaurante.voltar = async function() {
- var taxa, taxaCalculada;
+ var item;
   this.cronapi.screen.back();
 }
 
@@ -17,7 +17,7 @@ window.blockly.js.blockly.Restaurante.voltar = async function() {
  */
 window.blockly.js.blockly.Restaurante.converteStringEmFloatArgs = ['taxa'];
 window.blockly.js.blockly.Restaurante.converteStringEmFloat = async function(taxa) {
- var taxaCalculada;
+
   taxaCalculada = (taxa * 1);
   return taxaCalculada;
 }
@@ -27,7 +27,7 @@ window.blockly.js.blockly.Restaurante.converteStringEmFloat = async function(tax
  */
 window.blockly.js.blockly.Restaurante.inicializarTelaArgs = [];
 window.blockly.js.blockly.Restaurante.inicializarTela = async function() {
- var taxa, taxaCalculada;
+ var item;
   item = await this.cronapi.util.callServerBlockly('blockly.Restaurante:getRestaurentePorId', this.cronapi.screen.getValueOfField("params.idRestaurante"));
   this.cronapi.screen.changeValueOfField("vars.nomeRestaurante", this.cronapi.object.getObjectField(item, 'nome'));
 }

@@ -23,6 +23,11 @@
         "func": "get",
         "field": "p",
         "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "p.restaurante.logotipo",
+        "type": "string"
       }
     ],
     "rulesGroupBy": [],
