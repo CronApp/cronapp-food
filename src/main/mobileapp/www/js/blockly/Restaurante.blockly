@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="src/main/mobileapp/www/views/logged/restaurante-produtos.view.html" resourceType="JS" ruleDescription="Restaurante" ruleName="Restaurante" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
-  <metadata scale="1" scrollx="738.3000000000001" scrolly="-50" target="E4ZG.D}?u_)b02jTD5}n"/>
+  <metadata scale="1" scrollx="691.3000000000002" scrolly="-104.20000000000016" target="K)+iHN`X9|JH8Sm6|3l`"/>
   <block asynccall="false" colour="#fca03b" id="5LwLh|@tQ/kbdu:qDC**" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-502" y="68">
     <field customattributes="" name="NAME">voltar</field>
     <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
@@ -9,7 +9,40 @@
       </block>
     </statement>
   </block>
-  <block asynccall="false" colour="#fca03b" id="E4ZG.D}?u_)b02jTD5}n" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-562" y="173">
+  <block asynccall="false" colour="#fca03b" id="K)+iHN`X9|JH8Sm6|3l`" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-562" y="173">
+    <mutation>
+      <arg name="taxa"/>
+    </mutation>
+    <field customattributes="" name="NAME">converteStringEmFloat</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" dependencyby="K)+iHN`X9|JH8Sm6|3l`" id="d?$Su?8PX2Q:U1t).pnE" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field customattributes="" name="VAR">taxaCalculada</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#5b6da5" dependencyby="K)+iHN`X9|JH8Sm6|3l`" id="w(BOolMF*3#[@{4K3pPt" origintype="math_arithmetic" output="true" tooltip="function () { [native code] }" type="math_arithmetic">
+            <mutation items="2"/>
+            <field customattributes="" name="OP1">MULTIPLY</field>
+            <value name="ARG0">
+              <block asynccall="false" colour="#0088ee" dependencyby="K)+iHN`X9|JH8Sm6|3l`" id="|-i77{YZSt5?*VPeL@yN" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">taxa</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block asynccall="false" colour="#5b67a5" dependencyby="K)+iHN`X9|JH8Sm6|3l`" id="n%F,8B]yc+pXDGl%=!r6" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field customattributes="" name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block asynccall="false" colour="#0088ee" dependencyby="K)+iHN`X9|JH8Sm6|3l`" id="*!SO4X^2Va+qNPDjI^Cg" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+        <field customattributes="" name="VAR">taxaCalculada</field>
+      </block>
+    </value>
+  </block>
+  <block asynccall="false" colour="#fca03b" id="E4ZG.D}?u_)b02jTD5}n" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-499" y="204">
     <field customattributes="" name="NAME">inicializarTela</field>
     <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
     <statement name="STACK">
