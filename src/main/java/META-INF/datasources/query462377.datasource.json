@@ -50,6 +50,15 @@
           "operator": "equal",
           "value": ":userId",
           "valueIsField": false
+        },
+        {
+          "id": "p.statusPedido",
+          "field": "p.statusPedido",
+          "type": "string",
+          "input": "text",
+          "operator": "not_equal",
+          "value": ":statusPedido",
+          "valueIsField": false
         }
       ],
       "not": false,
@@ -87,6 +96,10 @@
           ]
         }
       }
+    },
+    {
+      "fieldName": "statusPedido",
+      "fieldValue": "\"Em Prepara\\u00E7\\u00E3o\""
     }
   ],
   "verbs": {

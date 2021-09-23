@@ -1,0 +1,103 @@
+{
+  "customId": "query22934",
+  "queryName": "Pedidos Em Preparação do Usuario Logado",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Pedido",
+  "entityFullName": "app.entity.Pedido",
+  "query": {
+    "isEmpty": true,
+    "isRawSql": true,
+    "sqlContent": "select p, p.restaurante.logotipo from Pedido p where p.user.id \u003d :userId AND p.statusPedido \u003d :statusPedido   order by p.dataPedido desc",
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "userId",
+      "fieldValue": "blockly.FuncoesUsuario:IdDoUsuarioLogado"
+    },
+    {
+      "fieldName": "statusPedido",
+      "fieldValue": "\"Em Prepara\\u00E7\\u00E3o\""
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "dataPedido": null,
+    "statusPedido": null,
+    "user": null,
+    "restaurante": null,
+    "formaPagamento": null,
+    "cep": null,
+    "rua": null,
+    "numero": null,
+    "bairro": null,
+    "cidade": null,
+    "estado": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "dataPedido": null,
+    "statusPedido": null,
+    "user": null,
+    "restaurante": null,
+    "formaPagamento": null,
+    "cep": null,
+    "rua": null,
+    "numero": null,
+    "bairro": null,
+    "cidade": null,
+    "estado": null
+  },
+  "security": {
+    "id": null,
+    "dataPedido": null,
+    "statusPedido": null,
+    "user": null,
+    "restaurante": null,
+    "formaPagamento": null,
+    "cep": null,
+    "rua": null,
+    "numero": null,
+    "bairro": null,
+    "cidade": null,
+    "estado": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query22934/",
+  "audit": false
+}
