@@ -23,6 +23,21 @@
         "func": "get",
         "field": "i",
         "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "i.restaurante.id",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "i.restaurante.taxaEntrega",
+        "type": "double"
+      },
+      {
+        "func": "get",
+        "field": "i.restaurante.tempoEntrega",
+        "type": "date"
       }
     ],
     "rulesGroupBy": [],
