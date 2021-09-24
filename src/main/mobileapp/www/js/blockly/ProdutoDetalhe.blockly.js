@@ -8,7 +8,7 @@ window.blockly.js.blockly.ProdutoDetalhe = window.blockly.js.blockly.ProdutoDeta
  */
 window.blockly.js.blockly.ProdutoDetalhe.adicionarArgs = [];
 window.blockly.js.blockly.ProdutoDetalhe.adicionar = async function() {
- var idProduto, item;
+
   await this.cronapi.util.callServerBlocklyNoReturn('blockly.Carrinho:inserirItem', this.cronapi.screen.getValueOfField("params.idProduto"), this.cronapi.screen.getValueOfField("vars.quantidade"));
   this.cronapi.screen.changeView("#/app/logged/carrinho",[  ]);
 }
@@ -18,7 +18,7 @@ window.blockly.js.blockly.ProdutoDetalhe.adicionar = async function() {
  */
 window.blockly.js.blockly.ProdutoDetalhe.voltarArgs = [];
 window.blockly.js.blockly.ProdutoDetalhe.voltar = async function() {
- var idProduto, item;
+
   this.cronapi.screen.back();
 }
 
@@ -27,7 +27,7 @@ window.blockly.js.blockly.ProdutoDetalhe.voltar = async function() {
  */
 window.blockly.js.blockly.ProdutoDetalhe.mostraRestauranteArgs = ['idProduto'];
 window.blockly.js.blockly.ProdutoDetalhe.mostraRestaurante = async function(idProduto) {
- var item;
+
   item = await this.cronapi.util.callServerBlockly('blockly.Restaurante:getRestaurantePorIdProduto', idProduto);
   console.log(String('RECEBIDO:') + String(item));
   this.cronapi.screen.changeView("#/app/logged/restaurante-produtos",[ { categoriaRestaurante : null } , { idRestaurante : this.cronapi.json.getProperty(item, 'id') } , { logotipoRestaurante : this.cronapi.json.getProperty(item, 'logotipoRestaurante') } , { nomeRestaurante : this.cronapi.json.getProperty(item, 'nome') } , { taxaEntregaRestaurante : this.cronapi.json.getProperty(item, 'taxaEntrega') } , { tempoEntregaRestaurante : this.cronapi.json.getProperty(item, 'tempoEntrega') } ]);
@@ -38,7 +38,7 @@ window.blockly.js.blockly.ProdutoDetalhe.mostraRestaurante = async function(idPr
  */
 window.blockly.js.blockly.ProdutoDetalhe.getLogoRestauranteArgs = ['idProduto'];
 window.blockly.js.blockly.ProdutoDetalhe.getLogoRestaurante = async function(idProduto) {
- var item;
+
   return String('data:image/jpg;base64,') + String(await this.cronapi.util.callServerBlockly('blockly.Restaurante:getLogoRestaurante', idProduto));
 }
 
@@ -47,7 +47,7 @@ window.blockly.js.blockly.ProdutoDetalhe.getLogoRestaurante = async function(idP
  */
 window.blockly.js.blockly.ProdutoDetalhe.obterTotalItemArgs = [];
 window.blockly.js.blockly.ProdutoDetalhe.obterTotalItem = async function() {
- var idProduto, item;
+
   qtde = this.cronapi.screen.getValueOfField("vars.quantidade");
   valorUnit = this.cronapi.screen.getValueOfField("params.valorProduto");
   valorTotal = (qtde * valorUnit);
@@ -59,6 +59,6 @@ window.blockly.js.blockly.ProdutoDetalhe.obterTotalItem = async function() {
  */
 window.blockly.js.blockly.ProdutoDetalhe.inicializaTelaArgs = [];
 window.blockly.js.blockly.ProdutoDetalhe.inicializaTela = async function() {
- var idProduto, item;
+
   this.cronapi.screen.changeValueOfField("vars.quantidade", 1);
 }

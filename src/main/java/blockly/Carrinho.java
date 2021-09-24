@@ -90,7 +90,7 @@ public static Var fecharPedido(@ParamMetaData(description = "formaPagamento") Va
 
                 itemPedido =
                 cronapi.database.Operations.newEntity(Var.valueOf("app.entity.PedidoItem"),Var.valueOf("quantidade",
-                Var.valueOf(1)),Var.valueOf("valorUnitario",
+                cronapi.object.Operations.getObjectField(itemCarrinho, Var.valueOf("quantidade"))),Var.valueOf("valorUnitario",
                 cronapi.object.Operations.getObjectField(itemCardapio, Var.valueOf("preco"))),Var.valueOf("pedido",pedidoRestaurante),Var.valueOf("itemCardapio",itemCardapio));
 
                 cronapi.database.Operations.insert(Var.valueOf("app.entity.PedidoItem"),itemPedido);
