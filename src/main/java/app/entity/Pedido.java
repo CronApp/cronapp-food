@@ -114,6 +114,20 @@ public class Pedido implements Serializable {
         private java.lang.String estado;
 
     /**
+    * @generated
+    */
+    @Column(name = "valorItens", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Double valorItens;
+
+    /**
+    * @generated
+    */
+    @Column(name = "valorFrete", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Double valorFrete;
+
+    /**
     * Construtor
     * @generated
     */
@@ -346,6 +360,44 @@ public class Pedido implements Serializable {
     */
     public Pedido setEstado(java.lang.String estado){
         this.estado = estado;
+        return this;
+    }
+    /**
+    * Obtém valorItens
+    * return valorItens
+    * @generated
+    */
+    
+    public java.lang.Double getValorItens(){
+        return this.valorItens;
+    }
+
+    /**
+    * Define valorItens
+    * @param valorItens valorItens
+    * @generated
+    */
+    public Pedido setValorItens(java.lang.Double valorItens){
+        this.valorItens = valorItens;
+        return this;
+    }
+    /**
+    * Obtém valorFrete
+    * return valorFrete
+    * @generated
+    */
+    
+    public java.lang.Double getValorFrete(){
+        return this.valorFrete;
+    }
+
+    /**
+    * Define valorFrete
+    * @param valorFrete valorFrete
+    * @generated
+    */
+    public Pedido setValorFrete(java.lang.Double valorFrete){
+        this.valorFrete = valorFrete;
         return this;
     }
 

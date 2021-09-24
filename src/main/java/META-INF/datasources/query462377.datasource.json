@@ -7,101 +7,14 @@
   "entitySimpleName": "Pedido",
   "entityFullName": "app.entity.Pedido",
   "query": {
-    "isValid": true,
-    "isEmpty": false,
-    "operationType": "object",
-    "type": "select",
-    "rulesEntity": [
-      {
-        "entity": "Pedido",
-        "namespace": "app.entity.Pedido",
-        "alias": "p"
-      }
-    ],
-    "rulesSelect": [
-      {
-        "func": "get",
-        "field": "p",
-        "type": "string"
-      },
-      {
-        "func": "get",
-        "field": "p.restaurante.logotipo",
-        "type": "string"
-      }
-    ],
-    "rulesGroupBy": [],
-    "rulesHaving": [],
-    "rulesOrderBy": [
-      {
-        "func": "get",
-        "field": "p.dataPedido",
-        "order": "desc"
-      }
-    ],
-    "rules": {
-      "condition": "AND",
-      "rules": [
-        {
-          "id": "p.user.id",
-          "field": "p.user.id",
-          "type": "string",
-          "input": "text",
-          "operator": "equal",
-          "value": ":userId",
-          "valueIsField": false
-        },
-        {
-          "id": "p.statusPedido",
-          "field": "p.statusPedido",
-          "type": "string",
-          "input": "text",
-          "operator": "not_equal",
-          "value": ":statusPedido",
-          "valueIsField": false
-        }
-      ],
-      "not": false,
-      "valid": true
-    },
-    "isRawSql": false,
+    "isEmpty": true,
+    "isRawSql": true,
+    "sqlContent": "select p, p.restaurante.logotipo from Pedido p where p.statusPedido \u003c\u003e \u0027Em Preparação\u0027 order by p.dataPedido desc",
     "multiTenant": false,
     "paginatorAutomatic": false,
     "pagination": false
   },
-  "queryParamsValues": [
-    {
-      "fieldName": "userId",
-      "fieldValue": {
-        "type": "server",
-        "blocklyMethod": "IdDoUsuarioLogado",
-        "blocklyClass": "blockly.FuncoesUsuario",
-        "blocklyLanguage": "java",
-        "blocklyParams": [],
-        "blocklyJson": {
-          "namespace": "blockly.FuncoesUsuario",
-          "sourcePath": "src/main/java/blockly/FuncoesUsuario.blockly",
-          "language": "java",
-          "methods": [
-            {
-              "name": "LoginDoUsuario",
-              "hasReturn": "true",
-              "params": []
-            },
-            {
-              "name": "IdDoUsuarioLogado",
-              "hasReturn": "true",
-              "params": []
-            }
-          ]
-        }
-      }
-    },
-    {
-      "fieldName": "statusPedido",
-      "fieldValue": "\"Em Prepara\\u00E7\\u00E3o\""
-    }
-  ],
+  "queryParamsValues": [],
   "verbs": {
     "GET": true,
     "GETAuthorities": null,

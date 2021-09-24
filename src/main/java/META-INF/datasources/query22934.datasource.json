@@ -9,21 +9,12 @@
   "query": {
     "isEmpty": true,
     "isRawSql": true,
-    "sqlContent": "select p, p.restaurante.logotipo from Pedido p where p.user.id \u003d :userId AND p.statusPedido \u003d :statusPedido   order by p.dataPedido desc",
+    "sqlContent": "select p, p.restaurante.logotipo from Pedido p where p.statusPedido \u003d \u0027Em Preparação\u0027 order by p.dataPedido desc",
     "multiTenant": false,
     "paginatorAutomatic": false,
     "pagination": false
   },
-  "queryParamsValues": [
-    {
-      "fieldName": "userId",
-      "fieldValue": "blockly.FuncoesUsuario:IdDoUsuarioLogado"
-    },
-    {
-      "fieldName": "statusPedido",
-      "fieldValue": "\"Em Prepara\\u00E7\\u00E3o\""
-    }
-  ],
+  "queryParamsValues": [],
   "verbs": {
     "GET": true,
     "GETAuthorities": null,

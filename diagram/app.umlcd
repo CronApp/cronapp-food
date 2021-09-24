@@ -2571,25 +2571,27 @@
         "numero:java.lang.String",
         "bairro:java.lang.String",
         "cidade:java.lang.String",
-        "estado:java.lang.String"
+        "estado:java.lang.String",
+        "valorItens:java.lang.Double",
+        "valorFrete:java.lang.Double"
       ],
       "attrs": {
         ".uml-class-attrs-rect": {
-          "height": 270,
+          "height": 310,
           "transform": "translate(0,50)"
         },
         ".uml-class-attrs-text": {
           "font-size": 11,
-          "text": "id\ndataPedido\nstatusPedido\nuser\nrestaurante\nformaPagamento\ncep\nrua\nnumero\nbairro\ncidade\nestado\n"
+          "text": "id\ndataPedido\nstatusPedido\nuser\nrestaurante\nformaPagamento\ncep\nrua\nnumero\nbairro\ncidade\nestado\nvalorItens\nvalorFrete\n"
         },
         ".uml-class-attrs-value": {
           "font-size": 11,
           "ref-x": 118.36666870117188,
-          "text": "Texto\nTexto\nTexto\nUser\nRestaurante\nFormaPagamento\nTexto\nTexto\nTexto\nTexto\nTexto\nTexto\n"
+          "text": "Texto\nTexto\nTexto\nUser\nRestaurante\nFormaPagamento\nTexto\nTexto\nTexto\nTexto\nTexto\nTexto\nNumérico\nNumérico\n"
         },
         ".uml-class-methods-rect": {
           "height": 30,
-          "transform": "translate(0,320)"
+          "transform": "translate(0,360)"
         },
         ".uml-class-methods-text": {
           "fill": "#0066FF",
@@ -2984,6 +2986,68 @@
           "storageType": "",
           "storageSecret": "",
           "foreignKeyName": ""
+        },
+        {
+          "name": "valorItens",
+          "type": "java.lang.Double",
+          "dbName": "valorItens",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Valor Itens",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": ""
+        },
+        {
+          "name": "valorFrete",
+          "type": "java.lang.Double",
+          "dbName": "valorFrete",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Valor Frete",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": ""
         }
       ],
       "generateView": "Auto",
@@ -3002,7 +3066,7 @@
       "role": "Auto",
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
-        "height": 217.91427612304688,
+        "height": 239.84100341796875,
         "width": 223.4000015258789
       },
       "tableName": "pedido",
