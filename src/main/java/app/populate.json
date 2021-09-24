@@ -2558,5 +2558,188 @@
     "promocao": false,
     "precoPromocional": 0,
     "_class": "app.entity.ItemCardapio"
+  },
+  {
+    "_class": "app.entity.Pedido",
+    "id": "C9A2106E-3D63-46A8-929E-8FD170B7C475",
+    "dataPedido": "2021-09-04T09:51:28Z",
+    "statusPedido": "Entregue",
+    "user": {"id" : "c35bc8d9-d309-4552-8f9f-6ca583a24a43"},
+    "restaurante": {"id" : "523DGD6W-56SZ-256Z-A562-4924595A8965"},
+    "formaPagamento": {"id" : "DINHEIRO"},
+    "cep": "05874250",
+    "rua": "Avenida Turquesa",
+    "numero": "2541",
+    "bairro": "Parque Novo Santo Amaro",
+    "cidade": "São Paulo",
+    "estado": "SP"
+  },
+  {
+    "_class": "app.entity.Pedido",
+    "id": "434D1C9F-69C4-4A0E-9D1B-0E0C1843D950",
+    "dataPedido": "2021-09-10T22:32:53Z",
+    "statusPedido": "Entregue",
+    "user": {"id" : "c35bc8d9-d309-4552-8f9f-6ca583a24a43"},
+    "restaurante": {"id" : "856EGD6W-56SZ-256Z-A562-4924595A5695"},
+    "formaPagamento": {"id" : "PIX"},
+    "cep": "02267050",
+    "rua": "Rua Silva Maranhão",
+    "numero": "25",
+    "bairro": "Vila Gustavo",
+    "cidade": "São Paulo",
+    "estado": "SP"
+  },
+  {
+    "_class": "app.entity.Pedido",
+    "id": "4853A547-EF79-4000-B900-B85011EEE1F6",
+    "dataPedido": "2021-09-14T08:42:48Z",
+    "statusPedido": "Entregue",
+    "user": {"id" : "c35bc8d9-d309-4552-8f9f-6ca583a24a43"},
+    "restaurante": {"id" : "969DGD6W-56SZ-256Z-A562-4924595A2135"},
+    "formaPagamento": {"id" : "CARTAO_CREDITO"},
+    "cep": "01245000",
+    "rua": "Rua Itápolis",
+    "numero": "785",
+    "bairro": "Pacaembu",
+    "cidade": "São Paulo",
+    "estado": "SP"
+  },
+  {
+    "_class": "app.entity.Pedido",
+    "id": "CC74B6DD-F6B1-42D3-A001-D342F2A46FDA",
+    "dataPedido": "2021-09-17T21:52:37Z",
+    "statusPedido": "Entregue",
+    "user": {"id" : "c35bc8d9-d309-4552-8f9f-6ca583a24a43"},
+    "restaurante": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A9813"},
+    "formaPagamento": {"id" : "PIX"},
+    "cep": "04180060",
+    "rua": "Rua Professor Hauptmann",
+    "numero": "2361",
+    "bairro": "Jardim Maria Estela",
+    "cidade": "São Paulo",
+    "estado": "SP"
+  },
+  {
+    "_class": "app.entity.Pedido",
+    "id": "592348FF-7822-42D9-81E5-98AC06FB32FA",
+    "dataPedido": "2021-09-19T16:47:38Z",
+    "statusPedido": "Em Preparação",
+    "user": {"id" : "c35bc8d9-d309-4552-8f9f-6ca583a24a43"},
+    "restaurante": {"id" : "965YGD6W-56SZ-256Z-A562-4924595A3214"},
+    "formaPagamento": {"id" : "DINHEIRO"},
+    "cep": "02110900",
+    "rua": "Rua Alcântara",
+    "numero": "328",
+    "bairro": "Vila Maria",
+    "cidade": "São Paulo",
+    "estado": "SP"
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "BD010BD4-7B4D-445A-AD48-FF1D6441C2B1",
+    "quantidade": 2,
+    "valorUnitario": 5.0,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8165"},
+    "pedido": {"id" : "C9A2106E-3D63-46A8-929E-8FD170B7C475"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "23E727B5-9455-4CA5-8D6D-DDBCDEA6BE6C",
+    "quantidade": 3,
+    "valorUnitario": 14.90,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8163"},
+    "pedido": {"id" : "C9A2106E-3D63-46A8-929E-8FD170B7C475"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "1B8D2D76-1463-4E37-8E5D-3DAEA50B3F92",
+    "quantidade": 1,
+    "valorUnitario": 13.0,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8184"},
+    "pedido": {"id" : "434D1C9F-69C4-4A0E-9D1B-0E0C1843D950"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "8A0025B3-1DE6-4387-B2C9-A188EFC7A510",
+    "quantidade": 4,
+    "valorUnitario": 16.70,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8188"},
+    "pedido": {"id" : "434D1C9F-69C4-4A0E-9D1B-0E0C1843D950"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "6D05E87B-696C-411B-BD47-85C4335F67C0",
+    "quantidade": 2,
+    "valorUnitario": 15.40,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8187"},
+    "pedido": {"id" : "434D1C9F-69C4-4A0E-9D1B-0E0C1843D950"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "D48AF2C4-9571-4006-A25A-9A1106D615DA",
+    "quantidade": 1,
+    "valorUnitario": 32.90,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8178"},
+    "pedido": {"id" : "4853A547-EF79-4000-B900-B85011EEE1F6"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "486D8689-6879-4639-A2B4-AB13D2886DA4",
+    "quantidade": 2,
+    "valorUnitario": 10.0,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8224"},
+    "pedido": {"id" : "CC74B6DD-F6B1-42D3-A001-D342F2A46FDA"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "046C0236-CB61-4967-B4B9-B21D977EC0D3",
+    "quantidade": 2,
+    "valorUnitario": 22.0,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8226"},
+    "pedido": {"id" : "CC74B6DD-F6B1-42D3-A001-D342F2A46FDA"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "6EE14D91-8E65-4EE1-96C1-DB16580731F8",
+    "quantidade": 3,
+    "valorUnitario": 5.0,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8228"},
+    "pedido": {"id" : "CC74B6DD-F6B1-42D3-A001-D342F2A46FDA"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "B8D84E76-3F3E-4B28-8698-6B823F02B1FA",
+    "quantidade": 4,
+    "valorUnitario": 5.0,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8201"},
+    "pedido": {"id" : "592348FF-7822-42D9-81E5-98AC06FB32FA"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "C970D505-F283-4850-8111-C6D31F35B161",
+    "quantidade": 6,
+    "valorUnitario": 5.0,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8200"},
+    "pedido": {"id" : "592348FF-7822-42D9-81E5-98AC06FB32FA"}
+    
+  },
+  {
+    "_class": "app.entity.PedidoItem",
+    "id": "29B36805-F5E2-4552-B508-06E9800E0A4A",
+    "quantidade": 12,
+    "valorUnitario": 6.0,
+    "itemCardapio": {"id" : "659WGD6W-56SZ-256Z-A562-4924595A8203"},
+    "pedido": {"id" : "592348FF-7822-42D9-81E5-98AC06FB32FA"}
+    
   }
 ]
