@@ -4,7 +4,8 @@ window.blockly.js.blockly = window.blockly.js.blockly || {};
 window.blockly.js.blockly.FinalizaPedido = window.blockly.js.blockly.FinalizaPedido || {};
 
 /**
- * Descreva esta função...
+ * Método responsável por invocar o bloco no servidor, passando
+ * os parâmetros necessários para que o pedido seja finalizado
  */
 window.blockly.js.blockly.FinalizaPedido.finalizarPedidoArgs = [];
 window.blockly.js.blockly.FinalizaPedido.finalizarPedido = async function() {
@@ -14,7 +15,8 @@ window.blockly.js.blockly.FinalizaPedido.finalizarPedido = async function() {
 }
 
 /**
- * Descreva esta função...
+ * Método invocado na tela de finalização para buscar
+ * o endereço do cliente a partir do CEP informado.
  */
 window.blockly.js.blockly.FinalizaPedido.buscaCepArgs = [];
 window.blockly.js.blockly.FinalizaPedido.buscaCep = async function() {

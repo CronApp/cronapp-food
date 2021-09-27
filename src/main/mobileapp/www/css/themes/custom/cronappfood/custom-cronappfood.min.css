@@ -508,6 +508,7 @@ a.assertive {
 }
 
 #pg-store-detail .scroll-content .scroll div:first-child {
+    padding-top: var(--distanceExtraSmall);
     margin-bottom: var(--distanceBig);
 }
 
@@ -565,12 +566,17 @@ a.assertive {
 #pg-product-detail .bar.bar-footer {
     margin: var(--distanceSmall);
     width: calc(100% - 2 * var(--distanceSmall));
+    background-image: none;
 }
 
 #pg-product-detail .bar.bar-footer button {
     margin: 0;
     border-radius: var(--borderRadiusExtraSmall);
     margin-left: 10px;
+}
+
+#pg-product-detail .bar.bar-footer button span {
+    color: var(--colorNeutral00) !important;
 }
 
 #pg-product-detail .scroll-content + * button {
@@ -580,6 +586,14 @@ a.assertive {
 /* ==== CHECKOUT PAGE ==== */
 #pg-checkout .scroll-content {
     margin: 20px;
+}
+
+#pg-checkout .scroll > div:nth-child(2) {
+    white-space: normal;
+}
+
+#pg-checkout .scroll > div:nth-child(2) select {
+    background: transparent;
 }
 
 #pg-checkout .scroll label.item-input {
@@ -610,6 +624,7 @@ a.assertive {
     width: 50%;
     padding: 0;
     margin: 0;
+    top: 0;
 }
 
 #pg-checkout .scroll label:nth-child(3) input {
@@ -648,6 +663,67 @@ a.assertive {
 
 #pg-checkout .scroll label + button {
     margin-top: 20px;
+}
+
+/* ==== ORDER PAGE ==== */
+#pg-orders .scroll > div > h2 {
+    margin: 10px 0 0 0;
+}
+
+#pg-order-detail .scroll > div.component-holder:nth-child(4) {
+    display: table;
+    width: 100%;
+    padding-top: var(--distanceExtraSmall);
+    margin-bottom:  var(--distanceMedium);
+}
+
+#pg-order-detail .scroll > div.component-holder:nth-child(4) > div.component-holder * {
+    margin: 0;
+    padding: 0;
+}
+
+#pg-order-detail .scroll > div.component-holder:nth-child(4) > div.component-holder:nth-child(1) {
+    margin-bottom:  var(--distanceMedium);
+    display: flex;
+}
+
+#pg-order-detail .scroll > div.component-holder:nth-child(4) > div.component-holder:nth-child(1) h2 {
+    font-size: 18px !important;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+#pg-order-detail .scroll > div.component-holder:nth-child(4) > div.component-holder:nth-child(1) div:nth-child(2) {
+    width: 20%;
+    margin-left: auto;
+}
+
+#pg-order-detail .scroll > div.component-holder:nth-child(4) > div.component-holder:nth-child(1) div:nth-child(3),
+#pg-order-detail .scroll > div.component-holder:nth-child(4) > div.component-holder:nth-child(1) div:nth-child(4) {
+    display: none;
+}
+
+#pg-order-detail .scroll > div.component-holder:nth-child(4) > div.component-holder:nth-child(2) {
+    text-align: center;
+    margin-bottom: var(--distanceExtraSmall);
+}
+
+#pg-order-detail .scroll > div.component-holder:nth-child(4) > div.component-holder img {
+    border-radius: var(--borderRadiusFull);
+}
+
+#pg-order-detail .list .item-content {
+    display: flex;
+}
+
+#pg-order-detail .list .item-content > img {
+    width: 100px;
+}
+
+#pg-order-detail .list .item-content > div {
+    width: calc(100% - 100px);
+    padding-left: var(--distanceExtraSmall);
 }
 
 /* ==== MODAL ==== */

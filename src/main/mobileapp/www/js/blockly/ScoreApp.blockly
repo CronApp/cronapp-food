@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="src/main/mobileapp/www/views/logged/home-perfil.view.html" resourceType="JS" ruleDescription="ScoreApp" ruleName="ScoreApp" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
-  <metadata scale="1" scrollx="713.5" scrolly="-11" target="N:_4|#z9D3c~T[7Yrvga"/>
+  <metadata scale="1" scrollx="768.2999999999998" scrolly="-7.800000000000011" target="N:_4|#z9D3c~T[7Yrvga"/>
   <block asynccall="false" colour="#fca03b" id="N:_4|#z9D3c~T[7Yrvga" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-592" y="83">
     <field customattributes="" name="NAME">avaliarApp</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método responsável por enviar ao servidor a nota informada pelo cliente, e mostrar uma mensagem agradecendo a sua votação.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#5b80a5" dependencyby="N:_4|#z9D3c~T[7Yrvga" id="4@XIrqkcp}$bEF?NJWo~" origintype="exception_trycatch" output="false" tooltip="Tratamento de exceção" type="exception_trycatch">
         <mutation catch="1"/>
@@ -101,7 +101,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="V5P|DsMWON.)re2/MF#f" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-742" y="143">
     <field customattributes="" name="NAME">showModal</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método para mostrar a janela com a opção de atribuir uma nota ao app mobile.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#934848" dependencyby="V5P|DsMWON.)re2/MF#f" id="`W`:Usn;(//yT/T`##g%" multilayer="true" namespace="cronapi.screen.showIonicModal" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibir%20modal%20mobile%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20um%20modal%20em%20dispositivos%20mobile%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20a%20ser%20modificado%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.showIonicModal%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
         <mutation name="{{cronapi.screen.showIonicModal}}" return-raw-type="undefined">
@@ -117,7 +117,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="5Rhtb`9XkuI^;yu,8)f%" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-727" y="248">
     <field customattributes="" name="NAME">closeModal</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método para fechar a janela que é aberta para a votação da nota do app mobile.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#934848" dependencyby="5Rhtb`9XkuI^;yu,8)f%" id="`h6)Nso%$aZ+D!c8tq@l" multilayer="true" namespace="cronapi.screen.hideIonicModal" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EEsconder%20modal%20mobile%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20esconde%20um%20modal%20em%20dispositivos%20mobile%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20a%20ser%20modificado%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.hideIonicModal%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
         <mutation name="{{cronapi.screen.hideIonicModal}}" return-raw-type="undefined">

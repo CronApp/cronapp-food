@@ -32,7 +32,7 @@ cronapi.util.Operations.getCurrentUserName());
  *
  * @return Var
  */
-// Descreva esta função...
+// Método para obter o ID do usuário logado no banco de dados
 public static Var IdDoUsuarioLogado() throws Exception {
  return new Callable<Var>() {
 
@@ -55,7 +55,7 @@ cronapi.list.Operations.getFirst(lista);
  * @param @ParamMetaData
  * @return Var
  */
-// Descreva esta função...
+// Método responsável por registrar a nota atribuida ao app pelo usuário logado.
 public static Var avaliarApp(@ParamMetaData(description = "nota") Var nota) throws Exception {
  return new Callable<Var>() {
 
@@ -92,7 +92,7 @@ public static Var avaliarApp(@ParamMetaData(description = "nota") Var nota) thro
  *
  * @return Var
  */
-// Descreva esta função...
+// método utilizado para obter o login do usuário no sistema.
 public static Var obterLoginUsuario() throws Exception {
  return new Callable<Var>() {
 
@@ -117,7 +117,7 @@ cronapi.util.Operations.getCurrentUserName();
  *
  * @return Var
  */
-// Descreva esta função...
+// Método responsável por obter o objeto que representa o usuário logado no sistema.
 public static Var obterUsuarioLogado() throws Exception {
  return new Callable<Var>() {
 
@@ -139,7 +139,7 @@ cronapi.list.Operations.getFirst(lista);
  * @param @ParamMetaData
  * @return Var
  */
-// Descreva esta função...
+// Método invocado pela tela de alterações de dados pessoais no perfil, através do app mobile. Atualiza as informações do usuário logado.
 public static Var updatePersonData(@ParamMetaData(description = "name") Var name, @ParamMetaData(description = "email") Var email, @ParamMetaData(description = "phoneNumber") Var phoneNumber) throws Exception {
  return new Callable<Var>() {
 

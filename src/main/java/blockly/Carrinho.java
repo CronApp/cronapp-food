@@ -179,7 +179,7 @@ public static Var inserirItem(@ParamMetaData(description = "idItem") Var idItem,
  *
  * @return Var
  */
-// Descreva esta função...
+// Método criado para consultar no banco de dados os itens que estão no carrinho do usuário atual, e retornar um JSON para ser utilizado na aplicação mobile
 public static Var listaItensCarrinho() throws Exception {
  return new Callable<Var>() {
 
@@ -204,7 +204,7 @@ public static Var listaItensCarrinho() throws Exception {
  *
  * @return Var
  */
-// Descreva esta função...
+// Método que retorna o objeto que representa o usuário logado no sistema.
 public static Var obterUsuarioLogado() throws Exception {
  return new Callable<Var>() {
 
@@ -226,7 +226,7 @@ cronapi.list.Operations.getFirst(lista);
  *
  * @return Var
  */
-// Descreva esta função...
+// Método que consulta os itens do carrinho no banco de dados, e se a lista retornada for maior que zero, informa que o carrinho possui itens, se a quantidade for zero, retorna que não possui. Método utilizado para exibir ou não o botão da sacola no app mobile.
 public static Var possuiItens() throws Exception {
  return new Callable<Var>() {
 
@@ -260,7 +260,7 @@ public static Var possuiItens() throws Exception {
  *
  * @return Var
  */
-// Descreva esta função...
+// Método que consulta os itens do carrinho do usuário logado, e posteriormente soma o total para mostrar na tela do app mobile.
 public static Var totalCarrinho() throws Exception {
  return new Callable<Var>() {
 
@@ -302,7 +302,7 @@ public static Var totalCarrinho() throws Exception {
  *
  * @return Var
  */
-// Descreva esta função...
+// Método que Calcula o total do frete do carrinho. Como no carrinho podem ser adicionados produtos de mais de um restaurante, ele faz uma consulta dos restaurantes existentes no carrinho e posteriormente varre o resultado somando o frete dos restaurantes para obter o total.
 public static Var totalFreteCarrinho() throws Exception {
  return new Callable<Var>() {
 

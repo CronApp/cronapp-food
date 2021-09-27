@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="" resourceType="JAVA" ruleDescription="FuncoesUsuario" ruleName="FuncoesUsuario" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
-  <metadata scale="1" scrollx="698.7" scrolly="-340.5" target="3u-Hgki{22k`htz1jErO"/>
+  <metadata scale="1" scrollx="843.3" scrolly="-97.80000000000007" target="O1rYRUO(AZ`?=v@QPcnN"/>
   <block asynccall="false" colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
     <field customattributes="" name="NAME">LoginDoUsuario</field>
     <comment h="80" pinned="false" w="160">FuncoesUsuario</comment>
@@ -24,7 +24,7 @@
       <arg name="nota"/>
     </mutation>
     <field customattributes="" name="NAME">avaliarApp</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método responsável por registrar a nota atribuida ao app pelo usuário logado.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" dependencyby="O1rYRUO(AZ`?=v@QPcnN" id="_K54GweUXxBv_D|FJCRG" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">retorno</field>
@@ -110,7 +110,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="gBUA{m46#}Fsd^C~wy5b" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-352" y="218">
     <field customattributes="" name="NAME">obterUsuarioLogado</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método responsável por obter o objeto que representa o usuário logado no sistema.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" dependencyby="gBUA{m46#}Fsd^C~wy5b" id="4egb_.kc7PF}9RYV0(,2" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">lista</field>
@@ -148,7 +148,7 @@
       <arg name="phoneNumber"/>
     </mutation>
     <field customattributes="" name="NAME">updatePersonData</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método invocado pela tela de alterações de dados pessoais no perfil, através do app mobile. Atualiza as informações do usuário logado.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" dependencyby="GZH5nZt{)(`S?@-nb,pI" id="/MoOP5K-8F/X23#?XINu" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">resultado</field>
@@ -361,7 +361,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="JlOBo;D94RzceT}khU_*" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-277" y="293">
     <field customattributes="" name="NAME">IdDoUsuarioLogado</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método para obter o ID do usuário logado no banco de dados</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" dependencyby="JlOBo;D94RzceT}khU_*" id="U_T_Te0A,,q{fmHa,!6|" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">lista</field>
@@ -404,7 +404,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="3u-Hgki{22k`htz1jErO" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-517" y="413">
     <field customattributes="" name="NAME">obterLoginUsuario</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">método utilizado para obter o login do usuário no sistema.</comment>
     <value name="RETURN">
       <block asynccall="false" colour="#487f7f" dependencyby="3u-Hgki{22k`htz1jErO" id="Rl|D(Wc6#X)4GqX^?+wF" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20login%20do%20usu%C3%A1rio%20logado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20o%20login%20do%20usu%C3%A1rio%20logado.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.getCurrentUserName%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
         <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>

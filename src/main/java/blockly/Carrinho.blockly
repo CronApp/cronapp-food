@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="" resourceType="JAVA" ruleDescription="Carrinho" ruleName="Carrinho" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
-  <metadata scale="1" scrollx="566.3000000000004" scrolly="228.29999999999995" target="53`*Bd!4ij-*5HAY~X5x"/>
+  <metadata scale="1" scrollx="609.3" scrolly="-250.6" target="[dz/upDUJY-m!3}GIn)R"/>
   <block asynccall="false" colour="#fca03b" id="53`*Bd!4ij-*5HAY~X5x" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-390" y="-237">
     <mutation>
       <arg name="formaPagamento"/>
@@ -670,7 +670,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="gBUA{m46#}Fsd^C~wy5b" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-264" y="326">
     <field customattributes="" name="NAME">obterUsuarioLogado</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método que retorna o objeto que representa o usuário logado no sistema.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" dependencyby="gBUA{m46#}Fsd^C~wy5b" id="4egb_.kc7PF}9RYV0(,2" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">lista</field>
@@ -716,7 +716,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="BrJNS`35R,A_j?*(*m$Y" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-413" y="366">
     <field customattributes="" name="NAME">totalFreteCarrinho</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método que Calcula o total do frete do carrinho. Como no carrinho podem ser adicionados produtos de mais de um restaurante, ele faz uma consulta dos restaurantes existentes no carrinho e posteriormente varre o resultado somando o frete dos restaurantes para obter o total.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" dependencyby="BrJNS`35R,A_j?*(*m$Y" id="OO]8AdyJjNqYi!7xVBUR" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">total</field>
@@ -797,7 +797,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="_^O:s`G:[!vT@XQP`(j^" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-450" y="369">
     <field customattributes="" name="NAME">possuiItens</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método que consulta os itens do carrinho no banco de dados, e se a lista retornada for maior que zero, informa que o carrinho possui itens, se a quantidade for zero, retorna que não possui. Método utilizado para exibir ou não o botão da sacola no app mobile.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" dependencyby="_^O:s`G:[!vT@XQP`(j^" id="8hVSmd:XBHM`B4To,y#2" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">contemProdutos</field>
@@ -876,7 +876,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="9|DN)t{_T4Y,s9%w(;v=" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-472" y="443">
     <field customattributes="" name="NAME">listaItensCarrinho</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método criado para consultar no banco de dados os itens que estão no carrinho do usuário atual, e retornar um JSON para ser utilizado na aplicação mobile</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" dependencyby="9|DN)t{_T4Y,s9%w(;v=" id="0ASN;oe;pjy.MG%~wzdM" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">listaItens</field>

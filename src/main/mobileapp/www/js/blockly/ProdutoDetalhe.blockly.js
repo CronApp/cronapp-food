@@ -14,7 +14,8 @@ window.blockly.js.blockly.ProdutoDetalhe.adicionar = async function() {
 }
 
 /**
- * Descreva esta função...
+ * Método criado para dar funcionalidade ao botão
+ * voltar no topo da página de detalhe do produto.
  */
 window.blockly.js.blockly.ProdutoDetalhe.voltarArgs = [];
 window.blockly.js.blockly.ProdutoDetalhe.voltar = async function() {
@@ -23,7 +24,8 @@ window.blockly.js.blockly.ProdutoDetalhe.voltar = async function() {
 }
 
 /**
- * Descreva esta função...
+ * Método que invoca o bloco no servidor para obter as informações
+ * do restaurante e exibir na tela de detalhe do produto.
  */
 window.blockly.js.blockly.ProdutoDetalhe.mostraRestauranteArgs = ['idProduto'];
 window.blockly.js.blockly.ProdutoDetalhe.mostraRestaurante = async function(idProduto) {
@@ -34,7 +36,8 @@ window.blockly.js.blockly.ProdutoDetalhe.mostraRestaurante = async function(idPr
 }
 
 /**
- * Descreva esta função...
+ * Método que obtém o logotipo do restaurante a partir do id de
+ * produto informado, chamando remotamente o bloco servidor.
  */
 window.blockly.js.blockly.ProdutoDetalhe.getLogoRestauranteArgs = ['idProduto'];
 window.blockly.js.blockly.ProdutoDetalhe.getLogoRestaurante = async function(idProduto) {
@@ -43,7 +46,8 @@ window.blockly.js.blockly.ProdutoDetalhe.getLogoRestaurante = async function(idP
 }
 
 /**
- * ProdutoDetalhe
+ * Método que realiza o cálculo e atualiza em tempo real o subtotal do item,
+ * multiplicando a quantidade informada pelo valor unitário do produto.
  */
 window.blockly.js.blockly.ProdutoDetalhe.obterTotalItemArgs = [];
 window.blockly.js.blockly.ProdutoDetalhe.obterTotalItem = async function() {
@@ -55,7 +59,8 @@ window.blockly.js.blockly.ProdutoDetalhe.obterTotalItem = async function() {
 }
 
 /**
- * Descreva esta função...
+ * Método criado para definir sempre que a tela de detalhe do
+ * produto é aberta que o campo quantidade receba o valor 1
  */
 window.blockly.js.blockly.ProdutoDetalhe.inicializaTelaArgs = [];
 window.blockly.js.blockly.ProdutoDetalhe.inicializaTela = async function() {

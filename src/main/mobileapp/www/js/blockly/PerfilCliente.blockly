@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="src/main/mobileapp/www/views/logged/home-perfil.view.html" resourceType="JS" ruleDescription="PerfilCliente" ruleName="PerfilCliente" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
-  <metadata scale="1" scrollx="923.5" scrolly="-101.49999999999994" target="K52E{!F~~;CAO18[^MWQ"/>
+  <metadata scale="1" scrollx="27.200012207031477" scrolly="-349.80000000000007" target="Anb:u5+^,0vLkL9QIqn5"/>
   <block asynccall="false" colour="#fca03b" id="iQCqxccPvR:^boy|mH^/" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-742" y="158">
     <field customattributes="" name="NAME">sairDoSistema</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método criado para efetuar o logout do sistema no app mobile.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#934848" dependencyby="iQCqxccPvR:^boy|mH^/" id=":-?HHpf,y;^+1$*P$IYP" multilayer="true" namespace="cronapi.screen.logout" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ELogout%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20faz%20o%20logout%20do%20usu%C3%A1rio%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.logout%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
         <mutation name="{{cronapi.screen.logout}}" return-raw-type="undefined"/>
@@ -11,7 +11,7 @@
   </block>
   <block asynccall="false" colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="338" y="173">
     <field customattributes="" name="NAME">definirUsuarioLogado</field>
-    <comment h="80" pinned="false" w="160">PerfilCliente</comment>
+    <comment h="80" pinned="true" w="160">Método responsável por obter as informações do us a partir do banco de dados</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#g_X9qMGsA9]+DLH-E~T" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">usuarioLogado&lt;app.entity.User&gt;</field>
@@ -164,7 +164,7 @@
   </block>
   <block asynccall="false" colour="#fca03b" id="K52E{!F~~;CAO18[^MWQ" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-802" y="293">
     <field customattributes="" name="NAME">avaliarApp</field>
-    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <comment h="80" pinned="false" w="160">Método que registra a nota de avaliação do cliente em relação ao uso do app mobile. Este método invoca o bloco no servidor para registrar no banco de dados essa nota.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#5b80a5" dependencyby="K52E{!F~~;CAO18[^MWQ" id="4@XIrqkcp}$bEF?NJWo~" origintype="exception_trycatch" output="false" tooltip="Tratamento de exceção" type="exception_trycatch">
         <mutation catch="1" finally="1"/>

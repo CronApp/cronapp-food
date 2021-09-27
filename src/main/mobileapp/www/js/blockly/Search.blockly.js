@@ -4,18 +4,11 @@ window.blockly.js.blockly = window.blockly.js.blockly || {};
 window.blockly.js.blockly.Search = window.blockly.js.blockly.Search || {};
 
 /**
- * Descreva esta função...
+ * Método criado para alterar a visibilidade das abas que
+ * mostram o resultado da busca na tela do app mobile.
  */
 window.blockly.js.blockly.Search.buscarArgs = [];
 window.blockly.js.blockly.Search.buscar = async function() {
 
   this.cronapi.screen.changeValueOfField("params.filtrado", 'true');
-}
-
-/**
- * Search
- */
-window.blockly.js.blockly.Search.ExecutarArgs = [];
-window.blockly.js.blockly.Search.Executar = async function() {
-
 }

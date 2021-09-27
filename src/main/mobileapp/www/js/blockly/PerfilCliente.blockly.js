@@ -4,20 +4,22 @@ window.blockly.js.blockly = window.blockly.js.blockly || {};
 window.blockly.js.blockly.PerfilCliente = window.blockly.js.blockly.PerfilCliente || {};
 
 /**
- * Descreva esta função...
+ * Método criado para efetuar o logout do sistema no app mobile.
  */
 window.blockly.js.blockly.PerfilCliente.sairDoSistemaArgs = [];
 window.blockly.js.blockly.PerfilCliente.sairDoSistema = async function() {
- var notaAvaliacao, retorno;
+ var usuarioLogado;
   this.cronapi.screen.logout();
 }
 
 /**
- * PerfilCliente
+ * Método responsável por obter as informações do usuário a
+ * partir do banco de dados por um bloco no servidor, e setar
+ * essas informações em parâmetros da tela de perfil do cliente.
  */
 window.blockly.js.blockly.PerfilCliente.definirUsuarioLogadoArgs = [];
 window.blockly.js.blockly.PerfilCliente.definirUsuarioLogado = async function() {
- var notaAvaliacao, retorno;
+ var usuarioLogado;
   usuarioLogado = await this.cronapi.util.callServerBlockly('blockly.FuncoesUsuario:obterUsuarioLogado');
   this.cronapi.screen.changeValueOfField("params.nomeUsuarioLogado", this.cronapi.object.getProperty(usuarioLogado, 'name'));
   this.cronapi.screen.changeValueOfField("params.emailUsuarioLogado", this.cronapi.object.getProperty(usuarioLogado, 'email'));
@@ -26,11 +28,13 @@ window.blockly.js.blockly.PerfilCliente.definirUsuarioLogado = async function() 
 }
 
 /**
- * Descreva esta função...
+ * Método que registra a nota de avaliação do cliente em
+ * relação ao uso do app mobile. Este método invoca o bloco
+ * no servidor para registrar no banco de dados essa nota.
  */
 window.blockly.js.blockly.PerfilCliente.avaliarAppArgs = [];
 window.blockly.js.blockly.PerfilCliente.avaliarApp = async function() {
- var notaAvaliacao, retorno;
+ var usuarioLogado;
   try {
      this.cronapi.screen.showLoading();
     notaAvaliacao = this.cronapi.screen.getValueOfField("params.notaAvaliacaoApp");

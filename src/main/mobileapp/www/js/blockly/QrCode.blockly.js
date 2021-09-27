@@ -4,7 +4,9 @@ window.blockly.js.blockly = window.blockly.js.blockly || {};
 window.blockly.js.blockly.QrCode = window.blockly.js.blockly.QrCode || {};
 
 /**
- * QrCode
+ * Método que abre o leitor de qr code do dispositivo
+ * móvel para ler um qrcode, mostrando uma mensagem em
+ * caso de sucesso, e outra em caso de não conseguir ler.
  */
 window.blockly.js.blockly.QrCode.EfetuarPagamentoArgs = [];
 window.blockly.js.blockly.QrCode.EfetuarPagamento = async function() {

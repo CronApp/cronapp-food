@@ -4,7 +4,8 @@ window.blockly.js.blockly = window.blockly.js.blockly || {};
 window.blockly.js.blockly.ScoreApp = window.blockly.js.blockly.ScoreApp || {};
 
 /**
- * Descreva esta função...
+ * Método responsável por enviar ao servidor a nota informada pelo
+ * cliente, e mostrar uma mensagem agradecendo a sua votação.
  */
 window.blockly.js.blockly.ScoreApp.avaliarAppArgs = [];
 window.blockly.js.blockly.ScoreApp.avaliarApp = async function() {
@@ -26,7 +27,7 @@ window.blockly.js.blockly.ScoreApp.avaliarApp = async function() {
 }
 
 /**
- * Descreva esta função...
+ * Método para mostrar a janela com a opção de atribuir uma nota ao app mobile.
  */
 window.blockly.js.blockly.ScoreApp.showModalArgs = [];
 window.blockly.js.blockly.ScoreApp.showModal = async function() {
@@ -35,7 +36,7 @@ window.blockly.js.blockly.ScoreApp.showModal = async function() {
 }
 
 /**
- * Descreva esta função...
+ * Método para fechar a janela que é aberta para a votação da nota do app mobile.
  */
 window.blockly.js.blockly.ScoreApp.closeModalArgs = [];
 window.blockly.js.blockly.ScoreApp.closeModal = async function() {
