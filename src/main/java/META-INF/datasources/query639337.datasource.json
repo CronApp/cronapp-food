@@ -1,0 +1,127 @@
+{
+  "customId": "query639337",
+  "queryName": "Soma de Itens da Sacola do Cliente Logado",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Carrinho",
+  "entityFullName": "app.entity.Carrinho",
+  "query": {
+    "isEmpty": true,
+    "isRawSql": true,
+    "sqlContent": "select COALESCE(SUM(c.quantidade * c.valorUnitario), 0) from Carrinho c where c.user.id \u003d :userId",
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "userId",
+      "fieldValue": {
+        "type": "server",
+        "blocklyMethod": "IdDoUsuarioLogado",
+        "blocklyClass": "blockly.FuncoesUsuario",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.FuncoesUsuario",
+          "sourcePath": "src/main/java/blockly/FuncoesUsuario.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "LoginDoUsuario",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "avaliarApp",
+              "hasReturn": "true",
+              "params": [
+                "nota"
+              ]
+            },
+            {
+              "name": "obterUsuarioLogado",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "updatePersonData",
+              "hasReturn": "true",
+              "params": [
+                "name",
+                "email",
+                "phoneNumber"
+              ]
+            },
+            {
+              "name": "IdDoUsuarioLogado",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "obterLoginUsuario",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "itemCardapio": null,
+    "user": null,
+    "quantidade": null,
+    "valorUnitario": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "itemCardapio": null,
+    "user": null,
+    "quantidade": null,
+    "valorUnitario": null
+  },
+  "security": {
+    "id": null,
+    "itemCardapio": null,
+    "user": null,
+    "quantidade": null,
+    "valorUnitario": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query639337/",
+  "audit": false
+}

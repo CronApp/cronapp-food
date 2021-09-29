@@ -1,0 +1,128 @@
+{
+  "customId": "query48741",
+  "queryName": "Produto por Id",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "ItemCardapio",
+  "entityFullName": "app.entity.ItemCardapio",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "ItemCardapio",
+        "namespace": "app.entity.ItemCardapio",
+        "alias": "i"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "i",
+        "type": "string"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "i.id",
+          "field": "i.id",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "value": ":id",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "id",
+      "fieldValue": ""
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "titulo": null,
+    "descricao": null,
+    "foto": null,
+    "preco": null,
+    "servePessoas": null,
+    "categoriaCardapio": null,
+    "restaurante": null,
+    "promocao": null,
+    "precoPromocional": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "titulo": null,
+    "descricao": null,
+    "foto": null,
+    "preco": null,
+    "servePessoas": null,
+    "categoriaCardapio": null,
+    "restaurante": null,
+    "promocao": null,
+    "precoPromocional": null
+  },
+  "security": {
+    "id": null,
+    "titulo": null,
+    "descricao": null,
+    "foto": null,
+    "preco": null,
+    "servePessoas": null,
+    "categoriaCardapio": null,
+    "restaurante": null,
+    "promocao": null,
+    "precoPromocional": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query48741/",
+  "audit": false
+}

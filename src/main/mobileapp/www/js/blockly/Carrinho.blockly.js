@@ -4,9 +4,7 @@ window.blockly.js.blockly = window.blockly.js.blockly || {};
 window.blockly.js.blockly.Carrinho = window.blockly.js.blockly.Carrinho || {};
 
 /**
- * Método criado para definir no parâmetro da tela
- * do carrinho o usuário logado no sistema, chamando
- * um bloco do servidor para obter essa informação.
+ * Carrinho
  */
 window.blockly.js.blockly.Carrinho.definirLoginUsuarioArgs = [];
 window.blockly.js.blockly.Carrinho.definirLoginUsuario = async function() {

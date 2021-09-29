@@ -13,6 +13,6 @@
     "cronapi-js": "^2.8.14",
     "cronapp-common-js": "^2.8.6",
     "cronapp-framework-js": "^2.8.21",
-    "cronapp-lib-js": "^2.8.1"
+    "cronapp-lib-js": "^2.8.2"
   }
 }
