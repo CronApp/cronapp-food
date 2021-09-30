@@ -1,6 +1,8 @@
 <!doctype html>
 <html ng-app="MyApp" update-language>
  <head> 
+  <link rel="stylesheet" href="node_modules/angular-timeline/dist/angular-timeline-animations.css"> 
+  <link rel="stylesheet" href="node_modules/angular-timeline/dist/angular-timeline-bootstrap.css"> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <meta http-equiv="X-UA-Compatible" content="IE=5,9,10,11;Edge"> 
@@ -17,6 +19,9 @@
   <script src="js/customStateProvider.js"></script> 
   <link rel="stylesheet" href="node_modules/pace/themes/pace-theme-minimal.css"> 
   <script src="node_modules/cronapp-framework-js/dist/js/stateProvider.js"></script> 
+  <script src="node_modules/signature_pad/dist/signature_pad.umd.min.js"></script> 
+  <link rel="stylesheet" href="node_modules/angular-timeline/dist/angular-timeline.css"> 
+  <script src="node_modules/angular-timeline/dist/angular-timeline.js"></script> 
  </head> 
  <body> 
   <input type="hidden" id="projectName" value="Cronapp Food"> 
@@ -91,6 +96,8 @@
   <script src="node_modules/cronapp-common-js/dist/js/parser.js"></script> 
   <script src="node_modules/cronapp-common-js/dist/js/datasource/datasource.js"></script> 
   <script src="node_modules/ui-select/dist/select.min.js"></script> 
-  <script src="node_modules/cronapp-lib-js/dist/js/kendo-ui/js/timezones/kendo.timezones.min.js"></script>  
+  <script src="node_modules/cronapp-lib-js/dist/js/kendo-ui/js/timezones/kendo.timezones.min.js"></script> 
+  <script src="node_modules/cronapp-framework-js/dist/js/dashboard/dashboard.service.js"></script> 
+  <script src="node_modules/@cronapp/framework-core/cronapp.framework.js"></script>  
  </body>
 </html>
