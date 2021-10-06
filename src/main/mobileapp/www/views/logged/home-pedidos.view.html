@@ -1,4 +1,4 @@
-<div id="pg-orders" ng-init="" ng-destroy="" data-component="crn-start" screen-params="[{'key':'teste','value':''}]"><ion-view class="pane" id="pg-orders">
+<div id="starter" ng-init="cronapi.client('js.blockly.Pedidos.initTela').names().run()" ng-destroy="" data-component="crn-start" screen-params="[{'key':'exibeBotaoSacola','value':''},{'key':'valorTotalSacola','value':''}]"><div id="pg-orders" ng-init="" ng-destroy="" data-component="crn-start" screen-params="[{'key':'teste','value':''}]"><ion-view class="pane" id="pg-orders">
   
   <ion-header-bar class="bar component-holder bar-stable" data-component="crn-ion-header-bar" xattr-theme="bar-stable" id="crn-ion-header-bar-214683"><h1 class="title" align-title="text-align: center;" style="text-align: center; left: 40px; right: 40px">MEUS PEDIDOS</h1></ion-header-bar><ion-content data-component="crn-ion-content" class="scroll-content has-header has-footer has-footer-tabs">
   <div data-component="crn-container" data-replace="true" class="component-holder col-xs-12" id="crn-container-862928"></div><div data-component="crn-container" data-replace="false" class="component-holder col-xs-12" id="crn-container-619988" style="position:fixed;
@@ -7,7 +7,7 @@ width: 100%;"></div><div data-component="crn-container" data-replace="true" clas
 <ion-footer>
 <button class="button component-holder button-assertive button-small filled button-block" type="button" xattr-fullsize="button-block" xattr-theme="button-assertive" ng-click="" data-component="crn-button" xattr-size="button-small" xattr-type="filled" id="crn-button-69471" style="position:fixed;
   bottom: 50px;
-width: 100%;" onclick="$evt('cronapi.screen.changeView(\'#/app/logged/carrinho\', [{\'teste\': \'\'}])')" ng-show="cronapi.server('blockly.Carrinho.possuiItens').names(queryHistorico).attr(queryHistorico).run(queryHistorico)"><i class="light ion ion-android-cart" xattr-icon-theme="light"></i> <span>Ver Sacola - R$ {{cronapi.server('blockly.Carrinho.totalCarrinho').names().attr().run()|mask:"#.##0,00;0"}}</span></button>
+width: 100%;" onclick="$evt('cronapi.screen.changeView(\'#/app/logged/carrinho\', [{\'teste\': \'\'}])')" ng-show="params.exibeBotaoSacola"><i class="light ion ion-android-cart" xattr-icon-theme="light"></i> <span>Ver Sacola - R$ {{params.valorTotalSacola|mask:"#.##0,00;0"}}</span></button>
 </ion-footer>
 <ion-tabs class="tabs-striped background-white component-holder tabs-icon-black icon-size-small" background-color="background-white" tabs-color="tabs-icon-black" tabs-size="icon-size-small" data-component="crn-tabs-icon-only" id="crn-tabs-icon-only-311066">
     <div class="tabs">
@@ -25,4 +25,4 @@ width: 100%;" onclick="$evt('cronapi.screen.changeView(\'#/app/logged/carrinho\'
         </a>
     <a class="tab-item" title="Perfil" data-component="crn-tabs-icon-only-item" contenttitle="" href="#/app/logged/home-perfil"><i class="icon fa fa-user"></i><span>Perfil</span></a></div>
 </ion-tabs>
-</ion-view></div>
+</ion-view></div></div>

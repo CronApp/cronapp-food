@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="src/main/mobileapp/www/views/logged/carrinho.view.html" resourceType="JS" ruleDescription="Carrinho" ruleName="Carrinho" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false">
-  <metadata scale="1" scrollx="554.0000000000002" scrolly="-54.5" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <metadata scale="1" scrollx="599.0000000000002" scrolly="-54.5" target="Anb:u5+^,0vLkL9QIqn5"/>
   <block asynccall="false" colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
     <field customattributes="" name="NAME">definirLoginUsuario</field>
     <comment h="80" pinned="false" w="160">Carrinho</comment>
@@ -25,7 +25,38 @@
       </block>
     </statement>
   </block>
-  <block asynccall="false" colour="#fca03b" id="^-_=wNvkGq32QsBxc6]Y" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-547" y="263">
+  <block asynccall="false" colour="#fca03b" id="}v+LD_HsbI.+{Pqjr~D(" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-592" y="248">
+    <mutation>
+      <arg name="idItem"/>
+      <arg name="qtde"/>
+    </mutation>
+    <field customattributes="" name="NAME">inserirItem</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#fca03b" dependencyby="}v+LD_HsbI.+{Pqjr~D(" id="P[ARVeY8bU,khc}$/FNu" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;abreSacola&quot;." type="procedures_callnoreturn">
+        <mutation name="abreSacola" return-raw-type="undefined"/>
+        <next>
+          <block asynccall="true" colour="#487f7f" dependencyby="}v+LD_HsbI.+{Pqjr~D(" id="s]Y|2;fIO$HB8[[b74+v" multilayer="false" namespace="cronapi.util.callServerBlocklyNoReturn" origintype="procedures_callblockly_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EChamar%20Bloco%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20chamar%20bloco%20de%20programa%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Nome%20da%20fun%C3%A7%C3%A3o%20do%20bloco%20que%20dever%C3%A1%20ser%20chamada%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.callServerBlocklyNoReturn%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callblockly_callnoreturn">
+            <mutation data="%7B%22name%22:%22Carrinho%22,%22class%22:%22blockly.Carrinho%22,%22function%22:%22inserirItem%22,%22oldName%22:%22inserirItem%22,%22params%22:%22%5B%5C%22idItem%5C%22,%5C%22qtde%5C%22%5D%22,%22type%22:%22java%22,%22namespace%22:%22blockly.Carrinho%22,%22jsonBlocklySelected%22:%7B%22namespace%22:%22blockly.Carrinho%22,%22sourcePath%22:%22src/main/java/blockly/Carrinho.blockly%22,%22language%22:%22java%22,%22class%22:%22blockly.Carrinho%22,%22methods%22:%5B%7B%22name%22:%22fecharPedido%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22formaPagamento%22,%22cep%22,%22logradouro%22,%22numero%22,%22bairro%22,%22cidade%22,%22uf%22%5D%7D,%7B%22name%22:%22esvaziarCarrinho%22,%22hasReturn%22:%22false%22,%22params%22:%5B%5D%7D,%7B%22name%22:%22getItemCarrinhoPorId%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22idItem%22%5D%7D,%7B%22name%22:%22inserirItem%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22idItem%22,%22qtde%22%5D%7D,%7B%22name%22:%22totalCarrinho%22,%22hasReturn%22:%22true%22,%22params%22:%5B%5D%7D,%7B%22name%22:%22obterUsuarioLogado%22,%22hasReturn%22:%22true%22,%22params%22:%5B%5D%7D,%7B%22name%22:%22totalFreteCarrinho%22,%22hasReturn%22:%22true%22,%22params%22:%5B%5D%7D,%7B%22name%22:%22possuiItens%22,%22hasReturn%22:%22true%22,%22params%22:%5B%5D%7D,%7B%22name%22:%22listaItensCarrinho%22,%22hasReturn%22:%22true%22,%22params%22:%5B%5D%7D%5D%7D%7D" name="{{cronapi.util.callServerBlocklyNoReturn}}">
+              <arg name="idItem"/>
+              <arg name="qtde"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#0088ee" dependencyby="}v+LD_HsbI.+{Pqjr~D(" id="ZF{J$bzNJn5lB5[|lTLq" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">idItem</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block asynccall="false" colour="#0088ee" dependencyby="}v+LD_HsbI.+{Pqjr~D(" id="9VKiX_8#nqvy~W|EvbIq" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">qtde</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block asynccall="false" colour="#fca03b" id="^-_=wNvkGq32QsBxc6]Y" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-497" y="283">
     <field customattributes="" name="NAME">initTelaComTotais</field>
     <comment h="80" pinned="false" w="160">Método invocado na inicialização da tela da sacola, atualizando a partir do servidor o valor do frete e o total dos itens do carrinho</comment>
     <statement name="STACK">
@@ -68,6 +99,31 @@
             </value>
           </block>
         </next>
+      </block>
+    </statement>
+  </block>
+  <block asynccall="false" colour="#fca03b" id="H.58H.l|SqZEZ,UT4^=F" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-497" y="283">
+    <field customattributes="" name="NAME">abreSacola</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#934848" dependencyby="H.58H.l|SqZEZ,UT4^=F" id="rKNfFt`bqV,NDd^e|ajy" multilayer="false" namespace="cronapi.screen.createScopeVariable" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECria%20Vari%C3%A1vel%20de%20escopo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20var%C3%ADavel%20de%20escopo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Nome%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Valor%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.createScopeVariable%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.screen.createScopeVariable}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Nome"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Valor"/>
+        </mutation>
+        <value name="ARG0">
+          <shadow asynccall="false" colour="#5ba593" dependencyby="H.58H.l|SqZEZ,UT4^=F" id="UxY,]FhUlSPT^LbU4T#f" origintype="text" output="true" tooltip="function() {&#10;    [native code]&#10;}" type="text">
+            <field customattributes="" name="TEXT">carrinhoComItens</field>
+          </shadow>
+        </value>
+        <value name="ARG1">
+          <shadow asynccall="false" colour="#5ba593" dependencyby="H.58H.l|SqZEZ,UT4^=F" id="zsCvKHvM4WpwCl6[[-xA" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field customattributes="" name="TEXT"/>
+          </shadow>
+          <block asynccall="false" colour="#5b80a5" dependencyby="H.58H.l|SqZEZ,UT4^=F" id="u@irRzo=o-BPdi1=yT`X" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+            <field customattributes="" name="BOOL">TRUE</field>
+          </block>
+        </value>
       </block>
     </statement>
   </block>
