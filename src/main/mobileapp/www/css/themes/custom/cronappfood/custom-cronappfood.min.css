@@ -127,6 +127,22 @@ body,
     background-size: auto 20%, auto 25%, auto 23%, auto 17%;
 }
 
+@media (max-height: 590px) {
+    .login-bg {
+        background-image:
+                        url("img/food-background-1.png"),
+                        url("img/food-background-4.png");
+        background-position: left top, right 5%;
+        background-size: auto calc(100% - 400px), auto calc(100% - 440px);
+    }
+}
+
+@media (max-height: 480px) {
+    .login-bg {
+        background-image: none;
+    }
+}
+
 .login-bg .center-content-vertically {
     justify-content: flex-end;
     padding: var(--distanceMedium);
@@ -330,7 +346,7 @@ a.item h5 {
 }
 
 a.item h4 {
-    height: 32px;
+    height: 60px;
     white-space: normal;
 }
 
@@ -404,6 +420,11 @@ a.assertive {
     margin-top: -10px;
     margin-left: -20px;
 }
+
+#pg-home .scroll-content .scroll a.item h4 {
+    height: auto;
+}
+    height: 60px;
 
 /* ==== CART ==== */
 .scroll-content + * button {
@@ -560,7 +581,12 @@ a.assertive {
 #pg-product-detail .scroll-content .scroll .card {
     margin: var(--distanceSmall);
     width: calc(100% - 2 * var(--distanceSmall));
-    padding: 0;
+    padding: 0 0 40px;
+    border: 0;
+}
+
+#pg-product-detail .scroll-content .scroll .card .item {
+    border: 1px solid var(--colorNeutral10);
 }
 
 #pg-product-detail .bar.bar-footer {
@@ -584,8 +610,13 @@ a.assertive {
 }
 
 /* ==== CHECKOUT PAGE ==== */
+#pg-checkout {
+    overflow: scroll;
+}
+
 #pg-checkout .scroll-content {
     margin: 20px;
+    overflow: unset;
 }
 
 #pg-checkout .scroll > div:nth-child(2) {
@@ -766,9 +797,22 @@ a.assertive {
     width: auto !important;
 }
 
-/* ==== BAR CODE ==== */
+/* ==== QR CODE ==== */
 #cronapiBarCodeCancel {
     margin: -65px var(--distanceSmall) 0;
     padding: 0;
-    width: calc(100% - 2 * var(--distanceSmall));
+    width: 52px;
+}
+
+/* ==== FOOTER ==== */
+.scroll-content + * button {
+    border-radius: 0;
+    margin-bottom: 8px !important;
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+    * {
+        font-size: 100% !important;
+    }
 }
