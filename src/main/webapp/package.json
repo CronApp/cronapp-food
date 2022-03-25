@@ -10,10 +10,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@cronapp/framework-core": "2.9.0-SNAPSHOT.10",
-    "cronapi-js": "git+https://github.com/technecloud/cronapi-js.git#a5a2e6ee9e9af858cf11dc8be59da50c1362531d",
-    "cronapp-common-js": "git+https://github.com/CronApp/cronapp-common-js.git#e25a75f122397d66d85c6c1e092bd367a16544d8",
-    "cronapp-framework-js": "git+https://github.com/technecloud/cronapp-framework-js.git#d787c405910e48aa8b81e4f21b7f04d91a290a31",
-    "cronapp-lib-js": "git+https://github.com/CronApp/cronapp-lib-js.git#cf37bd9a7d6acc5db7547402b8ce5531bb8dbd12"
+    "@cronapp/framework-core": "2.9.1-RC.1",
+    "cronapi-js": "2.9.1-RC.1",
+    "cronapp-common-js": "2.9.1-RC.1",
+    "cronapp-framework-js": "2.9.1-RC.1",
+    "cronapp-lib-js": "2.9.1-RC.1"
   }
 }
