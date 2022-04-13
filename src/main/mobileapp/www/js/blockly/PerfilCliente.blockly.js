@@ -8,18 +8,16 @@ window.blockly.js.blockly.PerfilCliente = window.blockly.js.blockly.PerfilClient
  */
 window.blockly.js.blockly.PerfilCliente.sairDoSistemaArgs = [];
 window.blockly.js.blockly.PerfilCliente.sairDoSistema = async function() {
- var usuarioLogado;
+
   this.cronapi.screen.logout();
 }
 
 /**
- * Método responsável por obter as informações do usuário a
- * partir do banco de dados por um bloco no servidor, e setar
- * essas informações em parâmetros da tela de perfil do cliente.
+ * Método responsável por obter as informações do us a partir do banco de dados
  */
 window.blockly.js.blockly.PerfilCliente.definirUsuarioLogadoArgs = [];
 window.blockly.js.blockly.PerfilCliente.definirUsuarioLogado = async function() {
- var usuarioLogado;
+
   usuarioLogado = await this.cronapi.util.callServerBlockly('blockly.FuncoesUsuario:obterUsuarioLogado');
   this.cronapi.screen.changeValueOfField("params.nomeUsuarioLogado", this.cronapi.object.getProperty(usuarioLogado, 'name'));
   this.cronapi.screen.changeValueOfField("params.emailUsuarioLogado", this.cronapi.object.getProperty(usuarioLogado, 'email'));
@@ -34,7 +32,7 @@ window.blockly.js.blockly.PerfilCliente.definirUsuarioLogado = async function() 
  */
 window.blockly.js.blockly.PerfilCliente.avaliarAppArgs = [];
 window.blockly.js.blockly.PerfilCliente.avaliarApp = async function() {
- var usuarioLogado;
+
   try {
      this.cronapi.screen.showLoading();
     notaAvaliacao = this.cronapi.screen.getValueOfField("params.notaAvaliacaoApp");
@@ -47,4 +45,14 @@ window.blockly.js.blockly.PerfilCliente.avaliarApp = async function() {
           this.cronapi.screen.hide();
    } finally {
    }
+}
+
+/**
+ * Descreva esta função...
+ */
+window.blockly.js.blockly.PerfilCliente.initTelaArgs = [];
+window.blockly.js.blockly.PerfilCliente.initTela = async function() {
+
+  this.cronapi.screen.changeValueOfField("params.exibeBotaoSacola", await this.cronapi.util.callServerBlockly('blockly.Carrinho:possuiItens'));
+  this.cronapi.screen.changeValueOfField("params.valorTotalSacola", await this.cronapi.util.callServerBlockly('blockly.Carrinho:totalCarrinho'));
 }

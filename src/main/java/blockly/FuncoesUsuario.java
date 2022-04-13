@@ -52,6 +52,28 @@ cronapi.list.Operations.getFirst(lista);
 
 /**
  *
+ * @return Var
+ */
+// Método para obter o ID do usuário logado no banco de dados
+public static Var NomeDoUsuarioLogado() throws Exception {
+ return new Callable<Var>() {
+
+   private Var lista = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+
+    lista =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select u.name from User u where u.normalizedUserName = :normalizedUserName"),Var.valueOf("normalizedUserName",
+    cronapi.text.Operations.normalize(
+    Var.valueOf(LoginDoUsuario()))));
+    return
+cronapi.list.Operations.getFirst(lista);
+   }
+ }.call();
+}
+
+/**
+ *
  * @param @ParamMetaData
  * @return Var
  */

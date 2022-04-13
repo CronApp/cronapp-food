@@ -33,7 +33,7 @@ window.blockly.js.blockly.auth.ChangePassword.changePassword = async function() 
       }.bind(this), async function(sender_item) {
           item = sender_item;
         if (this.cronapi.object.getProperty(item, 'status') == '403' || this.cronapi.object.getProperty(item, 'status') == '401') {
-          this.cronapi.screen.notify('error',this.cronapi.i18n.translate("Login.view.invalidPassword",[  ]));
+          this.cronapi.screen.notify('error','Senha Atual Inválida');
         } else {
           this.cronapi.screen.notify('error',this.cronapi.object.getProperty(item, 'responseJSON.message'));
         }
@@ -44,7 +44,7 @@ window.blockly.js.blockly.auth.ChangePassword.changePassword = async function() 
       this.cronapi.screen.notify('error','HostApp is Required');
     }
   } else {
-    this.cronapi.screen.notify('error',this.cronapi.i18n.translate("Login.view.invalidPassword",[  ]));
+    this.cronapi.screen.notify('error','Senhas não batem');
   }
 }
 
