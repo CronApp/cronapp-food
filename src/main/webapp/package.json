@@ -10,9 +10,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cronapi-js": "^2.8.17",
-    "cronapp-common-js": "^2.8.6",
-    "cronapp-framework-js": "^2.8.25",
-    "cronapp-lib-js": "^2.8.3"
+    "@cronapp/framework-core": "2.9.1-RC.1",
+    "cronapi-js": "2.9.1-RC.1",
+    "cronapp-common-js": "2.9.1-RC.1",
+    "cronapp-framework-js": "2.9.1-RC.1",
+    "cronapp-lib-js": "2.9.1-RC.1"
   }
 }

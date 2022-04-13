@@ -24,3 +24,4 @@ document.write("<script src='js/blockly/auth/ChangePersonData.blockly.js?07e8d09
 document.write("<script src='js/blockly/auth/FuncoesUsuario.blockly.js?56e5c8ed2faf5b5f2b955fce195c3fb1'></script>");
 document.write("<script src='js/blockly/auth/Home.blockly.js?297084bfe667bd3100b057e45e1c5219'></script>");
 document.write("<script src='js/blockly/auth/Login.blockly.js?cc551bda44726a6090736c4b9f7a9ee1'></script>");
+document.write("<script src='js/blockly/auth/UserControl.blockly.js?6028b366c989dd740487b4c00d75e874'></script>");
