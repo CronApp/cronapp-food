@@ -23,7 +23,7 @@
                 <div class="crn-slider display-ion-slider" id="crn-slider-crn-slider-987276"> 
                   <ion-slide-box class="" auto-play="true" slide-interval="2000" does-continue="true"> 
                     <ion-slide xattr-theme="light-bg" id="crn-slider-item-2140-3" data-component="crn-slider-item" class="active light-bg" style="width: 100%; position: relative;" data-container="true" data-replace="true" crn-repeat="Banner"> 
-                      <img src="{{'data:image/jpg;base64,'}}{{ rowData.imagem }}" style="width:100%;">
+                      <img ng-src="{{'data:image/jpg;base64,'}}{{ rowData.imagem }}" style="width:100%;">
                     </ion-slide> 
                   </ion-slide-box> 
                 </div> 
@@ -35,7 +35,7 @@
               <h2 class="component-holder text-left" xattr-position="text-left" subtitle-size="font-size: 22px;" style="font-size: 22px;" data-component="crn-label" id="crn-label-912840">Promoções</h2> 
               <div data-container="true" data-replace="false"> 
                 <div data-component="crn-container" data-replace="false" class="component-holder  col-xs-4" id="crn-container-765344" crn-repeat="query160873"> 
-                  <a class="item text-left  component-holder col-xs-12" href="" data-component="crn-list-item-thumbnail" id="crn-list-item-thumbnail-503978" crn-repeat="" ng-click="cronapi.screen.changeView('#/app/logged/produto-detalhe', [{'idProduto': rowData.id}, {'idRestaurante': rowData.restaurante_id}, {'precoProduto': rowData.preco}])"> 
+                  <a class="item text-left  component-holder col-xs-12" data-component="crn-list-item-thumbnail" id="crn-list-item-thumbnail-503978" crn-repeat="" ng-click="cronapi.screen.changeView('#/app/logged/produto-detalhe', [{'idProduto': rowData.id}, {'idRestaurante': rowData.restaurante_id}, {'precoProduto': rowData.preco}])"> 
                   <img alt="Thumbnail" ng-src="{{'data:image/jpg;base64,'}}{{rowData.foto}}" style="width: 100%;"> 
                   <h4 class="dark" xattr-theme="dark">{{rowData.titulo}}</h4> 
                   <h4 class="dark" xattr-theme="dark">R$ {{rowData.preco|mask:"#.##0,00;0"}}</h4> 
