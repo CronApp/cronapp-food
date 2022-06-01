@@ -1,35 +1,29 @@
 <ion-view role="region" aria-labelledby="login_page_title" cache-view="false" can-swipe-back="false" class="pane login-bg" data-container="true">
-    <h1 class="sr-only" id="login_page_title">{{"Users.view.Login" | translate}}</h1>
-    <ion-content class="scroll-content center-content-vertically" data-component="crn-ion-content">
-    <div class="list safe-top" data-container="true">
-      <div class="col text-center">
-        <img aria-roledescription="logo" alt="{{'Accessibility.Login.Logo.Alt' | translate}}" src="assets/cronapp-food-logo.png" class="" style="display: block; margin-left:auto; margin-right:auto;" xattr-position="display: block; margin-left:auto; margin-right:auto;" data-component="crn-image" id="crn-image-960683">
-      </div>
-    </div>
+  <h1 class="sr-only" id="login_page_title">{{"Users.view.Login" | translate}}</h1>
+  <ion-content class="scroll-content center-content-vertically" data-component="crn-ion-content">
     <form class="form-validation" autocomplete="off" name="form" role="form">
       <input type="hidden" name="csrf_token" value="CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz">
       <div class="list list-inset login-mobile" data-container="true">
-                <div class="item item-input component-holder" data-component="crn-input-icon" for="crn-input-icon-228215" title="{{'Login.view.Username' | translate}}">
-          <input aria-label="{{'Login.view.Username' | translate}}" autocomplete="username" autocorrect="off" autocapitalize="none" type="text" placeholder="{{'Login.view.Username' | translate}}" ng-model="vars.username" id="crn-input-icon-228215">
-        </div>
-        <div class="item item-input component-holder" data-component="crn-input-icon" for="crn-input-icon37951" title="{{'Login.view.Password' | translate}}">
-          <input aria-label="{{'Login.view.Password' | translate}}" autocomplete="current-password" type="password" placeholder="{{'Login.view.Password' | translate}}" ng-model="vars.password" id="crn-input-icon37951">
-        </div>
-         <a href="" class="component-holder" style="display: block; text-align: center; color: rgb(239, 41, 41);" xattr-fullsize="display:block;" data-replace="true" data-component="crn-anchor" id="reset-password" on-hold="" on-tap="$evt('cronapi.screen.changeView(\'#/app/public/reset-password-email\', [])')">{{'ResetPassword' | translate}}</a>
-        <div class="item" title="{{'Login.view.Login' | translate}}" for="crn-button-445347">
-          <button role="button" aria-label="{{'Login.view.Login' | translate}}" class="button component-holder button-full button-positive" type="button" ng-click="cronapi.client('js.blockly.auth.Login.login').run(vars.username, vars.password, null)" data-component="crn-button" id="crn-button-445347" xattr-fullsize="button-full" xattr-theme="button-positive" ng-disabled="form.$invalid || vm.dataLoading">
-            <i class=""></i>
-            <span>{{'Login.view.Login' | translate}}</span>
-          </button>
-        </div>
-        <div class="item">
-          <a aria-label="{{'Signup.view.Signup' | translate}}" href="#/app/public/signup" class="component-holder col-xs-12" xattr-fullsize="display:block;" data-replace="true" data-component="crn-anchor" id="crn-anchor-67621" style="text-align: center; color: rgb(239, 41, 41);">{{'Signup.view.Signup' | translate}}</a>
-        </div>
-        <div class="item" title="{{message.error}}">
-          <div ng-show="message.error" class="help-block" data-container="true">
-            {{message.error}}
+        <div class="list safe-top" data-container="true">
+          
+          
+          <h1 class="text-center h3" xattr-position="text-center" xattr-type="h3" data-component="crn-heading" id="crn-heading-940517">Falta pouco pra matar sua fome!</h1><h1 class="text-center h5" xattr-position="text-center" xattr-type="h5" data-component="crn-heading" id="crn-heading-112164">Faça seu login</h1><div class="item item-input component-holder" data-component="crn-input" for="crn-input-username" title="{{'Login.view.Username' | translate}}">
+            <input aria-label="{{'Login.view.Username' | translate}}" autocomplete="username" autocorrect="off" autocapitalize="off" type="text" placeholder="{{'Login.view.Username' | translate}}" ng-model="vars.username" id="crn-input-username" keyboard="username">
+          </div>
+          <div class="item item-input component-holder" data-component="crn-input" for="crn-input-password" title="{{'Login.view.Password' | translate}}">
+            <input aria-label="{{'Login.view.Password' | translate}}" autocomplete="current-password" type="password" placeholder="{{'Login.view.Password' | translate}}" ng-model="vars.password" id="crn-input-password" keyboard="password">
+          </div>
+          <div class="item">
+            <a href="#/app/public/reset-password" class="component-holder" style="display:block" xattr-fullsize="display:block;" data-replace="true" data-component="crn-anchor" id="reset-password-login" on-hold="" on-tap="">{{'ResetPassword' | translate}}</a>
+          </div>
+          <div class="item" title="{{'Login.view.Login' | translate}}" for="crn-button-445347">
+            <button role="button" aria-label="{{'Login.view.Login' | translate}}" class="button button-block button-medium filled button-default" type="button" xattr-fullsize="button-block" xattr-theme="button-default" ng-click="cronapi.client('js.blockly.auth.Login.login').run(vars.username, vars.password, null)" data-component="crn-button" xattr-size="button-medium" xattr-type="filled" id="crn-button-907928" ng-disabled="form.$invalid || vm.dataLoading"> <i class="light" xattr-icon-theme="light"></i> <span>{{"Login.view.Login" | translate}}</span></button>
+          </div>
+          <div class="item">
+            <a aria-label="{{'Signup.view.Signup' | translate}}" href="#/app/public/signup" class="component-holder" style="display:block" xattr-fullsize="display:block;" data-replace="true" data-component="crn-anchor" id="button-signup">{{'Signup.view.Signup' | translate}}</a>
           </div>
         </div>
+
       </div>
     </form>
   </ion-content>
