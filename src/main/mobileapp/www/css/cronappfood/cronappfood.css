@@ -300,13 +300,12 @@ button,
 
 /*  LOGIN  */
 .login-bg {
-    background-image: url("img/background-cronappfood.png");
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .login-bg .scroll {
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 
@@ -342,7 +341,6 @@ a#button-signup {
 
 /*  INPUTS  */
 .item.item-input input {
-    border: 1px solid var(--colorNeutral70);
     padding: 24px;
     background: var(--colorNeutral00);
     border-radius: var(--borderRadiusSmallest);
