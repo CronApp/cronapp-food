@@ -253,6 +253,7 @@ a,
 input,
 .item {
     font-family: var(--fontFamily);
+    color: var(--textColor30);
 }
 
 h5,
