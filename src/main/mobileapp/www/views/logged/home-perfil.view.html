@@ -1,37 +1,27 @@
-<div id="starter" ng-init="cronapi.client('js.blockly.PerfilCliente.initTela').names().run()" ng-destroy="" data-component="crn-start" screen-params="[{'key':'exibeBotaoSacola','value':''},{'key':'valorTotalSacola','value':''}]">
-  <div ng-init="cronapi.client('js.blockly.PerfilCliente.definirUsuarioLogado').names().run()" ng-destroy="" data-component="crn-start" screen-params="[{'key':'nomeUsuarioLogado','value':''},{'key':'emailUsuarioLogado','value':''},{'key':'telefoneUsuarioLogado','value':''},{'key':'notaAvaliacaoApp','value':''}]">
+<div id="starter" ng-init="cronapi.client('js.blockly.PerfilCliente.initTela').names().run()" ng-destroy="" data-component="crn-start" screen-params="[{'key':'exibeBotaoSacola','value':''},{'key':'valorTotalSacola','value':''}]"> 
+  <div ng-init="cronapi.client('js.blockly.PerfilCliente.definirUsuarioLogado').names().run()" ng-destroy="" data-component="crn-start" screen-params="[{'key':'nomeUsuarioLogado','value':''},{'key':'emailUsuarioLogado','value':''},{'key':'telefoneUsuarioLogado','value':''},{'key':'notaAvaliacaoApp','value':''}]"> 
     <ion-view class="pane" id="pg-profile"> 
-     <ion-header-bar class="bar component-holder bar-stable" data-component="crn-ion-header-bar" xattr-theme="bar-stable" id="crn-ion-header-bar-214683">
-        <h1 class="title" align-title="text-align: center;" style="text-align: center;">Perfil</h1>
-      </ion-header-bar>
+      <ion-header-bar class="bar component-holder bar-stable" data-component="crn-ion-header-bar" xattr-theme="bar-stable" id="crn-ion-header-bar-214683"> 
+        <h1 class="title" align-title="text-align: center;" style="text-align: center;">Perfil</h1> 
+      </ion-header-bar> 
       <ion-content data-component="crn-ion-content" class="scroll-content has-footer has-footer-tabs"> 
-        <div data-component="crn-container" data-replace="true" class="component-holder row" id="crn-topo-nome">
-          <div data-component="crn-container" data-replace="false" class="component-holder col-xs-3" id="crn-container-179781">
-            <img alt="Placehold" src="assets/img-perfil-cliente.png" class="" style="object-fit: cover;" xattr-position="" object-fit="object-fit: cover;" data-component="crn-image" id="crn-image-261100" width="100%" height="">
-          </div>
+        <div data-component="crn-container" data-replace="true" class="component-holder row" id="crn-topo-nome"> 
+          <div data-component="crn-container" data-replace="false" class="component-holder col-xs-3" id="crn-container-179781"> 
+            <img alt="Placehold" src="assets/img-perfil-cliente.png" class="" style="object-fit: cover;" xattr-position="" object-fit="object-fit: cover;" data-component="crn-image" id="crn-image-261100" width="100%" height=""> 
+          </div> 
           <div data-component="crn-container" data-replace="true" class="component-holder col-xs-9" id="crn-container-179782" style="font-weight: bold; line-height: 65px;">
-            {{params.nomeUsuarioLogado}}
-          </div>
-        </div>
-        <a class="item component-holder col-xs-12 item-icon-left text-center" xattr-icon-position="item-icon-left" href="" xattr-text-position="text-center" data-component="crn-list-item-icon" id="crn-list-item-icon-152716" ng-click="cronapi.client('js.blockly.auth.ChangePersonData.openModal').names().run()"><i class="icon dark ion ion-person" xattr-theme="dark" xattr-icon-size="font-size:200%;" style="font-size:200%"></i><h2 class="dark" xattr-theme="dark">Dados Pessoais</h2></a>
-        <a class="item component-holder col-xs-12 item-icon-left text-center" xattr-icon-position="item-icon-left" href="" xattr-text-position="text-center" data-component="crn-list-item-icon" id="crn-list-item-icon-69961" ng-click="cronapi.client('js.blockly.ScoreApp.showModal').names().run()"><i class="icon dark fa fa-star" xattr-theme="dark" xattr-icon-size="font-size:200%;" style="font-size:200%"></i><h2 class="dark" xattr-theme="dark">Avaliar Aplicativo</h2></a>
-        <a class="item item-icon-left component-holder col-xs-12 text-center" xattr-icon-position="item-icon-left" href="" xattr-text-position="text-center" data-component="crn-list-item-icon" id="crn-list-item-icon-366775" ng-click="cronapi.client('js.blockly.auth.ChangePassword.openModal').names().run()"><i class="icon dark ion ion-android-lock" xattr-theme="dark" xattr-icon-size="font-size:200%;" style="font-size:200%"></i><h2 class="dark" xattr-theme="dark">Alterar Senha</h2></a>
-        <a class="item item-icon-left component-holder col-xs-12 text-center" xattr-icon-position="item-icon-left" xattr-text-position="text-center" data-component="crn-list-item-icon" id="crn-list-item-icon-939216" ng-click="cronapi.client('js.blockly.PerfilCliente.sairDoSistema').names().run()"><i class="icon dark ion ion-log-out" xattr-theme="dark" xattr-icon-size="font-size:200%;" style="font-size:200%"></i><h2 class="dark" xattr-theme="dark">Sair</h2></a>
-      </ion-content> 
-      <ion-footer> 
-        <button class="button component-holder button-assertive button-small filled button-block" type="button" xattr-fullsize="button-block" xattr-theme="button-assertive" ng-click="" data-component="crn-button" xattr-size="button-small" xattr-type="filled" id="crn-button-69471" style="position:fixed;
-  bottom: 50px;
-width: 100%;" onclick="$evt('cronapi.screen.changeView(\'#/app/logged/carrinho\', [{\'teste\': \'\'}])')" ng-show="params.exibeBotaoSacola"><i class="light ion ion-android-cart" xattr-icon-theme="light"></i> <span>Ver Sacola - R$ {{params.valorTotalSacola|mask:"#.##0,00;0"}}</span></button> 
-      </ion-footer> 
-      <ion-tabs class="tabs-striped background-white component-holder tabs-icon-black icon-size-small" background-color="background-white" tabs-color="tabs-icon-black" tabs-size="icon-size-small" data-component="crn-tabs-icon-only" id="crn-tabs-icon-only-311066"> 
-        <div class="tabs"> 
-          <a class="tab-item" title="Home" data-component="crn-tabs-icon-only-item" href="#/app/logged/home"> <i class="icon ion-home"></i> <span>Início</span> </a> 
-          <a class="tab-item" title="Busca" data-component="crn-tabs-icon-only-item" href="#/app/logged/home-busca"> <i class="icon ion ion-android-search"></i> <span>Busca</span> </a> 
-          <a class="tab-item" title="Pedidos" data-component="crn-tabs-icon-only-item" href="#/app/logged/home-pedidos"> <i class="icon ion ion-clipboard"></i> <span>Pedidos</span> </a> 
-          <a class="tab-item active" title="Perfil" data-component="crn-tabs-icon-only-item" contenttitle="" href="#/app/logged/home-perfil"><i class="icon fa fa-user"></i><span>Perfil</span></a>
+             {{params.nomeUsuarioLogado}} 
+          </div> 
         </div> 
-      </ion-tabs> 
-    </ion-view>
+        <a class="item component-holder col-xs-12 item-icon-left text-center" xattr-icon-position="item-icon-left" href="" xattr-text-position="text-center" data-component="crn-list-item-icon" id="crn-list-item-icon-152716" ng-click="cronapi.client('js.blockly.auth.ChangePersonData.openModal').names().run()"><i class="icon dark ion ion-person" xattr-theme="dark" xattr-icon-size="font-size:200%;" style="font-size:200%"></i><h2 class="dark" xattr-theme="dark">Dados Pessoais</h2></a> 
+        <a class="item component-holder col-xs-12 item-icon-left text-center" xattr-icon-position="item-icon-left" href="" xattr-text-position="text-center" data-component="crn-list-item-icon" id="crn-list-item-icon-69961" ng-click="cronapi.client('js.blockly.ScoreApp.showModal').names().run()"><i class="icon dark fa fa-star" xattr-theme="dark" xattr-icon-size="font-size:200%;" style="font-size:200%"></i><h2 class="dark" xattr-theme="dark">Avaliar Aplicativo</h2></a> 
+        <a class="item item-icon-left component-holder col-xs-12 text-center" xattr-icon-position="item-icon-left" href="" xattr-text-position="text-center" data-component="crn-list-item-icon" id="crn-list-item-icon-366775" ng-click="cronapi.client('js.blockly.auth.ChangePassword.openModal').names().run()"><i class="icon dark ion ion-android-lock" xattr-theme="dark" xattr-icon-size="font-size:200%;" style="font-size:200%"></i><h2 class="dark" xattr-theme="dark">Alterar Senha</h2></a> 
+        <a class="item item-icon-left component-holder col-xs-12 text-center" xattr-icon-position="item-icon-left" xattr-text-position="text-center" data-component="crn-list-item-icon" id="crn-list-item-icon-939216" ng-click="cronapi.client('js.blockly.PerfilCliente.sairDoSistema').names().run()"><i class="icon dark ion ion-log-out" xattr-theme="dark" xattr-icon-size="font-size:200%;" style="font-size:200%"></i><h2 class="dark" xattr-theme="dark">Sair</h2></a> 
+      </ion-content> 
+      <div class="component-holder ng-scope" data-component="crn-component" id="crn-component-207278"> 
+        <crn-component origin="components/footer.component.html" params="" class=""></crn-component> 
+      </div> 
+    </ion-view> 
     <script type="text/ng-template" id="changePassword">
     <ion-modal-view role="dialog"> 
     <ion-header-bar role="heading" class="row bar bar-stable" align-title="center">
@@ -121,5 +111,5 @@ width: 100%;" onclick="$evt('cronapi.screen.changeView(\'#/app/logged/carrinho\'
     </ion-content>
     </ion-modal-view>
 </script> 
-  </div>
+  </div> 
 </div>

@@ -1,16 +1,16 @@
 <div id="starter" ng-init="cronapi.client('js.blockly.Busca.initTela').names().run()" ng-destroy="" data-component="crn-start" screen-params="[{'key':'exibeBotaoSacola','value':''},{'key':'valorTotalSacola','value':''}]"> 
   <div ng-init="" ng-destroy="" data-component="crn-start" screen-params="[{'key':'filtrado','value':'false'},{'key':'carrinhoPossuiItens','value':''}]"> 
     <ion-view class="pane" id="pg-search"> 
-     <ion-header-bar class="bar component-holder bar-stable" data-component="crn-ion-header-bar" xattr-theme="bar-stable" id="crn-ion-header-bar-214683">
-        <h1 class="title" align-title="text-align: center;" style="text-align: center;">Busca</h1>
-      </ion-header-bar>
+      <ion-header-bar class="bar component-holder bar-stable" data-component="crn-ion-header-bar" xattr-theme="bar-stable" id="crn-ion-header-bar-214683"> 
+        <h1 class="title" align-title="text-align: center;" style="text-align: center;">Busca</h1> 
+      </ion-header-bar> 
       <ion-content data-component="crn-ion-content" class="scroll-content has-header has-footer has-footer-tabs"> 
         <datasource data-component="crn-datasource" class="component-holder" name="buscaLojas" entity="app.query949259" keys="_objectKey" rows-per-page="100" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;permiteRetirada&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;realizaEntrega&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;tempoEntrega&quot;,&quot;type&quot;:&quot;Time&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;taxaEntrega&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;logotipo&quot;,&quot;type&quot;:&quot;Binary&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;categoriaRestaurante&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;categoriaRestaurante_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" parameters="" condition="{&quot;maxRecord&quot;:100,&quot;params&quot;:[{&quot;fieldName&quot;:&quot;descricao&quot;,&quot;fieldValue&quot;:&quot;{{vars.termoBusca|raw}}&quot;},{&quot;fieldName&quot;:&quot;nome&quot;,&quot;fieldValue&quot;:&quot;{{vars.termoBusca|raw}}&quot;}],&quot;expression&quot;:{&quot;type&quot;:&quot;AND&quot;,&quot;args&quot;:[]}}" dependent-lazy-post="" lazy="true" checkrequired=""></datasource> 
         <datasource data-component="crn-datasource" class="component-holder" name="BuscaItens" entity="app.query697292" keys="_objectKey" rows-per-page="100" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;titulo&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;foto&quot;,&quot;type&quot;:&quot;Binary&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;preco&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;servePessoas&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;categoriaCardapio&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;categoriaCardapio_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;restaurante&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;restaurante_nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;promocao&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;precoPromocional&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;restaurante_tempoEntrega&quot;,&quot;type&quot;:&quot;Time&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;restaurante_taxaEntrega&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true}]" parameters="" condition="{&quot;maxRecord&quot;:100,&quot;params&quot;:[{&quot;fieldName&quot;:&quot;descricao&quot;,&quot;fieldValue&quot;:&quot;{{vars.termoBusca|raw}}&quot;},{&quot;fieldName&quot;:&quot;titulo&quot;,&quot;fieldValue&quot;:&quot;{{vars.termoBusca|raw}}&quot;}],&quot;expression&quot;:{&quot;type&quot;:&quot;OR&quot;,&quot;args&quot;:[]}}" dependent-lazy-post="" lazy="true"></datasource> 
         <div data-component="crn-container" data-replace="true" class="component-holder row" id="crn-container-832899"> 
           <div data-component="crn-container" data-replace="true" class="component-holder col-xs-12" id="crn-container-5491"> 
-            <div class="item item-input component-holder col-xs-12" data-component="crn-input" id="crn-input-430819">
-              <input aria-label="Item ou Loja" id="crn-search-field" type="text" placeholder="Item ou Loja" ng-model="vars.termoBusca" mask="" keyboard="">
+            <div class="item item-input component-holder col-xs-12" data-component="crn-input" id="crn-input-430819"> 
+              <input aria-label="Item ou Loja" id="crn-search-field" type="text" placeholder="Item ou Loja" ng-model="vars.termoBusca" mask="" keyboard=""> 
             </div> 
           </div> 
         </div> 
@@ -29,7 +29,12 @@
               <div role="tabpanel" class="tab-pane active" id="tab2"> 
                 <div data-container="true" data-replace="false"> 
                   <div data-component="crn-container" data-replace="false" class="component-holder col-xs-6 " id="crn-container-765344" crn-repeat="BuscaItens"> 
-                    <div class="item text-left  component-holder col-xs-12" href="" data-component="crn-list-item-thumbnail" id="crn-list-item-thumbnail-503978" crn-repeat="" ng-click="cronapi.screen.changeView('#/app/logged/produto-detalhe', [{'idProduto': rowData.id}, {'idRestaurante': rowData.restaurante}, {'precoProduto': rowData.preco}])"> <img alt="Thumbnail" ng-src="{{'data:image/jpg;base64,'}}{{rowData.foto}}" style="width: 100%;"> <h4 class="dark" xattr-theme="dark">{{rowData.titulo}}</h4> <h4 class="dark" xattr-theme="dark">R$ {{rowData.preco|mask:"#.##0,00;0"}}</h4> <h5 class="dark" xattr-theme="dark">{{rowData.restaurante_tempoEntrega|mask:"mm"}} min - R$ {{rowData.restaurante_taxaEntrega|mask:"#.##0,00;0"}}</h5> </div> 
+                    <div class="item text-left  component-holder col-xs-12" href="" data-component="crn-list-item-thumbnail" id="crn-list-item-thumbnail-503978" crn-repeat="" ng-click="cronapi.screen.changeView('#/app/logged/produto-detalhe', [{'idProduto': rowData.id}, {'idRestaurante': rowData.restaurante}, {'precoProduto': rowData.preco}])"> 
+                      <img alt="Thumbnail" ng-src="{{'data:image/jpg;base64,'}}{{rowData.foto}}" style="width: 100%;"> 
+                      <h4 class="dark" xattr-theme="dark">{{rowData.titulo}}</h4> 
+                      <h4 class="dark" xattr-theme="dark">R$ {{rowData.preco|mask:"#.##0,00;0"}}</h4> 
+                      <h5 class="dark" xattr-theme="dark">{{rowData.restaurante_tempoEntrega|mask:"mm"}} min - R$ {{rowData.restaurante_taxaEntrega|mask:"#.##0,00;0"}}</h5> 
+                    </div> 
                   </div> 
                 </div> 
               </div> 
@@ -37,19 +42,9 @@
           </div> 
         </div> 
       </ion-content> 
-      <ion-footer> 
-        <button class="button component-holder button-assertive button-small filled button-block" type="button" xattr-fullsize="button-block" xattr-theme="button-assertive" ng-click="" data-component="crn-button" xattr-size="button-small" xattr-type="filled" id="crn-button-69471" style="position:fixed;
-  bottom: 50px;
-width: 100%;" onclick="$evt('cronapi.screen.changeView(\'#/app/logged/carrinho\', [{\'teste\': \'\'}])')" ng-show="params.exibeBotaoSacola"><i class="light ion ion-android-cart" xattr-icon-theme="light"></i> <span>Ver Sacola - R$ {{params.valorTotalSacola|mask:"#.##0,00;0"}}</span></button> 
-      </ion-footer> 
-      <ion-tabs class="tabs-striped background-white component-holder tabs-icon-black icon-size-small" background-color="background-white" tabs-color="tabs-icon-black" tabs-size="icon-size-small" data-component="crn-tabs-icon-only" id="crn-tabs-icon-only-311066"> 
-        <div class="tabs"> 
-          <a class="tab-item" title="Home" data-component="crn-tabs-icon-only-item" href="#/app/logged/home"> <i class="icon ion-home"></i> <span>Início</span> </a> 
-          <a class="tab-item active" title="Busca" data-component="crn-tabs-icon-only-item" href="#/app/logged/home-busca"> <i class="icon ion ion-android-search"></i> <span>Busca</span> </a> 
-          <a class="tab-item" title="Pedidos" data-component="crn-tabs-icon-only-item" href="#/app/logged/home-pedidos"> <i class="icon ion ion-clipboard"></i> <span>Pedidos</span> </a> 
-          <a class="tab-item" title="Perfil" data-component="crn-tabs-icon-only-item" contenttitle="" href="#/app/logged/home-perfil"><i class="icon fa fa-user"></i><span>Perfil</span></a> 
-        </div> 
-      </ion-tabs> 
+      <div class="component-holder ng-scope" data-component="crn-component" id="crn-component-207278"> 
+        <crn-component origin="components/footer.component.html" params="" class=""></crn-component> 
+      </div> 
     </ion-view> 
   </div> 
 </div>
