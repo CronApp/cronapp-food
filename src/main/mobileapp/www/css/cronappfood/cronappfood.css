@@ -1,0 +1,5 @@
+@import 'fonts/ifood-rc/iFoodRC.css';
+
+div.crn-ion-segment-light.icon-theme-light-assertive li a, .ion-segment-assertive li a {
+    color: var(--textColor40, #ef473a);
+}

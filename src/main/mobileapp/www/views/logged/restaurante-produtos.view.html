@@ -1,15 +1,15 @@
 <div id="starter" ng-init="cronapi.client('js.blockly.Restaurante.inicializarTela').names(query352885).run(query352885)" ng-destroy="" data-component="crn-start" screen-params="[{'key':'idRestaurante','value':''}]"><ion-view class="pane" id="pg-store-detail">
-  <ion-header-bar align-title="center" class="bar bar-light" xattr-theme="bar-light" data-component="crn-ion-header-bar">
+  <ion-header-bar align-title="center" class="bar bar-stable" xattr-theme="bar-stable" data-component="crn-ion-header-bar">
     <div class="buttons buttons-left header-item">
       <button class="button button-clear" data-component="crn-button" xattr-type="button-clear" ng-click="cronapi.screen.changeView('#/app/logged/home', [])" onclick=""> <i class="icon ion ion-ios-arrow-back assertive" xattr-icon-theme="assertive"></i> </button>
     </div>
-    <h1 class="title"></h1>
+    <h1 class="title">{{query352885.active.nome}}</h1>
     <div class="buttons buttons-right header-item">
       
     </div>
   </ion-header-bar>
   <ion-content data-component="crn-ion-content" class="scroll-content has-header">
-  <div data-component="crn-container" data-replace="false" class="component-holder col-xs-12" id="crn-container-726439"><h2 ng-model="vars.nomeRestaurante" class="component-holder text-left  col-xs-9" xattr-position="text-left" subtitle-size="font-size: 16px;" data-component="crn-label" id="crn-label-110186" style="font-size: 16px; font-weight: bold;">{{query352885.active.nome}}</h2><div data-component="crn-container" data-replace="false" class="component-holder  col-xs-3" id="crn-container-430217"><img alt="" src="{{'data:image/jpg;base64,'}}{{query352885.active.logotipo}}" class="component-holder col-xs-12" style="object-fit: cover;" xattr-position="" object-fit="object-fit: cover;" data-component="crn-image" id="crn-image-871118" width="100%" height=""></div>
+  <div data-component="crn-container" data-replace="false" class="component-holder col-xs-12" id="crn-container-726439" style="padding: 5px;"><h2 ng-model="vars.nomeRestaurante" class="component-holder text-left  col-xs-9" xattr-position="text-left" subtitle-size="font-size: 16px;" data-component="crn-label" id="crn-label-110186" style="font-size: 16px; font-weight: bold;">{{query352885.active.nome}}</h2><div data-component="crn-container" data-replace="false" class="component-holder  col-xs-3" id="crn-container-430217"><img alt="" src="{{'data:image/jpg;base64,'}}{{query352885.active.logotipo}}" class="component-holder col-xs-12" style="object-fit: cover;" xattr-position="" object-fit="object-fit: cover;" data-component="crn-image" id="crn-image-871118" width="100%" height=""></div>
   <div data-component="crn-container" data-replace="true" class="component-holder col-xs-12" id="crn-container-532241"><p>{{query352885.active.tempoEntrega|mask:"mm"}} min - <span ng-if="query352885.active.taxaEntrega > 0">R$ {{query352885.active.taxaEntrega|mask:"#.##0,00;0"}}</span><span ng-if="query352885.active.taxaEntrega == 0" style="color: #3f9b0b">Grátis</span></p></div>
   
   

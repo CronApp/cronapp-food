@@ -1,0 +1,57 @@
+/* Textos */
+@font-face {
+    font-family: "iFood RC Textos";
+    font-style: normal;
+    font-weight: 400;
+    src: url('iFoodRCTextos-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "iFood RC Textos";
+    font-style: normal;
+    font-weight: 500;
+    src: url('iFoodRCTextos-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "iFood RC Textos";
+    font-style: normal;
+    font-weight: 300;
+    src: url('iFoodRCTextos-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "iFood RC Textos";
+    font-style: normal;
+    font-weight: 600;
+    src: url('iFoodRCTextos-Bold.woff2') format('woff2');
+}
+
+/* Titulos */
+@font-face {
+    font-family: "iFood RC Titulos";
+    font-style: normal;
+    font-weight: 400;
+    src: url('iFoodRCTitulos-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "iFood RC Titulos";
+    font-style: normal;
+    font-weight: 500;
+    src: url('iFoodRCTitulos-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "iFood RC Titulos";
+    font-style: normal;
+    font-weight: 600;
+    src: url('iFoodRCTitulos-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "iFood RC Titulos";
+    font-style: normal;
+    font-weight: 300;
+    src: url('iFoodRCTitulos-Light.woff2') format('woff2');
+}
