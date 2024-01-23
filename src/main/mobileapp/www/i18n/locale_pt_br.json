@@ -242,5 +242,7 @@
   "ResetPasswordSuccess": "Successo!",
   "ResetPasswordConfirmation-placeholder": "Confirme sua senha",
   "ResetPasswordNew-placeholder": "Digite sua senha nova",
-  "Submit": "Redefinir a Senha"
+  "Submit": "Redefinir a Senha",
+  "FinalizaPedidoBlockly": "",
+  "FinalizaPedidoBlockly.erro": "Erro ao finalizar pedido"
 }
