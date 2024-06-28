@@ -45,3 +45,14 @@ window.blockly.js.blockly.Carrinho.abreSacola = async function() {
  var totalItens, totalFrete, totalCompra;
   this.cronapi.screen.createScopeVariable('carrinhoComItens', true);
 }
+
+window.blockly.js.blockly.Carrinho.fazerPedido = async function() {
+ var possuiItem = await this.cronapi.util.callServerBlockly('blockly.Carrinho:possuiItens');
+ if(possuiItem) {
+  this.cronapi.screen.changeView('#/app/logged/finalizapedido', []);
+ } else {
+   this.cronapi.util.callServerBlockly('blockly.Carrinho:exibirAviso');
+ }
+
+}
+
