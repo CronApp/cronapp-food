@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("CarrinhoDAO")
+@Repository("app-CarrinhoDAO")
 @Transactional(transactionManager="app-TransactionManager")
 public interface CarrinhoDAO extends JpaRepository<Carrinho, java.lang.String> {
 

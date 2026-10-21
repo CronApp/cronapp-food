@@ -28,6 +28,7 @@
             <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
             <property name="eclipselink.cache.shared.default" value="false"/>
             <property name="eclipselink.query-results-cache" value="false"/>
+            <property name="cronapp.diagram.namespace" value="app"/>
         </properties>
     </persistence-unit>
 </persistence>

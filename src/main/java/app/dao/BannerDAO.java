@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("BannerDAO")
+@Repository("app-BannerDAO")
 @Transactional(transactionManager="app-TransactionManager")
 public interface BannerDAO extends JpaRepository<Banner, java.lang.String> {
 

@@ -1,25 +1,30 @@
+
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
+
+
+import cronapp.framework.core.persistence.*;
 
 /**
 * Classe que representa a tabela item_cardapio
 * @generated
 */
-@Entity
-@Table(name = "\"item_cardapio\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"item_cardapio\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.ItemCardapio")
+@CronappTable(role=CronappTableRole.AUTO)
 public class ItemCardapio implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -30,73 +35,91 @@ public class ItemCardapio implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Titulo' | translate}}")
     @Column(name = "titulo", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String titulo;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Descricao' | translate}}")
     @Column(name = "descricao", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String descricao;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="IMAGE_DATABASE", label="{{'Foto' | translate}}")
     @Column(name = "foto", nullable = true, unique = false, insertable=true, updatable=true)
         
         private byte[] foto;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="DOUBLE", label="{{'Preco' | translate}}")
     @Column(name = "preco", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Double preco;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="INTEGER", label="{{'ServePessoas' | translate}}")
     @Column(name = "serve_pessoas", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Integer servePessoas;
 
+
     /**
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_categoriaCardapio", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+    @JoinColumn(name="fk_categoriaCardapio", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
         
         private CategoriaCardapio categoriaCardapio;
 
-    /**
-    * @generated
-    */
-    @ManyToOne
-    @JoinColumn(name="fk_restaurante", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
-        
-        private Restaurante restaurante;
 
     /**
     * @generated
     */
+    @ManyToOne
+    @JoinColumn(name="fk_restaurante", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
+        
+        private Restaurante restaurante;
+
+
+    /**
+    * @generated
+    */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'Promocao' | translate}}")
     @Column(name = "promocao", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean promocao;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="DOUBLE", label="{{'PrecoPromocional' | translate}}")
     @Column(name = "precoPromocional", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Double precoPromocional;
+
 
     /**
     * Construtor
@@ -110,8 +133,7 @@ public class ItemCardapio implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -120,7 +142,7 @@ public class ItemCardapio implements Serializable {
     * @param id id
     * @generated
     */
-    public ItemCardapio setId(java.lang.String id){
+    public ItemCardapio setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -129,8 +151,7 @@ public class ItemCardapio implements Serializable {
     * return titulo
     * @generated
     */
-    
-    public java.lang.String getTitulo(){
+    public java.lang.String getTitulo() {
         return this.titulo;
     }
 
@@ -139,7 +160,7 @@ public class ItemCardapio implements Serializable {
     * @param titulo titulo
     * @generated
     */
-    public ItemCardapio setTitulo(java.lang.String titulo){
+    public ItemCardapio setTitulo(java.lang.String titulo) {
         this.titulo = titulo;
         return this;
     }
@@ -148,8 +169,7 @@ public class ItemCardapio implements Serializable {
     * return descricao
     * @generated
     */
-    
-    public java.lang.String getDescricao(){
+    public java.lang.String getDescricao() {
         return this.descricao;
     }
 
@@ -158,7 +178,7 @@ public class ItemCardapio implements Serializable {
     * @param descricao descricao
     * @generated
     */
-    public ItemCardapio setDescricao(java.lang.String descricao){
+    public ItemCardapio setDescricao(java.lang.String descricao) {
         this.descricao = descricao;
         return this;
     }
@@ -167,8 +187,7 @@ public class ItemCardapio implements Serializable {
     * return foto
     * @generated
     */
-    
-    public byte[] getFoto(){
+    public byte[] getFoto() {
         return this.foto;
     }
 
@@ -177,7 +196,7 @@ public class ItemCardapio implements Serializable {
     * @param foto foto
     * @generated
     */
-    public ItemCardapio setFoto(byte[] foto){
+    public ItemCardapio setFoto(byte[] foto) {
         this.foto = foto;
         return this;
     }
@@ -186,8 +205,7 @@ public class ItemCardapio implements Serializable {
     * return preco
     * @generated
     */
-    
-    public java.lang.Double getPreco(){
+    public java.lang.Double getPreco() {
         return this.preco;
     }
 
@@ -196,7 +214,7 @@ public class ItemCardapio implements Serializable {
     * @param preco preco
     * @generated
     */
-    public ItemCardapio setPreco(java.lang.Double preco){
+    public ItemCardapio setPreco(java.lang.Double preco) {
         this.preco = preco;
         return this;
     }
@@ -205,8 +223,7 @@ public class ItemCardapio implements Serializable {
     * return servePessoas
     * @generated
     */
-    
-    public java.lang.Integer getServePessoas(){
+    public java.lang.Integer getServePessoas() {
         return this.servePessoas;
     }
 
@@ -215,7 +232,7 @@ public class ItemCardapio implements Serializable {
     * @param servePessoas servePessoas
     * @generated
     */
-    public ItemCardapio setServePessoas(java.lang.Integer servePessoas){
+    public ItemCardapio setServePessoas(java.lang.Integer servePessoas) {
         this.servePessoas = servePessoas;
         return this;
     }
@@ -224,8 +241,7 @@ public class ItemCardapio implements Serializable {
     * return categoriaCardapio
     * @generated
     */
-    
-    public CategoriaCardapio getCategoriaCardapio(){
+    public CategoriaCardapio getCategoriaCardapio() {
         return this.categoriaCardapio;
     }
 
@@ -234,7 +250,7 @@ public class ItemCardapio implements Serializable {
     * @param categoriaCardapio categoriaCardapio
     * @generated
     */
-    public ItemCardapio setCategoriaCardapio(CategoriaCardapio categoriaCardapio){
+    public ItemCardapio setCategoriaCardapio(CategoriaCardapio categoriaCardapio) {
         this.categoriaCardapio = categoriaCardapio;
         return this;
     }
@@ -243,8 +259,7 @@ public class ItemCardapio implements Serializable {
     * return restaurante
     * @generated
     */
-    
-    public Restaurante getRestaurante(){
+    public Restaurante getRestaurante() {
         return this.restaurante;
     }
 
@@ -253,7 +268,7 @@ public class ItemCardapio implements Serializable {
     * @param restaurante restaurante
     * @generated
     */
-    public ItemCardapio setRestaurante(Restaurante restaurante){
+    public ItemCardapio setRestaurante(Restaurante restaurante) {
         this.restaurante = restaurante;
         return this;
     }
@@ -262,8 +277,7 @@ public class ItemCardapio implements Serializable {
     * return promocao
     * @generated
     */
-    
-    public java.lang.Boolean getPromocao(){
+    public java.lang.Boolean getPromocao() {
         return this.promocao;
     }
 
@@ -272,7 +286,7 @@ public class ItemCardapio implements Serializable {
     * @param promocao promocao
     * @generated
     */
-    public ItemCardapio setPromocao(java.lang.Boolean promocao){
+    public ItemCardapio setPromocao(java.lang.Boolean promocao) {
         this.promocao = promocao;
         return this;
     }
@@ -281,8 +295,7 @@ public class ItemCardapio implements Serializable {
     * return precoPromocional
     * @generated
     */
-    
-    public java.lang.Double getPrecoPromocional(){
+    public java.lang.Double getPrecoPromocional() {
         return this.precoPromocional;
     }
 
@@ -291,7 +304,7 @@ public class ItemCardapio implements Serializable {
     * @param precoPromocional precoPromocional
     * @generated
     */
-    public ItemCardapio setPrecoPromocional(java.lang.Double precoPromocional){
+    public ItemCardapio setPrecoPromocional(java.lang.Double precoPromocional) {
         this.precoPromocional = precoPromocional;
         return this;
     }

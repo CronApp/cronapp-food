@@ -1,25 +1,30 @@
+
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
+
+
+import cronapp.framework.core.persistence.*;
 
 /**
 * Classe que representa a tabela APPLICATION
 * @generated
 */
-@Entity
-@Table(name = "\"APPLICATION\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"APPLICATION\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Application")
+@CronappTable(role=CronappTableRole.AUTO)
 public class Application implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -30,15 +35,19 @@ public class Application implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Name")
     @Column(name = "name", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String name;
+
 
     /**
     * Construtor
@@ -52,8 +61,7 @@ public class Application implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -62,7 +70,7 @@ public class Application implements Serializable {
     * @param id id
     * @generated
     */
-    public Application setId(java.lang.String id){
+    public Application setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -71,8 +79,7 @@ public class Application implements Serializable {
     * return name
     * @generated
     */
-    
-    public java.lang.String getName(){
+    public java.lang.String getName() {
         return this.name;
     }
 
@@ -81,7 +88,7 @@ public class Application implements Serializable {
     * @param name name
     * @generated
     */
-    public Application setName(java.lang.String name){
+    public Application setName(java.lang.String name) {
         this.name = name;
         return this;
     }

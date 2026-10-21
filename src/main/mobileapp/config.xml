@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="io.cronapp.apps.cronappfood" version="1.0.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="io.cronapp.apps.cronappfood" version="1.0.0">
     <name>Cronapp Food</name>
     <description>Cronapp Food</description>
     <author email="paulo.balmer@cronapp.io" href="http://cronapp.io">Paulo Roberto Balmer</author>
@@ -92,5 +93,5 @@
         <splash height="480" src="res/screen/ios/Default~iphone.png" width="320"/>
         <splash height="2732" src="res/screen/ios/Default@2x~universal~anyany.png" width="2732"/>
     </platform>
-    <plugin name="cordova-plugin-cronapp" spec="3.2.1-SP.2"/>
+    <plugin name="cordova-plugin-cronapp" spec="4.4.17"/>
 </widget>
