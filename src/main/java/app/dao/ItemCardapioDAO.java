@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("ItemCardapioDAO")
+@Repository("app-ItemCardapioDAO")
 @Transactional(transactionManager="app-TransactionManager")
 public interface ItemCardapioDAO extends JpaRepository<ItemCardapio, java.lang.String> {
 

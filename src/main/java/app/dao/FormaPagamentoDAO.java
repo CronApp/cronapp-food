@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("FormaPagamentoDAO")
+@Repository("app-FormaPagamentoDAO")
 @Transactional(transactionManager="app-TransactionManager")
 public interface FormaPagamentoDAO extends JpaRepository<FormaPagamento, java.lang.String> {
 

@@ -1,25 +1,30 @@
+
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
+
+
+import cronapp.framework.core.persistence.*;
 
 /**
 * Classe que representa a tabela CARRINHO
 * @generated
 */
-@Entity
-@Table(name = "\"CARRINHO\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"CARRINHO\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Carrinho")
+@CronappTable(role=CronappTableRole.AUTO)
 public class Carrinho implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -30,38 +35,46 @@ public class Carrinho implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
+
     /**
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_itemCardapio", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+    @JoinColumn(name="fk_itemCardapio", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private ItemCardapio itemCardapio;
 
-    /**
-    * @generated
-    */
-    @ManyToOne
-    @JoinColumn(name="fk_user", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
-        
-        private User user;
 
     /**
     * @generated
     */
+    @ManyToOne
+    @JoinColumn(name="fk_user", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+        
+        private User user;
+
+
+    /**
+    * @generated
+    */
+    @CronappColumn(attributeType="INTEGER", label="Quantidade")
     @Column(name = "quantidade", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Integer quantidade;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="DOUBLE", label="Valor Unitario")
     @Column(name = "valorUnitario", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Double valorUnitario;
+
 
     /**
     * Construtor
@@ -75,8 +88,7 @@ public class Carrinho implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -85,7 +97,7 @@ public class Carrinho implements Serializable {
     * @param id id
     * @generated
     */
-    public Carrinho setId(java.lang.String id){
+    public Carrinho setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -94,8 +106,7 @@ public class Carrinho implements Serializable {
     * return itemCardapio
     * @generated
     */
-    
-    public ItemCardapio getItemCardapio(){
+    public ItemCardapio getItemCardapio() {
         return this.itemCardapio;
     }
 
@@ -104,7 +115,7 @@ public class Carrinho implements Serializable {
     * @param itemCardapio itemCardapio
     * @generated
     */
-    public Carrinho setItemCardapio(ItemCardapio itemCardapio){
+    public Carrinho setItemCardapio(ItemCardapio itemCardapio) {
         this.itemCardapio = itemCardapio;
         return this;
     }
@@ -113,8 +124,7 @@ public class Carrinho implements Serializable {
     * return user
     * @generated
     */
-    
-    public User getUser(){
+    public User getUser() {
         return this.user;
     }
 
@@ -123,7 +133,7 @@ public class Carrinho implements Serializable {
     * @param user user
     * @generated
     */
-    public Carrinho setUser(User user){
+    public Carrinho setUser(User user) {
         this.user = user;
         return this;
     }
@@ -132,8 +142,7 @@ public class Carrinho implements Serializable {
     * return quantidade
     * @generated
     */
-    
-    public java.lang.Integer getQuantidade(){
+    public java.lang.Integer getQuantidade() {
         return this.quantidade;
     }
 
@@ -142,7 +151,7 @@ public class Carrinho implements Serializable {
     * @param quantidade quantidade
     * @generated
     */
-    public Carrinho setQuantidade(java.lang.Integer quantidade){
+    public Carrinho setQuantidade(java.lang.Integer quantidade) {
         this.quantidade = quantidade;
         return this;
     }
@@ -151,8 +160,7 @@ public class Carrinho implements Serializable {
     * return valorUnitario
     * @generated
     */
-    
-    public java.lang.Double getValorUnitario(){
+    public java.lang.Double getValorUnitario() {
         return this.valorUnitario;
     }
 
@@ -161,7 +169,7 @@ public class Carrinho implements Serializable {
     * @param valorUnitario valorUnitario
     * @generated
     */
-    public Carrinho setValorUnitario(java.lang.Double valorUnitario){
+    public Carrinho setValorUnitario(java.lang.Double valorUnitario) {
         this.valorUnitario = valorUnitario;
         return this;
     }

@@ -1,25 +1,30 @@
+
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
+
+
+import cronapp.framework.core.persistence.*;
 
 /**
 * Classe que representa a tabela restaurante
 * @generated
 */
-@Entity
-@Table(name = "\"restaurante\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"restaurante\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Restaurante")
+@CronappTable(role=CronappTableRole.AUTO)
 public class Restaurante implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -30,66 +35,83 @@ public class Restaurante implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Nome' | translate}}")
     @Column(name = "nome", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String nome;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Descricao' | translate}}")
     @Column(name = "descricao", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String descricao;
 
-    /**
-    * @generated
-    */
-    @Column(name = "permite_retirada", nullable = true, unique = false, insertable=true, updatable=true)
-        
-        private java.lang.Boolean permiteRetirada;
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'PermiteRetirada' | translate}}")
+    @Column(name = "permite_retirada", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Boolean permiteRetirada;
+
+
+    /**
+    * @generated
+    */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'RealizaEntrega' | translate}}")
     @Column(name = "realiza_entrega", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean realizaEntrega;
+
 
     /**
     * @generated
     */
     @Temporal(TemporalType.TIME)
+    @CronappColumn(attributeType="TIME", label="{{'TempoEntrega' | translate}}")
     @Column(name = "tempo_entrega", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.util.Date tempoEntrega;
 
-    /**
-    * @generated
-    */
-    @Column(name = "taxa_entrega", nullable = true, unique = false, insertable=true, updatable=true)
-        
-        private java.lang.Double taxaEntrega;
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="DOUBLE", label="{{'TaxaEntrega' | translate}}")
+    @Column(name = "taxa_entrega", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Double taxaEntrega;
+
+
+    /**
+    * @generated
+    */
+    @CronappColumn(attributeType="IMAGE_DATABASE", label="{{'Logotipo' | translate}}")
     @Column(name = "logotipo", nullable = true, unique = false, insertable=true, updatable=true)
         
         private byte[] logotipo;
+
 
     /**
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_categoriaRestaurante", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+    @JoinColumn(name="fk_categoriaRestaurante", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private CategoriaRestaurante categoriaRestaurante;
+
 
     /**
     * Construtor
@@ -103,8 +125,7 @@ public class Restaurante implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -113,7 +134,7 @@ public class Restaurante implements Serializable {
     * @param id id
     * @generated
     */
-    public Restaurante setId(java.lang.String id){
+    public Restaurante setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -122,8 +143,7 @@ public class Restaurante implements Serializable {
     * return nome
     * @generated
     */
-    
-    public java.lang.String getNome(){
+    public java.lang.String getNome() {
         return this.nome;
     }
 
@@ -132,7 +152,7 @@ public class Restaurante implements Serializable {
     * @param nome nome
     * @generated
     */
-    public Restaurante setNome(java.lang.String nome){
+    public Restaurante setNome(java.lang.String nome) {
         this.nome = nome;
         return this;
     }
@@ -141,8 +161,7 @@ public class Restaurante implements Serializable {
     * return descricao
     * @generated
     */
-    
-    public java.lang.String getDescricao(){
+    public java.lang.String getDescricao() {
         return this.descricao;
     }
 
@@ -151,7 +170,7 @@ public class Restaurante implements Serializable {
     * @param descricao descricao
     * @generated
     */
-    public Restaurante setDescricao(java.lang.String descricao){
+    public Restaurante setDescricao(java.lang.String descricao) {
         this.descricao = descricao;
         return this;
     }
@@ -160,8 +179,7 @@ public class Restaurante implements Serializable {
     * return permiteRetirada
     * @generated
     */
-    
-    public java.lang.Boolean getPermiteRetirada(){
+    public java.lang.Boolean getPermiteRetirada() {
         return this.permiteRetirada;
     }
 
@@ -170,7 +188,7 @@ public class Restaurante implements Serializable {
     * @param permiteRetirada permiteRetirada
     * @generated
     */
-    public Restaurante setPermiteRetirada(java.lang.Boolean permiteRetirada){
+    public Restaurante setPermiteRetirada(java.lang.Boolean permiteRetirada) {
         this.permiteRetirada = permiteRetirada;
         return this;
     }
@@ -179,8 +197,7 @@ public class Restaurante implements Serializable {
     * return realizaEntrega
     * @generated
     */
-    
-    public java.lang.Boolean getRealizaEntrega(){
+    public java.lang.Boolean getRealizaEntrega() {
         return this.realizaEntrega;
     }
 
@@ -189,7 +206,7 @@ public class Restaurante implements Serializable {
     * @param realizaEntrega realizaEntrega
     * @generated
     */
-    public Restaurante setRealizaEntrega(java.lang.Boolean realizaEntrega){
+    public Restaurante setRealizaEntrega(java.lang.Boolean realizaEntrega) {
         this.realizaEntrega = realizaEntrega;
         return this;
     }
@@ -198,8 +215,7 @@ public class Restaurante implements Serializable {
     * return tempoEntrega
     * @generated
     */
-    
-    public java.util.Date getTempoEntrega(){
+    public java.util.Date getTempoEntrega() {
         return this.tempoEntrega;
     }
 
@@ -208,7 +224,7 @@ public class Restaurante implements Serializable {
     * @param tempoEntrega tempoEntrega
     * @generated
     */
-    public Restaurante setTempoEntrega(java.util.Date tempoEntrega){
+    public Restaurante setTempoEntrega(java.util.Date tempoEntrega) {
         this.tempoEntrega = tempoEntrega;
         return this;
     }
@@ -217,8 +233,7 @@ public class Restaurante implements Serializable {
     * return taxaEntrega
     * @generated
     */
-    
-    public java.lang.Double getTaxaEntrega(){
+    public java.lang.Double getTaxaEntrega() {
         return this.taxaEntrega;
     }
 
@@ -227,7 +242,7 @@ public class Restaurante implements Serializable {
     * @param taxaEntrega taxaEntrega
     * @generated
     */
-    public Restaurante setTaxaEntrega(java.lang.Double taxaEntrega){
+    public Restaurante setTaxaEntrega(java.lang.Double taxaEntrega) {
         this.taxaEntrega = taxaEntrega;
         return this;
     }
@@ -236,8 +251,7 @@ public class Restaurante implements Serializable {
     * return logotipo
     * @generated
     */
-    
-    public byte[] getLogotipo(){
+    public byte[] getLogotipo() {
         return this.logotipo;
     }
 
@@ -246,7 +260,7 @@ public class Restaurante implements Serializable {
     * @param logotipo logotipo
     * @generated
     */
-    public Restaurante setLogotipo(byte[] logotipo){
+    public Restaurante setLogotipo(byte[] logotipo) {
         this.logotipo = logotipo;
         return this;
     }
@@ -255,8 +269,7 @@ public class Restaurante implements Serializable {
     * return categoriaRestaurante
     * @generated
     */
-    
-    public CategoriaRestaurante getCategoriaRestaurante(){
+    public CategoriaRestaurante getCategoriaRestaurante() {
         return this.categoriaRestaurante;
     }
 
@@ -265,7 +278,7 @@ public class Restaurante implements Serializable {
     * @param categoriaRestaurante categoriaRestaurante
     * @generated
     */
-    public Restaurante setCategoriaRestaurante(CategoriaRestaurante categoriaRestaurante){
+    public Restaurante setCategoriaRestaurante(CategoriaRestaurante categoriaRestaurante) {
         this.categoriaRestaurante = categoriaRestaurante;
         return this;
     }

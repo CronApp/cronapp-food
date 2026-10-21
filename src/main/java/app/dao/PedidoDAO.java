@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("PedidoDAO")
+@Repository("app-PedidoDAO")
 @Transactional(transactionManager="app-TransactionManager")
 public interface PedidoDAO extends JpaRepository<Pedido, java.lang.String> {
 

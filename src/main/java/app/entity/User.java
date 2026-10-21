@@ -1,24 +1,30 @@
+
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
-    import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import cronapi.swagger.CronappSwagger;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+
+
+import cronapp.framework.core.persistence.*;
 
 /**
 * Classe que representa a tabela USER
 * @generated
 */
-@Entity
-@Table(name = "\"USER\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"USER\"")
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.User")
+@CronappTable(role=CronappTableRole.CLASS)
 public class User implements Serializable {
     /**
     * Variável privada para verificação da criptofrafia
@@ -26,7 +32,6 @@ public class User implements Serializable {
     * @generated
     */
     private static final String ENCRYPT = "$2a$10$";
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -37,136 +42,173 @@ public class User implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="{{'Id' | translate}}", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, length=255, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="INTEGER", label="{{'AccessFailedCount' | translate}}", defaultValue = "0")
     @Column(name = "access_failed_count", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Integer accessFailedCount = 0;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Email' | translate}}")
     @Column(name = "email", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String email;
 
-    /**
-    * @generated
-    */
-    @Column(name = "email_confirmed", nullable = false, unique = false, insertable=true, updatable=true)
-        
-        private java.lang.Boolean emailConfirmed = true;
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'EmailConfirmed' | translate}}", defaultValue = "true")
+    @Column(name = "email_confirmed", nullable = false, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Boolean emailConfirmed = true;
+
+
+    /**
+    * @generated
+    */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'LockoutEnabled' | translate}}", defaultValue = "false")
     @Column(name = "lockout_enabled", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean lockoutEnabled = false;
+
 
     /**
     * @generated
     */
     @Temporal(TemporalType.TIMESTAMP)
+    @CronappColumn(attributeType="DATETIME", label="{{'LockoutEnd' | translate}}")
     @Column(name = "lockout_end", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.util.Date lockoutEnd;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Name' | translate}}")
     @Column(name = "name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String name;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'NormalizedEmail' | translate}}", defaultValue = "\"\"")
     @Column(name = "normalized_email", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String normalizedEmail = "";
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'NormalizedUserName' | translate}}", defaultValue = "\"\"")
     @Column(name = "normalized_user_name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String normalizedUserName = "";
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Password' | translate}}")
     @Column(name = "password", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String password;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'PhoneNumber' | translate}}")
     @Column(name = "phone_number", nullable = true, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String phoneNumber;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'PhoneNumberConfirmed' | translate}}", defaultValue = "true")
     @Column(name = "phone_number_confirmed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean phoneNumberConfirmed = true;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'SecurityStamp' | translate}}", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "security_stamp", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String securityStamp = UUID.randomUUID().toString().toUpperCase();
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'TwoFactorEnabled' | translate}}", defaultValue = "false")
     @Column(name = "two_factor_enabled", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean twoFactorEnabled = false;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'UserName' | translate}}")
     @Column(name = "user_name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String userName;
 
-    /**
-    * @generated
-    */
-    @Column(name = "theme", nullable = true, unique = false, length=255, insertable=true, updatable=true)
-        
-        private java.lang.String theme;
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Theme' | translate}}")
+    @Column(name = "theme", nullable = true, unique = false, length=255, insertable=true, updatable=true)
+        
+        private java.lang.String theme;
+
+
+    /**
+    * @generated
+    */
+    @CronappColumn(attributeType="STRING", label="{{'Picture' | translate}}")
     @Column(name = "picture", nullable = true, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String picture;
+
 
     /**
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_restaurante", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+    @JoinColumn(name="fk_restaurante", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Restaurante restaurante;
+
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="INTEGER", label="Avaliacao App")
     @Column(name = "avaliacao_app", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Integer avaliacaoApp;
+
 
     /**
     * Construtor
@@ -180,8 +222,7 @@ public class User implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -190,7 +231,7 @@ public class User implements Serializable {
     * @param id id
     * @generated
     */
-    public User setId(java.lang.String id){
+    public User setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -199,8 +240,7 @@ public class User implements Serializable {
     * return accessFailedCount
     * @generated
     */
-    
-    public java.lang.Integer getAccessFailedCount(){
+    public java.lang.Integer getAccessFailedCount() {
         return this.accessFailedCount;
     }
 
@@ -209,7 +249,7 @@ public class User implements Serializable {
     * @param accessFailedCount accessFailedCount
     * @generated
     */
-    public User setAccessFailedCount(java.lang.Integer accessFailedCount){
+    public User setAccessFailedCount(java.lang.Integer accessFailedCount) {
         this.accessFailedCount = accessFailedCount;
         return this;
     }
@@ -218,8 +258,7 @@ public class User implements Serializable {
     * return email
     * @generated
     */
-    
-    public java.lang.String getEmail(){
+    public java.lang.String getEmail() {
         return this.email;
     }
 
@@ -228,7 +267,7 @@ public class User implements Serializable {
     * @param email email
     * @generated
     */
-    public User setEmail(java.lang.String email){
+    public User setEmail(java.lang.String email) {
         this.email = email;
         return this;
     }
@@ -237,8 +276,7 @@ public class User implements Serializable {
     * return emailConfirmed
     * @generated
     */
-    
-    public java.lang.Boolean getEmailConfirmed(){
+    public java.lang.Boolean getEmailConfirmed() {
         return this.emailConfirmed;
     }
 
@@ -247,7 +285,7 @@ public class User implements Serializable {
     * @param emailConfirmed emailConfirmed
     * @generated
     */
-    public User setEmailConfirmed(java.lang.Boolean emailConfirmed){
+    public User setEmailConfirmed(java.lang.Boolean emailConfirmed) {
         this.emailConfirmed = emailConfirmed;
         return this;
     }
@@ -256,8 +294,7 @@ public class User implements Serializable {
     * return lockoutEnabled
     * @generated
     */
-    
-    public java.lang.Boolean getLockoutEnabled(){
+    public java.lang.Boolean getLockoutEnabled() {
         return this.lockoutEnabled;
     }
 
@@ -266,7 +303,7 @@ public class User implements Serializable {
     * @param lockoutEnabled lockoutEnabled
     * @generated
     */
-    public User setLockoutEnabled(java.lang.Boolean lockoutEnabled){
+    public User setLockoutEnabled(java.lang.Boolean lockoutEnabled) {
         this.lockoutEnabled = lockoutEnabled;
         return this;
     }
@@ -275,8 +312,7 @@ public class User implements Serializable {
     * return lockoutEnd
     * @generated
     */
-    
-    public java.util.Date getLockoutEnd(){
+    public java.util.Date getLockoutEnd() {
         return this.lockoutEnd;
     }
 
@@ -285,7 +321,7 @@ public class User implements Serializable {
     * @param lockoutEnd lockoutEnd
     * @generated
     */
-    public User setLockoutEnd(java.util.Date lockoutEnd){
+    public User setLockoutEnd(java.util.Date lockoutEnd) {
         this.lockoutEnd = lockoutEnd;
         return this;
     }
@@ -294,8 +330,7 @@ public class User implements Serializable {
     * return name
     * @generated
     */
-    
-    public java.lang.String getName(){
+    public java.lang.String getName() {
         return this.name;
     }
 
@@ -304,7 +339,7 @@ public class User implements Serializable {
     * @param name name
     * @generated
     */
-    public User setName(java.lang.String name){
+    public User setName(java.lang.String name) {
         this.name = name;
         return this;
     }
@@ -313,8 +348,7 @@ public class User implements Serializable {
     * return normalizedEmail
     * @generated
     */
-    
-    public java.lang.String getNormalizedEmail(){
+    public java.lang.String getNormalizedEmail() {
         return this.normalizedEmail;
     }
 
@@ -323,7 +357,7 @@ public class User implements Serializable {
     * @param normalizedEmail normalizedEmail
     * @generated
     */
-    public User setNormalizedEmail(java.lang.String normalizedEmail){
+    public User setNormalizedEmail(java.lang.String normalizedEmail) {
         this.normalizedEmail = normalizedEmail;
         return this;
     }
@@ -332,8 +366,7 @@ public class User implements Serializable {
     * return normalizedUserName
     * @generated
     */
-    
-    public java.lang.String getNormalizedUserName(){
+    public java.lang.String getNormalizedUserName() {
         return this.normalizedUserName;
     }
 
@@ -342,7 +375,7 @@ public class User implements Serializable {
     * @param normalizedUserName normalizedUserName
     * @generated
     */
-    public User setNormalizedUserName(java.lang.String normalizedUserName){
+    public User setNormalizedUserName(java.lang.String normalizedUserName) {
         this.normalizedUserName = normalizedUserName;
         return this;
     }
@@ -351,8 +384,7 @@ public class User implements Serializable {
     * return password
     * @generated
     */
-    
-    public java.lang.String getPassword(){
+    public java.lang.String getPassword() {
         return this.password;
     }
 
@@ -361,9 +393,8 @@ public class User implements Serializable {
     * @param password password
     * @generated
     */
-    public User setPassword(java.lang.String password){
-        password = password.startsWith(ENCRYPT) ? password : new BCryptPasswordEncoder().encode(password);
-        this.password = password;
+    public User setPassword(java.lang.String password) {
+        this.password = password.startsWith(ENCRYPT) ? password : new BCryptPasswordEncoder().encode(password);
         return this;
     }
     /**
@@ -371,8 +402,7 @@ public class User implements Serializable {
     * return phoneNumber
     * @generated
     */
-    
-    public java.lang.String getPhoneNumber(){
+    public java.lang.String getPhoneNumber() {
         return this.phoneNumber;
     }
 
@@ -381,7 +411,7 @@ public class User implements Serializable {
     * @param phoneNumber phoneNumber
     * @generated
     */
-    public User setPhoneNumber(java.lang.String phoneNumber){
+    public User setPhoneNumber(java.lang.String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
@@ -390,8 +420,7 @@ public class User implements Serializable {
     * return phoneNumberConfirmed
     * @generated
     */
-    
-    public java.lang.Boolean getPhoneNumberConfirmed(){
+    public java.lang.Boolean getPhoneNumberConfirmed() {
         return this.phoneNumberConfirmed;
     }
 
@@ -400,7 +429,7 @@ public class User implements Serializable {
     * @param phoneNumberConfirmed phoneNumberConfirmed
     * @generated
     */
-    public User setPhoneNumberConfirmed(java.lang.Boolean phoneNumberConfirmed){
+    public User setPhoneNumberConfirmed(java.lang.Boolean phoneNumberConfirmed) {
         this.phoneNumberConfirmed = phoneNumberConfirmed;
         return this;
     }
@@ -409,8 +438,7 @@ public class User implements Serializable {
     * return securityStamp
     * @generated
     */
-    
-    public java.lang.String getSecurityStamp(){
+    public java.lang.String getSecurityStamp() {
         return this.securityStamp;
     }
 
@@ -419,7 +447,7 @@ public class User implements Serializable {
     * @param securityStamp securityStamp
     * @generated
     */
-    public User setSecurityStamp(java.lang.String securityStamp){
+    public User setSecurityStamp(java.lang.String securityStamp) {
         this.securityStamp = securityStamp;
         return this;
     }
@@ -428,8 +456,7 @@ public class User implements Serializable {
     * return twoFactorEnabled
     * @generated
     */
-    
-    public java.lang.Boolean getTwoFactorEnabled(){
+    public java.lang.Boolean getTwoFactorEnabled() {
         return this.twoFactorEnabled;
     }
 
@@ -438,7 +465,7 @@ public class User implements Serializable {
     * @param twoFactorEnabled twoFactorEnabled
     * @generated
     */
-    public User setTwoFactorEnabled(java.lang.Boolean twoFactorEnabled){
+    public User setTwoFactorEnabled(java.lang.Boolean twoFactorEnabled) {
         this.twoFactorEnabled = twoFactorEnabled;
         return this;
     }
@@ -447,8 +474,7 @@ public class User implements Serializable {
     * return userName
     * @generated
     */
-    
-    public java.lang.String getUserName(){
+    public java.lang.String getUserName() {
         return this.userName;
     }
 
@@ -457,7 +483,7 @@ public class User implements Serializable {
     * @param userName userName
     * @generated
     */
-    public User setUserName(java.lang.String userName){
+    public User setUserName(java.lang.String userName) {
         this.userName = userName;
         return this;
     }
@@ -466,8 +492,7 @@ public class User implements Serializable {
     * return theme
     * @generated
     */
-    
-    public java.lang.String getTheme(){
+    public java.lang.String getTheme() {
         return this.theme;
     }
 
@@ -476,7 +501,7 @@ public class User implements Serializable {
     * @param theme theme
     * @generated
     */
-    public User setTheme(java.lang.String theme){
+    public User setTheme(java.lang.String theme) {
         this.theme = theme;
         return this;
     }
@@ -485,8 +510,7 @@ public class User implements Serializable {
     * return picture
     * @generated
     */
-    
-    public java.lang.String getPicture(){
+    public java.lang.String getPicture() {
         return this.picture;
     }
 
@@ -495,7 +519,7 @@ public class User implements Serializable {
     * @param picture picture
     * @generated
     */
-    public User setPicture(java.lang.String picture){
+    public User setPicture(java.lang.String picture) {
         this.picture = picture;
         return this;
     }
@@ -504,8 +528,7 @@ public class User implements Serializable {
     * return restaurante
     * @generated
     */
-    
-    public Restaurante getRestaurante(){
+    public Restaurante getRestaurante() {
         return this.restaurante;
     }
 
@@ -514,7 +537,7 @@ public class User implements Serializable {
     * @param restaurante restaurante
     * @generated
     */
-    public User setRestaurante(Restaurante restaurante){
+    public User setRestaurante(Restaurante restaurante) {
         this.restaurante = restaurante;
         return this;
     }
@@ -523,8 +546,7 @@ public class User implements Serializable {
     * return avaliacaoApp
     * @generated
     */
-    
-    public java.lang.Integer getAvaliacaoApp(){
+    public java.lang.Integer getAvaliacaoApp() {
         return this.avaliacaoApp;
     }
 
@@ -533,7 +555,7 @@ public class User implements Serializable {
     * @param avaliacaoApp avaliacaoApp
     * @generated
     */
-    public User setAvaliacaoApp(java.lang.Integer avaliacaoApp){
+    public User setAvaliacaoApp(java.lang.Integer avaliacaoApp) {
         this.avaliacaoApp = avaliacaoApp;
         return this;
     }

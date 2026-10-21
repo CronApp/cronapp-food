@@ -1,25 +1,30 @@
+
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
+
+
+import cronapp.framework.core.persistence.*;
 
 /**
 * Classe que representa a tabela pedido_item
 * @generated
 */
-@Entity
-@Table(name = "\"pedido_item\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"pedido_item\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.PedidoItem")
+@CronappTable(role=CronappTableRole.AUTO)
 public class PedidoItem implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -30,38 +35,46 @@ public class PedidoItem implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="INTEGER", label="{{'Quantidade' | translate}}")
     @Column(name = "quantidade", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Integer quantidade;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="DOUBLE", label="{{'ValorUnitario' | translate}}")
     @Column(name = "valor_unitario", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Double valorUnitario;
 
-    /**
-    * @generated
-    */
-    @ManyToOne
-    @JoinColumn(name="fk_pedido", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
-        
-        private Pedido pedido;
 
     /**
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_itemCardapio", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+    @JoinColumn(name="fk_pedido", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+        
+        private Pedido pedido;
+
+
+    /**
+    * @generated
+    */
+    @ManyToOne
+    @JoinColumn(name="fk_itemCardapio", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private ItemCardapio itemCardapio;
+
 
     /**
     * Construtor
@@ -75,8 +88,7 @@ public class PedidoItem implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -85,7 +97,7 @@ public class PedidoItem implements Serializable {
     * @param id id
     * @generated
     */
-    public PedidoItem setId(java.lang.String id){
+    public PedidoItem setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -94,8 +106,7 @@ public class PedidoItem implements Serializable {
     * return quantidade
     * @generated
     */
-    
-    public java.lang.Integer getQuantidade(){
+    public java.lang.Integer getQuantidade() {
         return this.quantidade;
     }
 
@@ -104,7 +115,7 @@ public class PedidoItem implements Serializable {
     * @param quantidade quantidade
     * @generated
     */
-    public PedidoItem setQuantidade(java.lang.Integer quantidade){
+    public PedidoItem setQuantidade(java.lang.Integer quantidade) {
         this.quantidade = quantidade;
         return this;
     }
@@ -113,8 +124,7 @@ public class PedidoItem implements Serializable {
     * return valorUnitario
     * @generated
     */
-    
-    public java.lang.Double getValorUnitario(){
+    public java.lang.Double getValorUnitario() {
         return this.valorUnitario;
     }
 
@@ -123,7 +133,7 @@ public class PedidoItem implements Serializable {
     * @param valorUnitario valorUnitario
     * @generated
     */
-    public PedidoItem setValorUnitario(java.lang.Double valorUnitario){
+    public PedidoItem setValorUnitario(java.lang.Double valorUnitario) {
         this.valorUnitario = valorUnitario;
         return this;
     }
@@ -132,8 +142,7 @@ public class PedidoItem implements Serializable {
     * return pedido
     * @generated
     */
-    
-    public Pedido getPedido(){
+    public Pedido getPedido() {
         return this.pedido;
     }
 
@@ -142,7 +151,7 @@ public class PedidoItem implements Serializable {
     * @param pedido pedido
     * @generated
     */
-    public PedidoItem setPedido(Pedido pedido){
+    public PedidoItem setPedido(Pedido pedido) {
         this.pedido = pedido;
         return this;
     }
@@ -151,8 +160,7 @@ public class PedidoItem implements Serializable {
     * return itemCardapio
     * @generated
     */
-    
-    public ItemCardapio getItemCardapio(){
+    public ItemCardapio getItemCardapio() {
         return this.itemCardapio;
     }
 
@@ -161,7 +169,7 @@ public class PedidoItem implements Serializable {
     * @param itemCardapio itemCardapio
     * @generated
     */
-    public PedidoItem setItemCardapio(ItemCardapio itemCardapio){
+    public PedidoItem setItemCardapio(ItemCardapio itemCardapio) {
         this.itemCardapio = itemCardapio;
         return this;
     }

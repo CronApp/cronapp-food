@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("CategoriaRestauranteDAO")
+@Repository("app-CategoriaRestauranteDAO")
 @Transactional(transactionManager="app-TransactionManager")
 public interface CategoriaRestauranteDAO extends JpaRepository<CategoriaRestaurante, java.lang.String> {
 
